@@ -11,7 +11,7 @@ const Header = () => {
 				<div className={styles.headerContainer}>
 					<Link to={'/'} className={styles.logoContainer}>
 						<img
-							src='public/static/lamp.svg'
+							src='/public/static/lamp.svg'
 							alt='Company Logo'
 							className={styles.logo}
 						/>
@@ -25,7 +25,7 @@ const Header = () => {
 					<div className={styles.containerContact}>
 						<CallRequestButton title={'ПЕРЕЗВОНИТЬ МНЕ'} arrow={true} />
 						<div className={styles.contactblok}>
-							<img src='public/static/telephone.svg' alt='telephoneIcon' />
+							<img src='/public/static/telephone.svg' alt='telephoneIcon' />
 							<p>+7(981)099-22-22</p>
 						</div>
 					</div>
