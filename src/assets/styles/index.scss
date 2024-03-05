@@ -20,6 +20,7 @@
 	font-family: 'Nunito', sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
+	text-decoration: none;
 }
 
 *::-webkit-input-placeholder {
@@ -73,7 +74,9 @@ body {
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
-	// height: 2000px;
+}
+a {
+	border: none;
 }
 
 img {

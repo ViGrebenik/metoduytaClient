@@ -60,6 +60,11 @@
 	font-size: 20px;
 	color: #cacaca;
 }
+.activeUrl {
+	a {
+		color: #d8d8d8;
+	}
+}
 
 .menu {
 	ul {
@@ -72,6 +77,9 @@
 				color: #858585;
 				font-weight: bold;
 				transition: color 0.3s;
+				&.active {
+					color: #ffd622;
+				}
 			}
 
 			a:hover {

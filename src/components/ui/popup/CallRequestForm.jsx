@@ -15,7 +15,6 @@ const CallRequestForm = ({ onClose }) => {
 	}
 
 	return (
-		// <div className={`${styles.modal} ${isVisible ? styles.visible : ''}`}></div>
 		<div className={classNames(styles.modal, { [styles.visible]: isVisible })}>
 			<div className={styles['modal-content']}>
 				<span className={styles.close} onClick={onClose}>

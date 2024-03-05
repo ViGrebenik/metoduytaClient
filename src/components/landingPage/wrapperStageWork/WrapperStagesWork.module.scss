@@ -125,10 +125,18 @@
 
 .WrapperDescriptionButton {
 	flex: 1 0 20%;
+	font-weight: 800;
 	text-align: center;
 	border-radius: 10px;
 	font-size: 25px;
 	padding: 10px;
 	height: 100px;
 	border: 2px solid $accent;
+	cursor: pointer;
+	transition: border 0.5s ease, color 0.5s ease, background-color 0.5s ease;
+	&:hover {
+		background-color: $fontColor;
+		border: 2px solid $fontColor;
+		color: $accent;
+	}
 }

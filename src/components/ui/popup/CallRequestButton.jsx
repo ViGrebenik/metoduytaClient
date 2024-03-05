@@ -22,7 +22,7 @@ const CallRequestButton = ({ title, arrow = false, bgC = null }) => {
 	return (
 		<CustomButton className={styles.containerButton}>
 			{arrow && <img src='/static/arrow.svg' alt='arrow' />}
-			<button onClick={openModal}>{title}</button>
+			<button onClick={() => openModal()}>{title}</button>
 			{isModalOpen && <CallRequestForm onClose={closeModal} />}
 		</CustomButton>
 	)

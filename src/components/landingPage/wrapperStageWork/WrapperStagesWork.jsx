@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import useModal from '../../ui/useModal/useModal'
 import styles from './WrapperStagesWork.module.scss'
+import CallRequestForm from '../../ui/popup/CallRequestForm'
 
 const stages = [
 	{
@@ -25,6 +27,7 @@ const stages = [
 const WrapperStagesWork = () => {
 	const [hoveredCircle, setHoveredCircle] = useState(stages[0])
 	const [hoveredText, setHoveredText] = useState(stages[0])
+	const { isModalOpen, openModal, closeModal } = useModal()
 
 	const handleHover = circle => {
 		setHoveredCircle(circle)
@@ -79,16 +82,18 @@ const WrapperStagesWork = () => {
 								className={`${styles.descriptionSubtitle} ${
 									hoveredText !== 'Этап 01' ? styles.hide : ''
 								}`}
-							>
-								{/* {hoveredText.title} */}
-							</div>
+							></div>
 						</div>
-						<div className={styles.WrapperDescriptionButton}>
+						<div
+							onClick={() => openModal()}
+							className={styles.WrapperDescriptionButton}
+						>
 							Получить консультацию
 						</div>
 					</div>
 				</div>
 			</div>
+			{isModalOpen && <CallRequestForm onClose={closeModal} />}
 		</div>
 	)
 }

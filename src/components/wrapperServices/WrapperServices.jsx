@@ -26,28 +26,28 @@ const WrapperServices = () => {
 								description='Изменить интерьер квартиры максимально быстро и с минимальными затратами – это реально.'
 								price='От 800 руб. м2'
 								imageUrl='/static/stoke/item01.jpg'
-								serviceUrl='/services'
+								serviceUrl='/servicesDesigner'
 							/>
 							<ServiceCard
 								title='РЕМОНТ КВАРТИР ПОД КЛЮЧ'
 								description='Выполняем все виды работ, включая дизайн-проект!'
 								price='От 9500 руб. м2'
 								imageUrl='/static/stoke/item02.jpg'
-								serviceUrl='/services'
+								serviceUrl='/servicesComplex'
 							/>
 							<ServiceCard
 								title='Ремонт квартир в новостройке'
 								description='Для тех, кто недавно переехал в новое жилье и мечтает поскорее оформить свой уютный уголок'
 								price='От 7000 ₽/м2'
 								imageUrl='/static/stoke/item03.jpg'
-								serviceUrl='/services'
+								serviceUrl='/servicesDesigner'
 							/>
 							<ServiceCard
 								title='Услуга 2'
 								description='Описание услуги 2'
 								price='Цена 2'
 								imageUrl='/static/stoke/item04.jpg'
-								serviceUrl='/services'
+								serviceUrl='/servicesComplex'
 							/>
 						</div>
 					</div>

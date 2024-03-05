@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './Header.module.scss'
 
 const NavBar = () => {
 	const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false)
-
+	const [currentPage, setCurrentPage] = useState('')
+	const location = useLocation()
+	useEffect(() => {
+		setCurrentPage(location.pathname)
+	}, [location])
 	useEffect(() => {
 		const handleOutsideClick = event => {
 			if (
@@ -49,38 +53,96 @@ const NavBar = () => {
 						{isServicesDropdownOpen && (
 							<ul className={styles.submenu}>
 								<li>
-									<Link to={'/servicesDesigner'}>УСЛУГИ ДИЗАНЕРА</Link>
+									<Link
+										to={'/servicesDesigner'}
+										className={
+											currentPage === '/servicesDesigner' ? styles.active : ''
+										}
+									>
+										УСЛУГИ ДИЗАНЕРА
+									</Link>
 								</li>
 								<li>
-									<Link to={'/servicesComplex'}>РЕМОНТ ПОД КЛЮЧ</Link>
+									<Link
+										to={'/servicesComplex'}
+										className={
+											currentPage === '/servicesComplex' ? styles.active : ''
+										}
+									>
+										РЕМОНТ ПОД КЛЮЧ
+									</Link>
 								</li>
 								<li>
-									<Link to={'/servicesDesigner'}>ДИЗАЙНЕРСКИЙ РЕМОНТ</Link>
+									<Link
+										to={'/servicesDesigner'}
+										className={
+											currentPage === '/servicesDesigne' ? styles.active : ''
+										}
+									>
+										ДИЗАЙНЕРСКИЙ РЕМОНТ
+									</Link>
 								</li>
 								<li>
-									<Link to={'/servicesComplex'}>КОСМЕТИЧЕСКИЙ РЕМОНТ</Link>
+									<Link
+										to={'/servicesComplex'}
+										className={
+											currentPage === '/servicesComple' ? styles.active : ''
+										}
+									>
+										КОСМЕТИЧЕСКИЙ РЕМОНТ
+									</Link>
 								</li>
 							</ul>
 						)}
 					</div>
 				</li>
 				<li>
-					<Link to={'/portfolio'}>ПРИМЕРЫ РАБОТ</Link>
+					<Link
+						to={'/portfolio'}
+						className={currentPage === '/portfolio' ? styles.active : ''}
+					>
+						ПРИМЕРЫ РАБОТ
+					</Link>
 				</li>
 				<li>
-					<Link to={'/payment'}>ЦЕНА</Link>
+					<Link
+						to={'/payment'}
+						className={currentPage === '/payment' ? styles.active : ''}
+					>
+						ЦЕНА
+					</Link>
 				</li>
 				<li>
-					<Link to={'/calculator'}>КАЛЬКУЛЯТОР</Link>
+					<Link
+						to={'/calculator'}
+						className={currentPage === '/calculator' ? styles.active : ''}
+					>
+						КАЛЬКУЛЯТОР
+					</Link>
 				</li>{' '}
 				<li>
-					<Link to={'/calculator'}>БЛОГ</Link>
+					<Link
+						to={'/blog'}
+						className={currentPage === '/blog' ? styles.active : ''}
+					>
+						БЛОГ
+					</Link>
 				</li>
 				<li>
-					<Link to={'/aboutUs'}>О КОМПАНИИ</Link>
+					<Link
+						to={'/aboutUs'}
+						className={currentPage === '/aboutUs' ? styles.active : ''}
+					>
+						О КОМПАНИИ
+					</Link>
 				</li>
 				<li>
-					<Link to={'/contacts'}>КОНТАКТЫ</Link>
+					<Link
+						to={'/contacts'}
+						className={currentPage === '/contacts' ? styles.active : ''}
+					>
+						КОНТАКТЫ
+					</Link>
 				</li>
 			</ul>
 		</div>
