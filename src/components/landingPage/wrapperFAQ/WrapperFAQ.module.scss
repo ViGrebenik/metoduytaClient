@@ -1,0 +1,89 @@
+@import 'src/assets/styles/variables';
+.WrapperFAQ {
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	margin-bottom: 100px;
+	border-radius: 10px;
+}
+
+.containerBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-bottom: 50px;
+}
+
+.containerHeader {
+	display: flex;
+	flex-direction: column;
+}
+
+.contentHeaderTitle {
+	font-size: 30px;
+	color: $accent;
+	background-color: #2727273b;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.containerFAQ {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+.faq {
+	h2 {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+
+	.question {
+		cursor: pointer;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #3f3f3f;
+		border-radius: 10px;
+		background-color: #3f3f3f;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: #4d4d4d;
+		}
+
+		.questionText {
+			font-weight: bold;
+		}
+
+		.answer {
+			padding: 10px;
+			margin-top: 10px;
+		}
+	}
+
+	/* Анимация для входа */
+	.questionEnter {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	.questionEnterActive {
+		opacity: 1;
+		transform: translateY(0);
+		transition: opacity 0.8s, transform 0.8s;
+	}
+
+	/* Анимация для выхода */
+	.questionExit {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.questionExitActive {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: opacity 0.8s, transform 0.8s;
+	}
+}

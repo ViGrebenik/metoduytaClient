@@ -1,0 +1,89 @@
+/* Стили для контейнера слайдера */
+.slider-container {
+	width: 50%; /* Ширина контейнера, можете настроить по своему усмотрению */
+	margin: 0 auto; /* Центрирование контейнера */
+}
+
+/* Стили для точек-пагинации */
+.slick-dots {
+	position: absolute;
+	bottom: 10px; /* Расположение точек снизу */
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	bottom: -75px !important;
+}
+
+.slick-dots li {
+	width: 100px !important;
+	height: 100px !important;
+	display: inline-block;
+	margin: 0 5px; /* Расстояние между точками */
+}
+
+.slick-dots li button {
+	font-size: 0; /* Скрытие текста внутри кнопок */
+	width: 10px; /* Ширина кнопок */
+	height: 10px; /* Высота кнопок */
+	border: none;
+	border-radius: 50%; /* Делаем кнопки круглыми */
+	background-color: rgba(255, 255, 255, 0.5); /* Цвет кнопок */
+	cursor: pointer;
+	transition: background-color 0.3s ease; /* Плавное изменение цвета при hover */
+}
+
+.slick-dots li button:hover {
+	background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.slick-dots li img {
+	filter: grayscale(100%);
+}
+
+/* Возвращаем цветное изображение для активного слайда */
+.slick-dots li.slick-active img {
+	filter: grayscale(0%);
+}
+
+/* Стили для изображений слайдов */
+.slider-container img {
+	width: 100%; /* Растягиваем изображения на всю ширину контейнера */
+	height: auto; /* Автоматическое вычисление высоты */
+	border-radius: 10px;
+}
+
+.slider-container {
+	position: relative;
+	/* Стили для кнопок переключения */
+	.slick-prev,
+	.slick-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 9999; /* Установка высокого z-index */
+		width: 30px;
+		height: 30px;
+		background-color: rgba(255, 255, 255, 0);
+		border: none;
+		// border-radius: 50%;
+		color: transparent;
+		font-size: 0;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	.slick-prev {
+		left: 10px;
+	}
+
+	.slick-next {
+		right: 40px;
+	}
+
+	/* Оформление кнопок при наведении */
+	.slick-prev:hover,
+	.slick-next:hover {
+		// background-color: rgba(0, 0, 0, 0.7);
+	}
+}

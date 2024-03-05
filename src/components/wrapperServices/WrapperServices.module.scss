@@ -1,0 +1,49 @@
+@import 'src/assets/styles/variables';
+.wrapperServices {
+	height: 800px;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	padding-top: 30px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+.containerItem {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	width: 100%;
+}
+
+.containerBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.containerHeader {
+	display: flex;
+	flex-direction: column;
+}
+.containerContentHeader {
+	position: relative;
+	background-color: #2727273b;
+	padding: 20px;
+	border-radius: 5px;
+	img {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		bottom: 3px;
+		right: 3px;
+	}
+}
+.contentHeaderTitle {
+	font-size: 30px;
+	color: $accent;
+	font-weight: 800;
+}
+.contentHeaderSubtitle {
+	font-size: 15px;
+	color: $fontColor;
+}

@@ -1,0 +1,78 @@
+@import 'src/assets/styles/variables';
+.wrapperAdvantage {
+}
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	padding-top: 30px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+.containerWrapper {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+.containerItem {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.containerBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-bottom: 30px;
+}
+.containerHeader {
+	display: flex;
+	flex-direction: column;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: bold;
+	color: $accent;
+	background-color: #2727273b;
+	padding: 20px;
+	width: 100%;
+	z-index: 4;
+	border-radius: 5px;
+}
+.contentHeaderTitle {
+	width: 100%;
+	z-index: 4;
+	border-radius: 5px;
+	font-size: 49px;
+	backdrop-filter: blur(3px);
+	line-height: 1;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.contentHeaderSubtitle {
+	font-size: 15px;
+	color: $fontColor;
+}
+
+.containerItem {
+	flex: 1 0 23%;
+	display: flex;
+	border-radius: 10px;
+	padding: 20px;
+	flex-direction: column;
+	background-color: #2727273b;
+}
+
+.containerItem img {
+	width: 20%; /* Пропорция 30% */
+	margin-bottom: 10px; /* Отступ между изображением и заголовком */
+}
+
+.containerItemTitle {
+	font-size: 25px; /* Пропорция 20% */
+	margin-bottom: 10px; /* Отступ между заголовком и текстом */
+}
+
+.containerItemSubtitle {
+	font-size: 15px;
+	color: rgb(109, 109, 109);
+}

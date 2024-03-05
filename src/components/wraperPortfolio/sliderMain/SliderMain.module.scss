@@ -1,0 +1,39 @@
+.sliderContainer {
+	button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный цвет кнопок */
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+		border-radius: 4px;
+		margin-left: 10px;
+	}
+
+	button:hover {
+		background-color: rgba(0, 0, 0, 0.7); /* Цвет кнопок при наведении */
+	}
+
+	button:first-child {
+		left: 30px; /* Отступ слева для кнопки "Previous" */
+	}
+
+	button:last-child {
+		right: 10px; /* Отступ справа для кнопки "Next" */
+	}
+}
+
+.mainItemBlockSlider {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.mainItemBlockSlider img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

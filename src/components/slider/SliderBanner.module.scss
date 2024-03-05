@@ -1,0 +1,45 @@
+.sliderContainer {
+	position: relative;
+	flex: 1 1 40%;
+	overflow: hidden;
+	// height: 600px;
+	// box-shadow: -20px 9px 16px 0px rgb(57 57 57);
+}
+
+.infoSlider {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	border-radius: 8px;
+}
+
+.infoSlider img {
+	width: 100%;
+	display: none;
+}
+
+.infoSlider img.active {
+	display: block;
+}
+
+.indicators {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.indicator {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.indicator.active {
+	background-color: #333;
+}

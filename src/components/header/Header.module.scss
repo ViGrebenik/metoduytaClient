@@ -1,0 +1,139 @@
+@import 'src/assets/styles/variables';
+
+.header {
+	position: sticky;
+	z-index: 20;
+	top: 0;
+	backdrop-filter: blur(6px);
+	background: -webkit-linear-gradient(
+		89deg,
+		rgba(0, 0, 0, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(38, 39, 39, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(0, 0, 0, 0.9)
+	);
+	background: linear-gradient(
+		89deg,
+		rgba(0, 0, 0, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(38, 39, 39, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(0, 0, 0, 0.9)
+	);
+}
+
+.headerWrapper {
+	margin: 0 auto;
+	max-width: 1280px;
+	border-radius: 10px;
+}
+
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+}
+
+.logoContainer {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: inherit;
+	img {
+		width: 40px;
+		height: 40px;
+		svg {
+			path {
+				stroke: #c6aa2dff;
+			}
+		}
+	}
+}
+
+.title {
+	line-height: 1;
+	font-weight: bold;
+	font-size: 20px;
+	color: #cacaca;
+}
+
+.menu {
+	ul {
+		display: flex;
+		font-size: 16px;
+		li {
+			margin-right: 20px;
+			a {
+				text-decoration: none;
+				color: #858585;
+				font-weight: bold;
+				transition: color 0.3s;
+			}
+
+			a:hover {
+				color: #ffd622;
+			}
+		}
+	}
+}
+.dropdown {
+	position: relative;
+	.dropdownToggle {
+		color: #858585;
+		font-weight: bold;
+		cursor: pointer;
+		&:hover {
+			color: #ffd622;
+		}
+	}
+	.submenu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: -20px;
+		width: 300px;
+		z-index: 100;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+		background-color: #1f1f1fe7;
+
+		li {
+			padding: 0px 20px;
+			margin-bottom: 10px;
+			margin-top: 10px;
+
+			a {
+				color: #cdcdcd;
+				font-size: 16px;
+				font-weight: 800;
+			}
+		}
+	}
+	&:hover .submenu {
+		display: block;
+	}
+}
+
+.containerContact {
+	display: flex;
+	flex-direction: column;
+	margin-top: 3px;
+	p {
+		font-size: 20px;
+		color: #d8d8d8;
+		font-weight: 700;
+	}
+}
+.contactblok {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	img {
+		width: 18px;
+		height: 18px;
+	}
+}

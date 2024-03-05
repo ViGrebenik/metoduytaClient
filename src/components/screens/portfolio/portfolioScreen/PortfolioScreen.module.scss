@@ -1,0 +1,27 @@
+@import 'src/assets/styles/variables';
+.wrapperPortfolio {
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+.containerBlock {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+.containerHeader {
+	display: flex;
+	text-align: center;
+	margin: 10px 0px 40px 0px;
+	.contentHeaderTitle {
+		margin: 0 auto;
+		font-size: 45px;
+		color: #ffd622;
+		font-weight: 800;
+		width: 80%;
+	}
+}

@@ -1,0 +1,121 @@
+@import 'src/assets/styles/variables';
+.homeBanner {
+	padding: 40px 0px 30px 0px;
+	background: -webkit-linear-gradient(
+		89deg,
+		#000000,
+		#171717,
+		#262727,
+		#171717,
+		#000000
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		89deg,
+		#000000,
+		#171717,
+		#262727,
+		#171717,
+		#000000
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	// background: -webkit-linear-gradient(90deg, #2a2a2a, #1a1a1a);
+	// background: linear-gradient(90deg, #2a2a2a, #1a1a1a);
+}
+
+.bannerContainer {
+	margin: 0 auto;
+	max-width: 1280px;
+	border-radius: 5px;
+}
+
+.bannerInfo {
+	display: flex;
+	gap: 5px;
+}
+
+.infoTitle {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 25%;
+	h1 {
+		width: 100%;
+		z-index: 4;
+		border-radius: 5px;
+		font-size: 49px;
+		// background-color: rgb(53 53 53 / 57%);
+		padding: 10px;
+		line-height: 1;
+		font-weight: bold;
+		color: $fontColor;
+		margin-bottom: 100px;
+		span {
+			color: $accent;
+		}
+	}
+	h2 {
+		display: none;
+		text-align: end;
+		font-size: 20px;
+		line-height: 1;
+		font-weight: bold;
+		color: $fontColorAccent;
+		margin-bottom: 36px;
+		width: 100%;
+		z-index: 4;
+		border-radius: 5px;
+		background-color: rgb(53 53 53 / 57%);
+		padding: 10px;
+	}
+}
+
+.titleAction {
+	display: flex;
+	background-color: #1c1c1c;
+	border-radius: 8px;
+	align-items: center;
+	gap: 10px;
+	margin-top: 5px;
+	button {
+		padding: 15px 15px;
+		border: none;
+		border-radius: 5px;
+		font-size: 20px;
+		font-weight: bold;
+		color: $black;
+	}
+
+	p {
+		color: #8f8f8f;
+		font-size: 10px;
+	}
+}
+
+.bannerAdvantages {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.advantageItem {
+	background-color: #1c1c1c;
+	display: flex;
+	gap: 5px;
+	border-radius: 10px;
+	font-size: 1.5em;
+	padding: 10px;
+	img {
+		width: 30px;
+		height: 30px;
+	}
+}
+.advantageBlock {
+	display: flex;
+	flex-direction: column;
+}
+.advantageDescriptionMain {
+	font-size: 17px;
+	color: #ffffff;
+}
+.advantageDescription {
+	font-size: 12px;
+	color: #8f8f8f;
+}

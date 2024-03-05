@@ -1,0 +1,46 @@
+.containerObject {
+	display: flex;
+	width: 100%;
+}
+.objectSlider {
+	// flex: 1 0 50%;
+}
+.objectDescription {
+	flex: 1 0 50%;
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	font-size: 20px;
+	color: #d0d0d0;
+}
+.descriptionTitle {
+	color: rgb(255, 205, 67);
+	font-size: 40px;
+	font-weight: bold;
+}
+.descriptionInfoObject {
+	font-size: 20px;
+}
+.descriptionWorkBeenDone {
+	color: rgb(115, 115, 115);
+	font-size: 15px;
+	height: 300px;
+}
+.descriptionContainerButton {
+	display: flex;
+	gap: 10px;
+}
+.descriptionButton {
+	margin-top: 20px;
+	display: 1 0 45%;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	// height: 100px;
+	background-color: rgba(231, 191, 32, 0.75);
+	font-size: 20px;
+}

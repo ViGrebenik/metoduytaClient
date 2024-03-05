@@ -1,0 +1,64 @@
+@import 'src/assets/styles/variables';
+.WrapperTeam {
+	// background-color: #2727273b;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	padding-top: 30px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+
+.containerBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-bottom: 50px;
+}
+
+.containerHeader {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #2727273b;
+	border: 2px solid #616161;
+}
+
+.contentHeaderTitle {
+	font-size: 30px;
+	font-weight: 800;
+	color: $accent;
+}
+.contentHeaderSubtitle {
+	font-size: 20px;
+	color: $fontColorAccent;
+}
+
+.containerSubtitleTeam {
+	display: flex;
+	gap: 10px;
+	height: 200px;
+}
+.SubtitleTeamTitle {
+	flex: 1 0 25%;
+	background-color: #2727273b;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid #616161;
+}
+.SubtitleTeamSubtitle {
+	flex: 1 0 25%;
+	background-color: #2727273b;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid #616161;
+}
+.SubtitleTeamDiscription {
+	flex: 1 0 48%;
+	background-color: #2727273b;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid #616161;
+}

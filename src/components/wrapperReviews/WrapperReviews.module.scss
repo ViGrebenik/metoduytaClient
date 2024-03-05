@@ -1,0 +1,85 @@
+@import 'src/assets/styles/variables';
+.wrapperReviews {
+	// background-color: rgb(37, 37, 37);
+}
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	padding-top: 30px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+.containerBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-bottom: 50px;
+}
+.containerHeader {
+	display: flex;
+	justify-content: space-between;
+}
+
+.containerContent {
+}
+.contentHeaderTitle {
+	color: $accent;
+}
+
+.containerMain {
+	// margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	overflow: hidden;
+}
+
+.sliderContainer {
+	display: flex;
+	// transition: transform 0.5s;
+	gap: 20px;
+	height: 300px;
+}
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+
+.slider {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.item {
+	flex: 0 0 33.33%;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.prevButton,
+.nextButton {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+
+.prevButton {
+	left: 0;
+}
+
+.nextButton {
+	right: 0;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}

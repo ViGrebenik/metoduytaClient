@@ -1,0 +1,29 @@
+@import 'src/assets/styles/variables';
+.containerBreadCrumbs {
+	display: flex;
+	align-items: center;
+}
+.crumbs {
+	display: flex;
+	align-items: center;
+}
+
+.separator {
+	margin: 0 5px; /* отступ между разделителями */
+	width: 20px;
+	height: 20px;
+}
+
+.breadcrumb {
+	color: #b9b9b9; /* цвет ссылок */
+	text-decoration: none; /* убираем подчеркивание ссылок */
+	transition: color 0.3s; /* плавное изменение цвета при наведении */
+	font-size: 20px;
+	span {
+		img {
+		}
+	}
+	&:hover {
+		color: $accent; /* цвет ссылок при наведении */
+	}
+}
