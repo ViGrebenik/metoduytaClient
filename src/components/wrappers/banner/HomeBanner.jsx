@@ -23,10 +23,11 @@ const HomeBanner = () => {
 								<img src='/static/construction.svg' alt='fkk' />
 								<div className={styles.advantageBlock}>
 									<div className={styles.advantageDescriptionMain}>
-										Бесплатный замер
+										ОТ ПРОЕКТА ДО РЕАЛИЗАЦИИ
 									</div>
 									<div className={styles.advantageDescription}>
-										Встреча с инженером-сметчиком и замер помещения квартир
+										Ваш ремонт будет сделан точно в соответствии с дизайн -
+										проектом и технической документацией.
 									</div>
 								</div>
 							</div>

@@ -20,7 +20,8 @@ const CarouselTeam = ({ items }) => {
 			<Slider {...settings}>
 				{items.map((item, index) => (
 					<div key={index} className='carousel-itemTeam'>
-						<div className='carouselTitle'>ОТЗЫВЫ</div>
+						<div className='carouselTitle'>Член команды</div>
+						<div className='carouselDescription'>ФОТОГРАФИЯ</div>
 						<div className='carouselDescription'>{item}</div>
 						<div
 							className={`carouselblock ${index === 1 ? 'middle-card' : ''}`}
