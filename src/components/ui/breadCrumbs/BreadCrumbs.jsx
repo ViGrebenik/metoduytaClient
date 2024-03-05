@@ -10,7 +10,7 @@ const Breadcrumbs = ({ breadcrumbs }) => {
 					{index > 0 && (
 						<>
 							<img
-								src='/public/arrow.svg'
+								src='/static/arrow.svg'
 								alt='arrow'
 								className={styles.separator}
 							/>

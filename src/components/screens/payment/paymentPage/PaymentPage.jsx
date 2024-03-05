@@ -64,7 +64,7 @@ const PaymentPage = () => {
 							</div>
 						</div>
 						<div className={styles.actionItem}>
-							<img src='/public/paper.svg' alt='paper' />
+							<img src='/static/paper.svg' alt='paper' />
 							<div className={styles.actionItemTitle}>
 								Уже делали расчет в других компаниях?
 							</div>

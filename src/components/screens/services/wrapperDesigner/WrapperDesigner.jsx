@@ -28,7 +28,7 @@ const WrapperDesigner = () => {
 					</div>
 					<div className={styles.containerAdvantages}>
 						<div className={styles.advantagesItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.itemTitle}>Преимущество</div>
 							<div className={styles.itemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -36,7 +36,7 @@ const WrapperDesigner = () => {
 							</div>
 						</div>
 						<div className={styles.advantagesItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.itemTitle}>Преимущество</div>
 							<div className={styles.itemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -44,7 +44,7 @@ const WrapperDesigner = () => {
 							</div>
 						</div>
 						<div className={styles.advantagesItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.itemTitle}>Преимущество</div>
 							<div className={styles.itemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -52,7 +52,7 @@ const WrapperDesigner = () => {
 							</div>
 						</div>
 						<div className={styles.advantagesItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.itemTitle}>Преимущество</div>
 							<div className={styles.itemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -62,7 +62,7 @@ const WrapperDesigner = () => {
 					</div>
 					<div className={styles.containerDescription}>
 						<span>ПРИМЕРЫ РАБОТ</span>
-						<img src='/public/arrowService.svg' alt='arrow' />
+						<img src='/static/arrowService.svg' alt='arrow' />
 					</div>
 					<div className={styles.containerExamples}>
 						<DesignerItem />

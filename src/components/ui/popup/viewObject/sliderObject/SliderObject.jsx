@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import './SliderObject.scss'
 
 const SliderObject = () => {
-	const baseUrl = '../../../../../../public/archive'
+	const baseUrl = '/static/archive'
 	const settings = {
 		customPaging: function (i) {
 			return (

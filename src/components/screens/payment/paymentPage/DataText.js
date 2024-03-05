@@ -13,8 +13,8 @@ export const services = [
 ]
 
 export const advantages = [
-	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/public/paper.svg' },
-	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/public/paper.svg' },
-	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/public/paper.svg' },
-	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/public/paper.svg' }
+	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/static/paper.svg' },
+	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/static/paper.svg' },
+	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/static/paper.svg' },
+	{ title: 'ПРЕИМЦЩЕСТВА', subTitle: 'ОПИСАНИЕ', iconImg: '/static/paper.svg' }
 ]

@@ -20,7 +20,7 @@ const HomeBanner = () => {
 						</h2>
 						<div className={styles.bannerAdvantages}>
 							<div className={styles.advantageItem}>
-								<img src='../../../public/construction.svg' alt='fkk' />
+								<img src='/static/construction.svg' alt='fkk' />
 								<div className={styles.advantageBlock}>
 									<div className={styles.advantageDescriptionMain}>
 										Бесплатный замер
@@ -31,7 +31,7 @@ const HomeBanner = () => {
 								</div>
 							</div>
 							<div className={styles.advantageItem}>
-								<img src='../../../public/construction.svg' alt='fkk' />
+								<img src='/static/construction.svg' alt='fkk' />
 								<div className={styles.advantageBlock}>
 									<div className={styles.advantageDescriptionMain}>
 										Договор с фиксированной стоимостью
@@ -42,7 +42,7 @@ const HomeBanner = () => {
 								</div>
 							</div>
 							<div className={styles.advantageItem}>
-								<img src='../../../public/construction.svg' alt='fkk' />
+								<img src='/static/construction.svg' alt='fkk' />
 								<div className={styles.advantageBlock}>
 									<div className={styles.advantageDescriptionMain}>
 										ГАРАНТИЯ ОТ 2 ЛЕТ
@@ -64,9 +64,9 @@ const HomeBanner = () => {
 					</div>
 					<SliderBanner
 						slides={[
-							'../../../public/archive/item01.jpg',
-							'../../../public/archive/item02.jpg',
-							'../../../public/archive/item03.jpg'
+							'/static/archive/item01.jpg',
+							'/static/archive/item02.jpg',
+							'/static/archive/item03.jpg'
 						]}
 					/>
 				</div>

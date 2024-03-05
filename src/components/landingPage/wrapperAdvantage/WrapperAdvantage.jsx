@@ -15,7 +15,7 @@ const WrapperAdvantage = () => {
 					</div>
 					<div className={styles.containerWrapper}>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -23,7 +23,7 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -31,7 +31,7 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -39,7 +39,7 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -47,7 +47,7 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -55,7 +55,7 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -63,7 +63,7 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
@@ -71,7 +71,7 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 						<div className={styles.containerItem}>
-							<img src='../../../../public/construction.svg' alt='logo' />
+							<img src='/static/construction.svg' alt='logo' />
 							<div className={styles.containerItemTitle}>Преимущество</div>
 							<div className={styles.containerItemSubtitle}>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem

@@ -14,9 +14,9 @@ const SliderMain = () => {
 	}
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const slides = [
-		'../../../public/archive/item01.jpg',
-		'../../../public/archive/item02.jpg',
-		'../../../public/archive/item03.jpg'
+		'/static/archive/item01.jpg',
+		'/static/archive/item02.jpg',
+		'/static/archive/item03.jpg'
 	]
 	const nextSlide = () => {
 		setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide + 1)
