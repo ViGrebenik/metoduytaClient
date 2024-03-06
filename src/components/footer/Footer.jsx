@@ -1,5 +1,5 @@
+import FeedbackForm from '../ui/formFeedback/FormFeedback'
 import styles from './Footer.module.scss'
-import FeedbackFormFooter from './feedbackFormInput/FeedbackFormFooter'
 const Footer = () => {
 	return (
 		<div className={styles.wrapperFooter}>
@@ -33,7 +33,7 @@ const Footer = () => {
 								</div>
 							</div>
 						</div>
-						<FeedbackFormFooter />
+						<FeedbackForm />
 					</div>
 				</div>
 				<div className={styles.containerBasement}>

@@ -120,14 +120,14 @@ const NavBar = () => {
 						КАЛЬКУЛЯТОР
 					</Link>
 				</li>{' '}
-				<li>
+				{/* <li>
 					<Link
 						to={'/blog'}
 						className={currentPage === '/blog' ? styles.active : ''}
 					>
 						БЛОГ
 					</Link>
-				</li>
+				</li> */}
 				<li>
 					<Link
 						to={'/aboutUs'}

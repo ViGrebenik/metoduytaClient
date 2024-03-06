@@ -1,7 +1,9 @@
+import ContactsPage from './contactsPage/ContactsPage'
+
 const Contacts = () => {
 	return (
 		<>
-			<div className='wrapper-inner-page'>Contacts</div>
+			<ContactsPage />
 		</>
 	)
 }
