@@ -1,8 +1,10 @@
+import AboutUsPage from './aboutUsPage/AboutUsPage'
+
 const AboutUs = () => {
 	return (
-		<>
-			<div className='wrapper-inner-page'>About Us</div>
-		</>
+		<section>
+			<AboutUsPage />
+		</section>
 	)
 }
 
