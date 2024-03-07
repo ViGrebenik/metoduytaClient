@@ -1,5 +1,6 @@
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import FeedbackForm from '../../../ui/formFeedback/FormFeedback'
+import SocialLink from '../../../ui/socialLink/SocialLink'
 import WrapperReviews from '../../../wrapperReviews/WrapperReviews'
 import WrapperServices from '../../../wrapperServices/WrapperServices'
 import styles from './ContactsPage.module.scss'
@@ -64,15 +65,9 @@ const ContactsPage = () => {
 										</div>
 									</div>
 								</div>
-								<div className={styles.itemSocialLink}>
-									<img src='/static/socialyoutube.svg' alt='logo' />
-								</div>
-								<div className={styles.itemSocialLink}>
-									<img src='/static/socialTelegram.svg' alt='logo' />
-								</div>
-								<div className={styles.itemSocialLink}>
-									<img src='/static/socialInstagram.svg' alt='logo' />
-								</div>
+								<SocialLink logoSvg={'/static/socialyoutube.svg'} />
+								<SocialLink logoSvg={'/static/socialTelegram.svg'} />
+								<SocialLink logoSvg={'/static/socialInstagram.svg'} />
 							</div>
 						</div>
 						<div className={styles.containerContactsFormAction}>

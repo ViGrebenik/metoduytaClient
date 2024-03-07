@@ -5,6 +5,7 @@ import NotFound from '../components/screens/not-found/NotFound'
 import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 import { routes } from './routes.data'
+import FooterSignature from '../components/footer/footerSignature/FooterSignature'
 
 const Router = () => {
 	return (
@@ -21,6 +22,7 @@ const Router = () => {
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 			<Footer />
+			<FooterSignature />
 		</BrowserRouter>
 	)
 }

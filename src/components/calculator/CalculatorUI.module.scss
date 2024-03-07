@@ -1,0 +1,209 @@
+@import 'src/assets/styles/variables';
+.containerCalculator {
+	display: flex;
+	background-color: $bgdefault;
+	border-radius: 10px;
+	gap: 10px;
+}
+.containerHeader {
+	display: flex;
+	flex-direction: column;
+	.contentHeaderTitle {
+		font-size: 25px;
+		color: #ffd622;
+		font-weight: 800;
+	}
+	.contentHeaderSubtitle {
+		font-size: 15px;
+		color: $fontColorAccent;
+		font-weight: 800;
+	}
+}
+
+.calculatorActionFormBlock {
+	flex: 1 0 48%;
+	// background-color: $bgDefaultAccent;
+	// border-radius: 10px;
+	margin: 20px;
+	.containerHeaderForm {
+		display: flex;
+		flex-direction: column;
+		padding-left: 20px;
+		.contentHeaderTitleForm {
+			font-size: 25px;
+			color: $fontColorAccent;
+			font-weight: 800;
+		}
+		.contentHeaderSubtitleForm {
+			font-size: 15px;
+			color: $fontColorAccent;
+			font-weight: 800;
+		}
+	}
+}
+
+.calculatorBlock {
+	display: flex;
+	padding: 20px;
+	flex-direction: column;
+	gap: 16px;
+	flex: 1 0 48%;
+	margin: 0 auto;
+	border-radius: 4px;
+	align-items: center;
+}
+
+.calculatorForm {
+	.blockTypeServices {
+		margin-bottom: 10px;
+		.typeServices {
+			display: flex;
+			gap: 10px;
+		}
+	}
+	.numberOfRooms {
+		display: flex;
+	}
+
+	& label {
+		display: block;
+		font-size: 20px;
+		font-weight: bold;
+		color: #646464;
+	}
+
+	& input[type='range'] {
+		display: block;
+		width: 100%;
+		padding: 8px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		font-size: 14px;
+		line-height: 1.5;
+		color: #333;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 4px 1px #333;
+		}
+	}
+
+	& input[type='radio'] {
+		margin-right: 8px;
+	}
+
+	& button[type='button'] {
+		display: block;
+		padding: 8px 16px;
+		border: none;
+		border-radius: 4px;
+		background-color: #333;
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #444;
+		}
+
+		&:disabled {
+			background-color: #ccc;
+			cursor: not-allowed;
+		}
+	}
+
+	& #numberOfRooms {
+		display: inline-block;
+		width: 32px;
+		text-align: center;
+		font-size: 14px;
+		color: #333;
+	}
+
+	& .roomsButtons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.numberOfRoomsBlock {
+	display: flex;
+	margin-bottom: 10px;
+	.containerNumberOfRooms {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		.numberOfRoomsItem {
+			display: flex;
+			flex-direction: column;
+			width: 200px;
+			// background-color: $bgDefaultAccent;
+			.roomsItemButton {
+				display: flex;
+				justify-content: space-around;
+				border-radius: 5px;
+				background-color: #333;
+				span {
+					color: $bgdefault;
+				}
+				button {
+					background-color: #333;
+					padding: 5px;
+					img {
+						width: 30px;
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.checkBox {
+	display: block;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	border: 3px solid rgba(255, 255, 255, 0);
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.checkBoxBlock {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #646464;
+	.checkBox {
+		div {
+			width: 40px;
+			height: 40px;
+			background-color: #fff;
+			top: -52px;
+			left: -52px;
+			position: absolute;
+			transform: rotateZ(45deg);
+			z-index: 100;
+		}
+	}
+
+	.checkBox input[type='checkbox']:checked + div {
+		left: -10px;
+		top: -10px;
+	}
+
+	.checkBox input[type='checkbox'] {
+		position: absolute;
+		left: 50px;
+		visibility: hidden;
+	}
+
+	.transition {
+		transition: 300ms ease;
+	}
+}

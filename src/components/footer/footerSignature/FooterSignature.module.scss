@@ -1,0 +1,33 @@
+@import 'src/assets/styles/variables';
+.wrapperFooter {
+	box-shadow: 3px -20px 20px 20px rgb(0 0 0 / 39%);
+	background-color: rgba(0, 0, 0, 0.5490196078);
+	border-top: 1px solid #3d3d3d;
+}
+.containerBasement {
+	padding: 10px 10px 10px 10px;
+	display: flex;
+	background-color: rgba(39, 39, 39, 0.231372549);
+}
+.containerBasementBorders {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	line-height: 1.2;
+
+	.containerInfoRights {
+		color: $fontColorAccent;
+		font-size: 12px;
+		span {
+			color: $fontColor;
+		}
+	}
+	.containerDeveloper {
+		color: $fontColor;
+		font-size: 12px;
+		align-items: center;
+		display: flex;
+	}
+}

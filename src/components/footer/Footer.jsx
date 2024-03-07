@@ -1,66 +1,31 @@
-import FeedbackForm from '../ui/formFeedback/FormFeedback'
+import NavBar from '../header/NavBar'
+import SocialLink from '../ui/socialLink/SocialLink'
 import styles from './Footer.module.scss'
 const Footer = () => {
 	return (
 		<div className={styles.wrapperFooter}>
 			<div className={styles.container}>
-				<div className={styles.containerBlock}>
-					<div className={styles.containerFeedback}>
-						<div className={styles.feedbackBlockQuestion}>
-							<div className={styles.feedbackQuestion}>
-								<div className={styles.feedbackQuestionTitle}>
-									{' '}
-									ОСТАЛИСЬ ВОПРОСЫ
-								</div>
-								<div className={styles.feedbackQuestionSubtitle}>
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								</div>
-							</div>
-							<div className={styles.feedbackQuestion}>
-								<div className={styles.feedbackQuestionTitle}>
-									ОСТАЛИСЬ ВОПРОСЫ
-								</div>
-								<div className={styles.feedbackQuestionSubtitle}>
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								</div>
-							</div>
-							<div className={styles.feedbackQuestion}>
-								<div className={styles.feedbackQuestionTitle}>
-									ОСТАЛИСЬ ВОПРОСЫ
-								</div>
-								<div className={styles.feedbackQuestionSubtitle}>
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								</div>
-							</div>
-						</div>
-						<FeedbackForm />
-					</div>
-				</div>
 				<div className={styles.containerBasement}>
 					<div className={styles.containerBasementBorders}>
 						<div className={styles.basementNavigation}>
-							<div className={styles.navigationURL}>
-								{/* <ul> */}
-								<li>УСЛУГИ</li>
-								<li>ПРИМЕРЫ РАБОТ</li>
-								<li>ОПЛАТА</li>
-								<li>КАЛЬКУЛЯТОР</li>
-								<li>О НАС</li>
-								<li>КОНТАКТЫ</li>
-								{/* </ul> */}
-							</div>
+							<NavBar />
 							<div className={styles.navigationInfoCampania}>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+								<span>Метод Уюта </span>- комплексный ремонт и дизайн.
+								<br />
+								Санкт-Петербург, Москва.
 							</div>
 							<div className={styles.navigationInfoSocialLink}>
-								<div className={styles.socialLink}></div>
-								<div className={styles.socialLink}></div>
-								<div className={styles.socialLink}></div>
+								<SocialLink logoSvg={'/static/socialyoutube.svg'} />
+								<SocialLink logoSvg={'/static/socialTelegram.svg'} />
+								<SocialLink logoSvg={'/static/socialInstagram.svg'} />
 							</div>
 						</div>
 						<div className={styles.basementInfo}>
-							<div className={styles.infoAdress}>Адресс</div>
-							<div className={styles.infoContact}>Контакты</div>
+							<div className={styles.infoAdress}>
+								м. Пионерская Проспект Королёва, 7, Санкт-Петербург, 197349, БЦ
+								... , офис ...
+							</div>
+							<div className={styles.infoContact}>+ 7 999 999 99 99</div>
 						</div>
 					</div>
 				</div>

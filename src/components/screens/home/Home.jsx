@@ -1,3 +1,4 @@
+import FooterQuestion from '../../footer/footerQuestion/FooterQuestion'
 import WrapperAdvantage from '../../landingPage/wrapperAdvantage/WrapperAdvantage'
 import WrapperFAQ from '../../landingPage/wrapperFAQ/WrapperFAQ'
 import WrapperStagesWork from '../../landingPage/wrapperStageWork/WrapperStagesWork'
@@ -33,6 +34,9 @@ const Home = () => {
 			</section>
 			<section>
 				<WrapperFAQ />
+			</section>
+			<section>
+				<FooterQuestion />
 			</section>
 		</>
 	)

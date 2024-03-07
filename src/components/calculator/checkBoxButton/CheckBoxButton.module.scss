@@ -1,0 +1,34 @@
+@import 'src/assets/styles/variables';
+.buttonsBlock {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 10px 0px;
+
+	.buttonWrapper {
+		margin-bottom: 10px;
+	}
+
+	button {
+		padding: 10px 20px;
+		margin-right: 10px;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		background-color: #f0f0f0;
+
+		&.checked {
+			background-color: $accent;
+			color: white;
+		}
+	}
+
+	input[type='checkbox'] {
+		display: none;
+	}
+
+	input[type='checkbox']:checked + button {
+		background-color: $accent;
+		color: white;
+	}
+}

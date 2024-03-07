@@ -1,3 +1,4 @@
+import CalculatorUI from '../../../calculator/CalculatorUI'
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import styles from './CalculatorPage.module.scss'
 import { dataText } from './DataText'
@@ -28,7 +29,9 @@ const CalculatorPage = () => {
 						<div className={styles.descriptionItem}>{dataText.textO1}</div>
 						<div className={styles.descriptionItem}>{dataText.textO2}</div>
 					</div>
-					<div className={styles.containerCalculator}>тут калькулятор</div>
+					<div className={styles.containerCalculator}>
+						<CalculatorUI />
+					</div>
 					<div className={styles.containerActions}>
 						<div className={styles.actionItem}>
 							<div className={styles.actionItemTitle}>
