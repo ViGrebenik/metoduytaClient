@@ -1,0 +1,17 @@
+@import 'src/assets/styles/variables';
+.blockTypeServices {
+	margin: 10px 0px;
+	.typeServices {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-top: 10px;
+		gap: 10px;
+		button {
+			&.selected {
+				background-color: $accent;
+				color: black;
+			}
+		}
+	}
+}

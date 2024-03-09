@@ -1,28 +1,22 @@
-import { useCallback, useState } from 'react'
+import { useCallback } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleRoomOption } from '../state/useCalculatorStore'
 import styles from './CheckBoxButton.module.scss'
 
 const CheckboxButtons = () => {
-	const [buttonsState, setButtonsState] = useState([
-		{ name: 'Выровнять полы', checked: false },
-		{ name: 'Выровнять стены', checked: false },
-		{ name: 'Сантехнические работы', checked: false },
-		{ name: 'Электромонтажные работы', checked: false }
-	])
+	const dispatch = useDispatch()
+	const roomOptions = useSelector(state => state.calculator.roomOptions)
 
-	const handleButtonClick = useCallback(index => {
-		setButtonsState(prevState => {
-			const newState = [...prevState]
-			newState[index] = {
-				...newState[index],
-				checked: !newState[index].checked
-			}
-			return newState
-		})
-	}, [])
+	const handleButtonClick = useCallback(
+		index => {
+			dispatch(toggleRoomOption({ index }))
+		},
+		[dispatch]
+	)
 
 	return (
 		<div className={styles.buttonsBlock}>
-			{buttonsState.map((button, index) => (
+			{roomOptions.map((button, index) => (
 				<div key={index} className={styles.buttonWrapper}>
 					<input
 						type='checkbox'

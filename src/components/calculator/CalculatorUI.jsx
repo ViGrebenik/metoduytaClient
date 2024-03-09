@@ -1,54 +1,75 @@
-import { useCallback, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import FeedbackForm from '../ui/formFeedback/FormFeedback'
 import styles from './CalculatorUI.module.scss'
-import CheckboxButtons from './checkBoxButton/CheckBoxButton'
+import {
+	setBuildingType,
+	setNumberOfBathrooms,
+	setNumberOfRooms,
+	setRoomArea
+} from './state/useCalculatorStore'
+import YourComponent from './yourComponent/YourComponent'
+import { selectTotalCost } from './state/totalCost'
 
 const CalculatorUI = () => {
-	const [roomArea, setRoomArea] = useState(0)
+	const dispatch = useDispatch()
 
-	// тип жилья
-	const [buildingType, setBuildingType] = useState('')
+	const roomArea = useSelector(state => state.calculator.roomArea)
+	const buildingType = useSelector(state => state.calculator.buildingType)
+	const numberOfRooms = useSelector(state => state.calculator.numberOfRooms)
+	const numberOfBathrooms = useSelector(
+		state => state.calculator.numberOfBathrooms
+	)
+	const totalCost = useSelector(selectTotalCost)
+	console.log('totalCost', totalCost)
+
+	const handleRoomAreaChange = newArea => {
+		dispatch(setRoomArea({ ...roomArea, value: Number(newArea) }))
+	}
+
 	const handleBuildingTypeChange = type => {
-		if (buildingType === type) {
-			setBuildingType('')
-		} else {
-			setBuildingType(type)
+		dispatch(setBuildingType(type))
+	}
+
+	const RoomsPlus = type => {
+		if (type === 'Комнаты') {
+			dispatch(
+				setNumberOfRooms({
+					value: numberOfRooms.value + 1,
+					costPerUnit: numberOfRooms.costPerUnit
+				})
+			)
+		} else if (type === 'Санузлы') {
+			dispatch(
+				setNumberOfBathrooms({
+					value: numberOfBathrooms.value + 1,
+					costPerUnit: numberOfBathrooms.costPerUnit
+				})
+			)
 		}
 	}
 
-	const handleRoomAreaChange = event => {
-		setRoomArea(event.target.value)
-	}
-
-	// колличество комнат
-	const [numberOfRooms, setNumberOfRooms] = useState(0)
-	const [numberOfBathroom, setNumberOfBathroom] = useState(0)
-
-	const RoomsPlus = useCallback(
-		type => {
-			setNumberOfRooms(prevRooms =>
-				type === 'Комнаты' ? prevRooms + 1 : prevRooms
+	const RoomsMinus = type => {
+		if (type === 'Комнаты') {
+			dispatch(
+				setNumberOfRooms({
+					value:
+						numberOfRooms.value > 1
+							? numberOfRooms.value - 1
+							: numberOfRooms.value,
+					costPerUnit: numberOfRooms.costPerUnit
+				})
 			)
-			setNumberOfBathroom(prevBathroom =>
-				type === 'Санузлы' ? prevBathroom + 1 : prevBathroom
+		} else if (type === 'Санузлы') {
+			dispatch(
+				setNumberOfBathrooms({
+					value:
+						numberOfBathrooms.value > 1
+							? numberOfBathrooms.value - 1
+							: numberOfBathrooms.value,
+					costPerUnit: numberOfBathrooms.costPerUnit
+				})
 			)
-		},
-		[setNumberOfRooms, setNumberOfBathroom]
-	)
-
-	const RoomsMinus = useCallback(
-		type => {
-			if (type === 'Комнаты' && numberOfRooms > 1) {
-				setNumberOfRooms(prevRooms => prevRooms - 1)
-			} else if (type === 'Санузлы' && numberOfBathroom > 1) {
-				setNumberOfBathroom(prevBathroom => prevBathroom - 1)
-			}
-		},
-		[numberOfRooms, numberOfBathroom, setNumberOfRooms, setNumberOfBathroom]
-	)
-
-	const calculateCost = () => {
-		// Calculate the renovation cost based on the form data
+		}
 	}
 
 	return (
@@ -65,12 +86,7 @@ const CalculatorUI = () => {
 				<div className={styles.calculatorForm}>
 					<form>
 						<div className={styles.blockTypeServices}>
-							<label htmlFor='buildingType'>Тип ремонта</label>
-							<div className={styles.typeServices}>
-								<button type='button'>ДИЗАЙНЕРСКИЙ</button>
-								<button type='button'>КОСМЕТИЧЕСКИЙ</button>
-								<button type='button'>КАПИТАЛЬНЫЙ</button>
-							</div>
+							<YourComponent />
 						</div>
 						<div className={styles.blockTypeServices}>
 							<label htmlFor='buildingType'>Тип жилья:</label>
@@ -79,8 +95,8 @@ const CalculatorUI = () => {
 									<label className={styles.checkBox}>
 										<input
 											onChange={() => handleBuildingTypeChange('новостройка')}
-											type='checkbox'
 											checked={buildingType === 'новостройка'}
+											type='checkbox'
 										/>
 										<div className={styles.transition}></div>
 									</label>
@@ -89,8 +105,8 @@ const CalculatorUI = () => {
 								<div className={styles.checkBoxBlock}>
 									<label className={styles.checkBox}>
 										<input
-											onChange={() => handleBuildingTypeChange('ВТОРИЧКА')}
 											type='checkbox'
+											onChange={() => handleBuildingTypeChange('ВТОРИЧКА')}
 											checked={buildingType === 'ВТОРИЧКА'}
 										/>
 										<div className={styles.transition}></div>
@@ -100,17 +116,24 @@ const CalculatorUI = () => {
 							</div>
 						</div>
 						{/* Блок range */}
-						<div>
-							<label htmlFor='roomArea'>Площадь помещения</label>
-							<input
-								type='range'
-								id='roomArea'
-								min='0'
-								max='100'
-								value={roomArea}
-								onChange={handleRoomAreaChange}
-							/>
-							<span>{roomArea} m2</span>
+						<div className={styles.rangeOfRoomBlock}>
+							<label htmlFor='roomArea'>
+								Площадь помещения: <span>{roomArea.value}m²</span>
+							</label>
+							<div className={styles.customRange}>
+								<input
+									type='range'
+									min={0} // Set the minimum value
+									max={100} // Set the maximum value
+									value={roomArea.value}
+									onChange={e => handleRoomAreaChange(e.target.value)}
+									className={styles.input}
+								/>
+								<div
+									className={styles.fill}
+									style={{ width: `${roomArea.value}%` }}
+								></div>
+							</div>
 						</div>
 						{/* Блок комнаты */}
 						<div className={styles.numberOfRoomsBlock}>
@@ -121,7 +144,7 @@ const CalculatorUI = () => {
 										<button type='button' onClick={() => RoomsMinus('Комнаты')}>
 											<img src='/static/minus.svg' alt='plus' />
 										</button>
-										<span>{numberOfRooms}</span>
+										{numberOfRooms.value}
 										<button type='button' onClick={() => RoomsPlus('Комнаты')}>
 											<img src='/static/plus.svg' alt='plus' />
 										</button>
@@ -133,7 +156,7 @@ const CalculatorUI = () => {
 										<button type='button' onClick={() => RoomsMinus('Санузлы')}>
 											<img src='/static/minus.svg' alt='plus' />
 										</button>
-										<span>{numberOfBathroom}</span>
+										<span>{numberOfBathrooms.value}</span>
 										<button type='button' onClick={() => RoomsPlus('Санузлы')}>
 											<img src='/static/plus.svg' alt='plus' />
 										</button>
@@ -143,13 +166,8 @@ const CalculatorUI = () => {
 						</div>
 						<div>
 							<label>Доп. работы</label>
-							<div>
-								<CheckboxButtons />
-							</div>
+							<div>{/* <CheckboxButtons /> */}</div>
 						</div>
-						{/* <button type='button' onClick={calculateCost}>
-							Calculate cost
-						</button> */}
 					</form>
 				</div>
 			</div>
@@ -160,7 +178,7 @@ const CalculatorUI = () => {
 					</div>
 				</div>
 				<div className={styles.containerHeaderForm}>
-					<div className={styles.contentHeaderTitleForm}>450 058 руб.</div>
+					<div className={styles.contentHeaderTitleForm}>{totalCost}</div>
 				</div>
 				<div className={styles.containerHeaderForm}>
 					<div className={styles.contentHeaderSubtitleForm}>
