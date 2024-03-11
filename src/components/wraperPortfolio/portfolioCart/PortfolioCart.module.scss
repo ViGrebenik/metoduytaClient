@@ -1,0 +1,54 @@
+@import 'src/assets/styles/variables';
+.mainItemBlockSlider {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 10px;
+	height: 400px; /* Высота блока, подставьте нужное значение */
+}
+
+.mainItemContent {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+}
+.contentItemTitle {
+}
+.titleService {
+	font-size: 20px;
+	font-weight: 800;
+	color: $accent;
+}
+.titleCheck {
+	font-size: 20px;
+	font-weight: 800;
+	color: $fontColorAccent;
+	img {
+		position: relative;
+		top: 3px;
+		left: -5px;
+		width: 30px;
+		height: 30px;
+	}
+}
+.contentItemSubtitle {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	flex-direction: column;
+}
+.subtitleAddress {
+	color: black;
+	font-weight: 800;
+	padding: 0px 20px;
+	border-radius: 5px;
+	background-color: $accent;
+	font-size: 20px;
+}
+.subtitleQuadrature {
+	font-weight: 800;
+	color: $fontColorAccent;
+	margin-bottom: 5px;
+	text-align: end;
+	font-size: 20px;
+}

@@ -1,21 +1,18 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
+import CheckboxButtons from '../../calculator/checkBoxButton/CheckBoxButton'
 import styles from './FormFeedback.module.scss'
 
 const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
 	const [name, setName] = useState('')
 	const [phone, setPhone] = useState('')
 	const [question, setQuestion] = useState('')
-	const [contactMethods, setContactMethods] = useState([])
 
-	const handleContactMethodChange = event => {
-		const method = event.target.value
-		if (contactMethods.includes(method)) {
-			setContactMethods(contactMethods.filter(m => m !== method))
-		} else {
-			setContactMethods([...contactMethods, method])
-		}
-	}
+	const [buttonsState, setButtonsState] = useState([
+		{ name: 'Telegram', checked: false },
+		{ name: 'Whatsapp', checked: false },
+		{ name: 'По телефону', checked: false }
+	])
 
 	return (
 		<div className={styles.feedbackForm}>
@@ -48,39 +45,16 @@ const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
 						/>
 					</div>
 				)}
-				<div>
+				<div className={styles.headerCheckBox}>
 					<label>Как удобно связаться ?</label>
-					<div>
-						<label>
-							<input
-								type='checkbox'
-								value='telegram'
-								checked={contactMethods.includes('telegram')}
-								onChange={handleContactMethodChange}
-							/>
-							Telegram
-						</label>
-						<label>
-							<input
-								type='checkbox'
-								value='whatsapp'
-								checked={contactMethods.includes('whatsapp')}
-								onChange={handleContactMethodChange}
-							/>
-							Whatsapp
-						</label>
-						<label>
-							<input
-								type='checkbox'
-								value='phone'
-								checked={contactMethods.includes('phone')}
-								onChange={handleContactMethodChange}
-							/>
-							По телефону
-						</label>
-					</div>
+					<CheckboxButtons
+						buttonsState={buttonsState}
+						setButtonsState={setButtonsState}
+					/>
 				</div>
-				<button type='submit'>Получить rонсультация</button>
+				<button className={styles.postData} type='submit'>
+					Получить rонсультация
+				</button>
 			</form>
 		</div>
 	)

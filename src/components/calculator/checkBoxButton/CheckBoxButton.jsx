@@ -3,16 +3,19 @@ import { useCallback } from 'react'
 import styles from './CheckBoxButton.module.scss'
 
 const CheckboxButtons = ({ buttonsState, setButtonsState }) => {
-	const handleButtonClick = useCallback(index => {
-		setButtonsState(prevState => {
-			const newState = [...prevState]
-			newState[index] = {
-				...newState[index],
-				checked: !newState[index].checked
-			}
-			return newState
-		})
-	}, [])
+	const handleButtonClick = useCallback(
+		index => {
+			setButtonsState(prevState => {
+				const newState = [...prevState]
+				newState[index] = {
+					...newState[index],
+					checked: !newState[index].checked
+				}
+				return newState
+			})
+		},
+		[setButtonsState]
+	)
 
 	return (
 		<div className={styles.buttonsBlock}>

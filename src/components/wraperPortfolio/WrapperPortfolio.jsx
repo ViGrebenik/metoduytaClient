@@ -1,6 +1,6 @@
 import Button from '../ui/button/Button'
 import styles from './WrapperPortfolio.module.scss'
-import SliderMain from './sliderMain/SliderMain'
+import PortfolioCart from './portfolioCart/PortfolioCart'
 
 const WrapperPortfolio = () => {
 	return (
@@ -18,70 +18,23 @@ const WrapperPortfolio = () => {
 						</div>
 						<Button
 							title={'ПОСМОТРЕТЬ ВСЕ РАБОТЫ'}
-							fontSize={'22px'}
+							fontSize={'16px'}
 							redirectTo={'/portfolio'}
+							pd={'20px 20px'}
 						/>
 					</div>
 					<div className={styles.containerMain}>
 						<div className={styles.containerMainItem}>
-							<div className={styles.mainItemBlockSlider}>
-								<SliderMain />
-							</div>
-							<div className={styles.mainItemContent}>
-								<div className={styles.contentItemTitle}>
-									<div className={styles.titleService}>КАПИТАЛЬНЫЙ РЕМОНТ</div>
-									<div className={styles.titleCheck}>СТОИМОСТЬ</div>
-								</div>
-								<div className={styles.contentItemSubtitle}>
-									<div className={styles.subtitleAddress}>АДРЕСС</div>
-									<div className={styles.subtitleQuadrature}>ХХ М2</div>
-								</div>
-							</div>
+							<PortfolioCart />
 						</div>
 						<div className={styles.containerMainItem}>
-							<div className={styles.mainItemBlockSlider}>
-								<SliderMain />
-							</div>
-							<div className={styles.mainItemContent}>
-								<div className={styles.contentItemTitle}>
-									<div className={styles.titleService}>КАПИТАЛЬНЫЙ РЕМОНТ</div>
-									<div className={styles.titleCheck}>СТОИМОСТЬ</div>
-								</div>
-								<div className={styles.contentItemSubtitle}>
-									<div className={styles.subtitleAddress}>АДРЕСС</div>
-									<div className={styles.subtitleQuadrature}>ХХ М2</div>
-								</div>
-							</div>
+							<PortfolioCart />
 						</div>
 						<div className={styles.containerMainItem}>
-							<div className={styles.mainItemBlockSlider}>
-								<SliderMain />
-							</div>
-							<div className={styles.mainItemContent}>
-								<div className={styles.contentItemTitle}>
-									<div className={styles.titleService}>КАПИТАЛЬНЫЙ РЕМОНТ</div>
-									<div className={styles.titleCheck}>СТОИМОСТЬ</div>
-								</div>
-								<div className={styles.contentItemSubtitle}>
-									<div className={styles.subtitleAddress}>АДРЕСС</div>
-									<div className={styles.subtitleQuadrature}>ХХ М2</div>
-								</div>
-							</div>
+							<PortfolioCart />
 						</div>
 						<div className={styles.containerMainItem}>
-							<div className={styles.mainItemBlockSlider}>
-								<SliderMain />
-							</div>
-							<div className={styles.mainItemContent}>
-								<div className={styles.contentItemTitle}>
-									<div className={styles.titleService}>КАПИТАЛЬНЫЙ РЕМОНТ</div>
-									<div className={styles.titleCheck}>СТОИМОСТЬ</div>
-								</div>
-								<div className={styles.contentItemSubtitle}>
-									<div className={styles.subtitleAddress}>АДРЕСС</div>
-									<div className={styles.subtitleQuadrature}>ХХ М2</div>
-								</div>
-							</div>
+							<PortfolioCart />
 						</div>
 					</div>
 				</div>

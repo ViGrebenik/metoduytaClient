@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
-$accent: #ffd622;
+$accent: #f3c910ed;
 $fontColor: #989898;
 $fontColorAccent: #d3d3d3d9;
 $black: #202020;
@@ -9,8 +9,7 @@ $white: #c9c9c9;
 $bgdefault: hsla(0, 0%, 11%, 0.85); // написть цвет
 $bgDefaultAccent: #989898; // написать цвет
 
-$bgDefaultAccentBlock: #14141473;
-
+$bgDefaultAccentBlock: rgb(21 21 21);
 $default-font: 'Sofia Sans', sans-serif;
 
 $mobile: 480px;

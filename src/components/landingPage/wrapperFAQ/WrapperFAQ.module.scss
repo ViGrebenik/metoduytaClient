@@ -5,15 +5,13 @@
 .container {
 	margin: 0 auto;
 	max-width: 1280px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	border-radius: 10px;
 }
 
 .containerBlock {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
-	padding-bottom: 50px;
 }
 
 .containerHeader {
@@ -24,9 +22,9 @@
 .contentHeaderTitle {
 	font-size: 30px;
 	color: $accent;
-	background-color: #2727273b;
+	font-weight: 800;
 	border-radius: 5px;
-	padding: 20px;
+	padding: 10px;
 }
 
 .containerFAQ {
@@ -44,21 +42,26 @@
 		cursor: pointer;
 		padding: 10px;
 		margin-bottom: 10px;
-		border: 1px solid #3f3f3f;
 		border-radius: 10px;
-		background-color: #3f3f3f;
+		background-color: $bgDefaultAccentBlock;
 		transition: background-color 0.3s;
 
 		&:hover {
-			background-color: #4d4d4d;
+			background-color: $bgDefaultAccentBlock;
 		}
 
 		.questionText {
-			font-weight: bold;
+			padding-left: 10px;
+			color: $fontColorAccent;
+			font-weight: 800;
 		}
 
 		.answer {
-			padding: 10px;
+			border-top: 2px solid;
+			font-weight: 800;
+			line-height: 1;
+			color: $fontColor;
+			padding: 20px 10px;
 			margin-top: 10px;
 		}
 	}

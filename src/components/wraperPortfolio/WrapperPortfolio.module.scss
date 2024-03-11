@@ -1,6 +1,5 @@
 @import 'src/assets/styles/variables';
 .wrapperPortfolio {
-	// background-color: rgb(37, 37, 37);
 	padding-top: 30px;
 }
 .container {
@@ -23,7 +22,6 @@
 .containerContent {
 	padding: 0px 10px;
 	border-radius: 5px;
-	width: 100%;
 	margin-right: 10px;
 }
 .contentHeaderTitle {
@@ -41,47 +39,12 @@
 	flex-wrap: wrap;
 	gap: 30px;
 }
+
 .containerMainItem {
 	flex: 1 0 45%;
-	background-color: #1c1c1c;
+	background-color: $bgDefaultAccentBlock;
 	gap: 5px;
-	border-radius: 5px;
 	font-size: 1.5em;
-	// padding: 10px 20px;
-}
-.mainItemBlockSlider {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
+	border: 2px solid #252525;
 	border-radius: 10px;
-	height: 400px; /* Высота блока, подставьте нужное значение */
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-}
-
-.mainItemContent {
-	display: flex;
-	justify-content: space-between;
-	padding: 20px 30px;
-}
-.contentItemTitle {
-	// margin-top: 20px;
-}
-.titleService {
-	font-size: 15px;
-}
-.titleCheck {
-	font-size: 15px;
-}
-.contentItemSubtitle {
-	font-size: 15px;
-}
-.subtitleAddress {
-	font-size: 15px;
-}
-.subtitleQuadrature {
-	font-size: 15px;
 }

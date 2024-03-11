@@ -30,11 +30,7 @@ const SliderMain = ({ arrow = true }) => {
 	return (
 		<div className={styles.sliderContainer}>
 			<div className={styles.mainItemBlockSlider}>
-				<img
-					// onClick={openModal}
-					src={slides[currentSlide]}
-					alt={`Slide ${currentSlide}`}
-				/>
+				<img src={slides[currentSlide]} alt={`Slide ${currentSlide}`} />
 				{isModalOpen && <ViewObject onClose={closeModal} />}
 			</div>
 			<div onClick={openModal} className={styles.browseIcon}></div>

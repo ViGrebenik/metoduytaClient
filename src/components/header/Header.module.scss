@@ -4,25 +4,25 @@
 	position: sticky;
 	z-index: 100;
 	top: 0;
-	backdrop-filter: blur(10px);
-	background-color: #00000054;
-	// backdrop-filter: blur(6px);
-	// background: -webkit-linear-gradient(
-	// 	89deg,
-	// 	rgba(0, 0, 0, 0.9),
-	// 	rgba(23, 23, 23, 0.9),
-	// 	rgba(38, 39, 39, 0.9),
-	// 	rgba(23, 23, 23, 0.9),
-	// 	rgba(0, 0, 0, 0.9)
-	// );
-	// background: linear-gradient(
-	// 	89deg,
-	// 	rgba(0, 0, 0, 0.9),
-	// 	rgba(23, 23, 23, 0.9),
-	// 	rgba(38, 39, 39, 0.9),
-	// 	rgba(23, 23, 23, 0.9),
-	// 	rgba(0, 0, 0, 0.9)
-	// );
+	// backdrop-filter: blur(10px);
+	// background-color: #00000054;
+	backdrop-filter: blur(6px);
+	background: -webkit-linear-gradient(
+		89deg,
+		rgba(0, 0, 0, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(38, 39, 39, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(0, 0, 0, 0.9)
+	);
+	background: linear-gradient(
+		89deg,
+		rgba(0, 0, 0, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(38, 39, 39, 0.9),
+		rgba(23, 23, 23, 0.9),
+		rgba(0, 0, 0, 0.9)
+	);
 }
 
 .headerWrapper {

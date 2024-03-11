@@ -22,8 +22,9 @@ const stages = [
 		title: 'Этап 03',
 		description: 'Установим сроки, заключим договор'
 	},
-	{ number: '04', title: 'Этап 04', description: 'Описание 04' },
-	{ number: '05', title: 'Этап 05', description: 'Описание 05' }
+	{ number: '04', title: 'Этап 05', description: 'Описание 04' },
+	{ number: '05', title: 'Этап 05', description: 'Описание 05' },
+	{ number: '06', title: 'Этап 06', description: 'Описание 06' }
 ]
 
 const WrapperStagesWork = () => {

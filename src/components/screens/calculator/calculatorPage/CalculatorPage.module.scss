@@ -115,24 +115,3 @@
 	justify-content: end;
 	margin-top: 43px;
 }
-
-button {
-	border: 1px solid #ccc;
-	background-color: #fff;
-	color: #333;
-	padding: 10px 20px;
-	border-radius: 4px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-
-	&:hover {
-		background-color: #f5f5f5;
-	}
-
-	&:active,
-	&:focus {
-		background-color: #e5e5e5;
-		box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
-	}
-}
