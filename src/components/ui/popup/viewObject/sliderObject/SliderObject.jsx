@@ -34,6 +34,12 @@ const SliderObject = () => {
 				<div>
 					<img src={baseUrl + '/item04.jpg'} />
 				</div>
+				<div>
+					<img src={baseUrl + '/item05.jpg'} />
+				</div>
+				<div>
+					<img src={baseUrl + '/item06.jpg'} />
+				</div>
 			</Slider>
 		</div>
 	)

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react'
-import styles from './SliderMain.module.scss'
 import ViewObject from '../../ui/popup/viewObject/ViewObject'
+import styles from './SliderMain.module.scss'
 
-const SliderMain = () => {
+const SliderMain = ({ arrow = true }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 
 	const openModal = () => {
@@ -30,14 +31,23 @@ const SliderMain = () => {
 		<div className={styles.sliderContainer}>
 			<div className={styles.mainItemBlockSlider}>
 				<img
-					onClick={openModal}
+					// onClick={openModal}
 					src={slides[currentSlide]}
 					alt={`Slide ${currentSlide}`}
 				/>
 				{isModalOpen && <ViewObject onClose={closeModal} />}
 			</div>
-			<button onClick={prevSlide}>Previous</button>
-			<button onClick={nextSlide}>Next</button>
+			<div onClick={openModal} className={styles.browseIcon}></div>
+			{arrow && (
+				<>
+					<button className={styles.arrowSlider} onClick={prevSlide}>
+						<img src='/public/static/slider/arrowSliderLeft.svg' alt='arrow' />
+					</button>
+					<button className={styles.arrowSlider} onClick={nextSlide}>
+						<img src='/public/static/slider/arrowSliderRight.svg' alt='arrow' />
+					</button>
+				</>
+			)}
 		</div>
 	)
 }

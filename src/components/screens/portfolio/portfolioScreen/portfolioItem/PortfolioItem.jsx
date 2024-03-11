@@ -8,7 +8,7 @@ const PortfolioItemContainer = () => {
 			{items.map((_, index) => (
 				<div className={styles.containerMainItem} key={index}>
 					<div className={styles.mainItemBlockSlider}>
-						<SliderMain />
+						<SliderMain arrow={false} />
 					</div>
 					<div className={styles.mainItemContent}>
 						<div className={styles.contentItemTitle}>

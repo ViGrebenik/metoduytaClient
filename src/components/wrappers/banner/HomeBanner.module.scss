@@ -1,24 +1,8 @@
 @import 'src/assets/styles/variables';
 .homeBanner {
 	padding: 40px 0px 30px 0px;
-	background: -webkit-linear-gradient(
-		89deg,
-		#000000,
-		#171717,
-		#262727,
-		#171717,
-		#000000
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		89deg,
-		#000000,
-		#171717,
-		#262727,
-		#171717,
-		#000000
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	// background: -webkit-linear-gradient(90deg, #2a2a2a, #1a1a1a);
-	// background: linear-gradient(90deg, #2a2a2a, #1a1a1a);
+	// background-color: hsla(0, 0%, 11%, 0.393);
+	// backdrop-filter: blur(5px);
 }
 
 .bannerContainer {
@@ -37,15 +21,19 @@
 	flex-direction: column;
 	flex: 1 1 25%;
 	h1 {
-		width: 100%;
+		position: relative;
+		top: -26px;
+		width: 137%;
 		z-index: 4;
-		border-radius: 5px;
-		font-size: 49px;
+		border-radius: 10px;
+		font-size: 60px;
 		padding: 10px;
 		line-height: 1;
 		font-weight: bold;
-		color: $fontColor;
-		margin-bottom: 80px;
+		color: #989898;
+		margin-bottom: 82px;
+		// background-color: rgba(109, 109, 109, 0.6392156863);
+		backdrop-filter: blur(10px);
 		span {
 			color: $accent;
 		}
@@ -73,6 +61,10 @@
 	align-items: center;
 	gap: 10px;
 	margin-top: 5px;
+	width: 110%;
+	z-index: 40;
+	// background-color: rgba(109, 109, 109, 0.6392156863);
+	backdrop-filter: blur(10px);
 	button {
 		padding: 15px 15px;
 		border: none;
@@ -83,8 +75,9 @@
 	}
 
 	p {
-		color: #8f8f8f;
-		font-size: 10px;
+		font-size: 13px;
+		font-weight: 800;
+		color: $fontColor;
 	}
 }
 
@@ -95,12 +88,15 @@
 }
 
 .advantageItem {
-	background-color: #1c1c1c;
+	z-index: 40;
 	display: flex;
 	gap: 5px;
 	border-radius: 10px;
 	font-size: 1.5em;
 	padding: 10px;
+	width: 120%;
+	// background-color: #6d6d6da3;
+	backdrop-filter: blur(10px);
 	img {
 		width: 30px;
 		height: 30px;
@@ -111,10 +107,12 @@
 	flex-direction: column;
 }
 .advantageDescriptionMain {
-	font-size: 17px;
-	color: #ffffff;
+	font-size: 20px;
+	font-weight: 800;
+	color: $fontColor;
 }
 .advantageDescription {
 	font-size: 12px;
-	color: #8f8f8f;
+	color: $fontColorAccent;
+	font-weight: 800;
 }

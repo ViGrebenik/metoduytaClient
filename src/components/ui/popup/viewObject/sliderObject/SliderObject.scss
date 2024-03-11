@@ -1,6 +1,6 @@
 /* Стили для контейнера слайдера */
 .slider-container {
-	width: 50%; /* Ширина контейнера, можете настроить по своему усмотрению */
+	width: 48%; /* Ширина контейнера, можете настроить по своему усмотрению */
 	margin: 0 auto; /* Центрирование контейнера */
 }
 
@@ -13,12 +13,12 @@
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	bottom: -75px !important;
+	// bottom: -75px !important;
 }
 
 .slick-dots li {
-	width: 100px !important;
-	height: 100px !important;
+	width: 80px !important;
+	height: 80px !important;
 	display: inline-block;
 	margin: 0 5px; /* Расстояние между точками */
 }

@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import classNames from 'classnames'
 import { useState } from 'react'
+import FeedbackForm from '../formFeedback/FormFeedback'
 import styles from './styles.module.scss'
 
 const CallRequestForm = ({ onClose }) => {
-	const [name, setName] = useState('')
-	const [phone, setPhone] = useState('')
 	const [isVisible, setIsVisible] = useState(false)
 
 	const handleSubmit = e => {
 		e.preventDefault()
 		setIsVisible(true)
 		onClose()
+		alert('Вам перезвонят')
 	}
 
 	return (
@@ -24,25 +24,7 @@ const CallRequestForm = ({ onClose }) => {
 				<div className={styles.feedbackFormSubtitle}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				</div>
-				<form onSubmit={handleSubmit}>
-					<label>
-						<input
-							type='text'
-							placeholder='Имя:'
-							value={name}
-							onChange={e => setName(e.target.value)}
-						/>
-					</label>
-					<label>
-						<input
-							type='text'
-							placeholder='Телефон:'
-							value={phone}
-							onChange={e => setPhone(e.target.value)}
-						/>
-					</label>
-					<button type='submit'>Отправить</button>
-				</form>
+				<FeedbackForm questionForm={false} handleSubmit={handleSubmit} />
 			</div>
 		</div>
 	)

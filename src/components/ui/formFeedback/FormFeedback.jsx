@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react'
 import styles from './FormFeedback.module.scss'
 
-const FeedbackForm = () => {
+const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
 	const [name, setName] = useState('')
 	const [phone, setPhone] = useState('')
 	const [question, setQuestion] = useState('')
@@ -16,16 +17,10 @@ const FeedbackForm = () => {
 		}
 	}
 
-	const handleSubmit = event => {
-		event.preventDefault()
-		// Submit the form data here
-	}
-
 	return (
 		<div className={styles.feedbackForm}>
 			<form onSubmit={handleSubmit}>
 				<div>
-					{/* <label htmlFor='name'>Your name:</label> */}
 					<input
 						type='text'
 						placeholder='Ваше имя'
@@ -35,7 +30,6 @@ const FeedbackForm = () => {
 					/>
 				</div>
 				<div>
-					{/* <label htmlFor='phone'>Your phone number:</label> */}
 					<input
 						type='tel'
 						placeholder='Ваш телефон'
@@ -44,14 +38,16 @@ const FeedbackForm = () => {
 						onChange={event => setPhone(event.target.value)}
 					/>
 				</div>
-				<div>
-					<label htmlFor='question'>Опишите свой вопрос</label>
-					<textarea
-						id='question'
-						value={question}
-						onChange={event => setQuestion(event.target.value)}
-					/>
-				</div>
+				{questionForm && (
+					<div>
+						<label htmlFor='question'>Опишите свой вопрос</label>
+						<textarea
+							id='question'
+							value={question}
+							onChange={event => setQuestion(event.target.value)}
+						/>
+					</div>
+				)}
 				<div>
 					<label>Как удобно связаться ?</label>
 					<div>

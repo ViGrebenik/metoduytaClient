@@ -1,11 +1,17 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import FeedbackForm from '../ui/formFeedback/FormFeedback'
 import styles from './CalculatorUI.module.scss'
 import CheckboxButtons from './checkBoxButton/CheckBoxButton'
+import TypeOfRepair from './typeOfRepair/TypeOfRepair'
 
 const CalculatorUI = () => {
-	const [roomArea, setRoomArea] = useState(0)
-
+	// тип помещения
+	const [typeOfRepair, setTypeOfRepair] = useState(1)
+	// Площадь помещения
+	const [roomArea, setRoomArea] = useState(45)
+	const handleRoomAreaChange = event => {
+		setRoomArea(event.target.value)
+	}
 	// тип жилья
 	const [buildingType, setBuildingType] = useState('')
 	const handleBuildingTypeChange = type => {
@@ -16,13 +22,9 @@ const CalculatorUI = () => {
 		}
 	}
 
-	const handleRoomAreaChange = event => {
-		setRoomArea(event.target.value)
-	}
-
 	// колличество комнат
-	const [numberOfRooms, setNumberOfRooms] = useState(0)
-	const [numberOfBathroom, setNumberOfBathroom] = useState(0)
+	const [numberOfRooms, setNumberOfRooms] = useState(1)
+	const [numberOfBathroom, setNumberOfBathroom] = useState(1)
 
 	const RoomsPlus = useCallback(
 		type => {
@@ -47,9 +49,41 @@ const CalculatorUI = () => {
 		[numberOfRooms, numberOfBathroom, setNumberOfRooms, setNumberOfBathroom]
 	)
 
-	const calculateCost = () => {
-		// Calculate the renovation cost based on the form data
-	}
+	// Доп услуги
+	const [buttonsState, setButtonsState] = useState([
+		{ name: 'Выровнять полы', checked: false, coefficient: 1.5 },
+		{ name: 'Выровнять стены', checked: false, coefficient: 1.6 },
+		{ name: 'Сантехнические работы', checked: false, coefficient: 1.7 },
+		{ name: 'Электромонтажные работы', checked: false, coefficient: 1.8 }
+	])
+
+	const [result, setResult] = useState(0)
+
+	useEffect(() => {
+		const keFbuildingType = buildingType == 'ВТОРИЧКА' ? 1.2 : 1.3
+		const keFroomArea = Number(roomArea) * 100
+		const kefButtonsState = buttonsState
+			.filter(button => button.checked)
+			.map(button => button.coefficient)
+			.reduce((accumulator, currentValue) => accumulator * currentValue, 1)
+		setResult(
+			Math.round(
+				keFroomArea *
+					keFbuildingType *
+					typeOfRepair *
+					kefButtonsState *
+					numberOfRooms *
+					numberOfBathroom
+			)
+		)
+	}, [
+		buildingType,
+		buttonsState,
+		numberOfBathroom,
+		numberOfRooms,
+		roomArea,
+		typeOfRepair
+	])
 
 	return (
 		<div className={styles.containerCalculator}>
@@ -67,9 +101,7 @@ const CalculatorUI = () => {
 						<div className={styles.blockTypeServices}>
 							<label htmlFor='buildingType'>Тип ремонта</label>
 							<div className={styles.typeServices}>
-								<button type='button'>ДИЗАЙНЕРСКИЙ</button>
-								<button type='button'>КОСМЕТИЧЕСКИЙ</button>
-								<button type='button'>КАПИТАЛЬНЫЙ</button>
+								<TypeOfRepair setTypeOfRepair={setTypeOfRepair} />
 							</div>
 						</div>
 						<div className={styles.blockTypeServices}>
@@ -100,17 +132,24 @@ const CalculatorUI = () => {
 							</div>
 						</div>
 						{/* Блок range */}
-						<div>
-							<label htmlFor='roomArea'>Площадь помещения</label>
-							<input
-								type='range'
-								id='roomArea'
-								min='0'
-								max='100'
-								value={roomArea}
-								onChange={handleRoomAreaChange}
-							/>
-							<span>{roomArea} m2</span>
+						<div className={styles.rangeOfRoomBlock}>
+							<label htmlFor='roomArea'>
+								Площадь помещения: <span>{roomArea}m²</span>
+							</label>
+							<div className={styles.customRange}>
+								<input
+									type='range'
+									min={0} // Set the minimum value
+									max={100} // Set the maximum value
+									value={roomArea}
+									onChange={handleRoomAreaChange}
+									className={styles.input}
+								/>
+								<div
+									className={styles.fill}
+									style={{ width: `${roomArea}%` }}
+								></div>
+							</div>
 						</div>
 						{/* Блок комнаты */}
 						<div className={styles.numberOfRoomsBlock}>
@@ -123,7 +162,11 @@ const CalculatorUI = () => {
 										</button>
 										<span>{numberOfRooms}</span>
 										<button type='button' onClick={() => RoomsPlus('Комнаты')}>
-											<img src='/static/plus.svg' alt='plus' />
+											<img
+												src='/static/plus.svg'
+												alt='plus'
+												className={styles.plusSvg}
+											/>
 										</button>
 									</div>
 								</div>
@@ -144,12 +187,12 @@ const CalculatorUI = () => {
 						<div>
 							<label>Доп. работы</label>
 							<div>
-								<CheckboxButtons />
+								<CheckboxButtons
+									buttonsState={buttonsState}
+									setButtonsState={setButtonsState}
+								/>
 							</div>
 						</div>
-						{/* <button type='button' onClick={calculateCost}>
-							Calculate cost
-						</button> */}
 					</form>
 				</div>
 			</div>
@@ -160,7 +203,7 @@ const CalculatorUI = () => {
 					</div>
 				</div>
 				<div className={styles.containerHeaderForm}>
-					<div className={styles.contentHeaderTitleForm}>450 058 руб.</div>
+					<div className={styles.contentHeaderTitleForm}>{result} руб.</div>
 				</div>
 				<div className={styles.containerHeaderForm}>
 					<div className={styles.contentHeaderSubtitleForm}>

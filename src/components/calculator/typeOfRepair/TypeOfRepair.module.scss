@@ -1,0 +1,18 @@
+@import 'src/assets/styles/variables';
+
+.typeServices {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	gap: 10px;
+	button {
+		&.selected {
+			background-color: $accent;
+			color: black;
+			&:hover {
+				background-color: $accent;
+			}
+		}
+	}
+}

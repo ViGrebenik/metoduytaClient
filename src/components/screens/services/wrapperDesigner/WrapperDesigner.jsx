@@ -1,8 +1,8 @@
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
+import PortfolioCart from '../../../ui/portfolioCart/PortfolioCart'
 import WrapperReviews from '../../../wrapperReviews/WrapperReviews'
 import WrapperServices from '../../../wrapperServices/WrapperServices'
 import styles from './WrapperDesigner.module.scss'
-import DesignerItem from './designerItem/DesignerItem'
 
 const WrapperDesigner = () => {
 	return (
@@ -65,10 +65,10 @@ const WrapperDesigner = () => {
 						<img src='/static/arrowService.svg' alt='arrow' />
 					</div>
 					<div className={styles.containerExamples}>
-						<DesignerItem />
+						<PortfolioCart />
 					</div>
 					<div className={styles.containerExamples}>
-						<DesignerItem />
+						<PortfolioCart />
 					</div>
 					<WrapperReviews />
 					<WrapperServices />

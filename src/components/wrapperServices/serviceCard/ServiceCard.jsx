@@ -1,15 +1,12 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import ScrollToTop from '../../ui/linkScrollTo/ScrollToTop'
-import CallRequestForm from '../../ui/popup/CallRequestForm'
 import styles from './ServiceCard.module.scss'
-import useModal from '../../ui/useModal/useModal'
+import { useModal } from '../../../assets/services/ModalContext'
 
 // eslint-disable-next-line no-unused-vars
 const ServiceCard = ({ title, description, price, imageUrl, serviceUrl }) => {
-	const scrollToTop = ScrollToTop()
-	const { isModalOpen, openModal, closeModal } = useModal()
+	const { openModal } = useModal()
 
 	const ServiceCardContainer = styled.div`
 		background-image: url(${props => props.imageUrl});
@@ -24,9 +21,7 @@ const ServiceCard = ({ title, description, price, imageUrl, serviceUrl }) => {
 				<div className={styles.staticContent}>
 					<div className={styles.serviceCardTitle}>{title}</div>
 					<div className={styles.serviceCardButton}>
-						<Link to={serviceUrl} onClick={scrollToTop}>
-							{'ПОДРОБНЕЕ'}
-						</Link>
+						<Link to={serviceUrl}>{'ПОДРОБНЕЕ'}</Link>
 					</div>
 				</div>
 				<div className={styles.hoverContent}>
@@ -42,7 +37,6 @@ const ServiceCard = ({ title, description, price, imageUrl, serviceUrl }) => {
 					</div>
 				</div>
 			</div>
-			{isModalOpen && <CallRequestForm onClose={closeModal} />}
 		</ServiceCardContainer>
 	)
 }

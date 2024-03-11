@@ -19,18 +19,20 @@
 .containerHeader {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	margin-top: 20px;
+	// background-color: $bgDefaultAccentBlock;
 	.contentHeaderTitle {
 		margin-top: 20px;
 		font-size: 45px;
 		color: #ffd622;
 		font-weight: 800;
-		width: 80%;
 	}
 	.contentHeaderSubtitle {
 		font-size: 25px;
 		color: $fontColorAccent;
 		font-weight: 800;
-		width: 50%;
 		margin-bottom: 40px;
 	}
 }
@@ -39,10 +41,9 @@
 	gap: 10px;
 	.descriptionItem {
 		margin-top: 10px;
-		// border: 2px solid rgba(178, 178, 178, 0.382);
 		flex: 1 0 48%;
 		border-radius: 10px;
-		background-color: #2727273b;
+		background-color: $bgDefaultAccentBlock;
 		padding: 20px;
 		font-size: 15px;
 		color: $fontColorAccent;
@@ -52,11 +53,11 @@
 .containerCalculator {
 	margin-top: 10px;
 	border-radius: 10px;
+	background-color: $bgDefaultAccentBlock;
 }
 
 .actionItem {
 	margin-top: 10px;
-	// height: 400px;
 	border: 2px solid rgba(178, 178, 178, 0.382);
 	border-radius: 10px;
 	padding: 40px;
@@ -95,10 +96,8 @@
 				font-size: 25px;
 				font-weight: 800;
 				color: $accent;
-				// margin-bottom: 20px;
 			}
 			.actionItemSubtitle {
-				// width: 70%;
 				font-size: 15px;
 				color: $fontColorAccent;
 				font-weight: 700;

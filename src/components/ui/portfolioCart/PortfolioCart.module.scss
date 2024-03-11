@@ -1,0 +1,57 @@
+.modalContent {
+	backdrop-filter: blur(10px);
+	background-color: #111111de;
+	padding: 40px 40px 20px 40px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	max-width: 1300px;
+	.close {
+		position: absolute;
+		top: 0px;
+		z-index: 500;
+		right: 20px;
+		cursor: pointer;
+		font-size: 30px;
+		color: #d0d0d0;
+	}
+	.containerObject {
+		display: flex;
+		width: 100%;
+	}
+	.objectDescription {
+		flex: 1 0 48%;
+		margin: 0px 0px 20px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.descriptionItem {
+		.descriptionTitle {
+			line-height: 1;
+			margin-bottom: 20px;
+			color: rgb(255, 205, 67);
+			font-size: 40px;
+			font-weight: bold;
+		}
+		.descriptionInfoObject {
+			font-size: 20px;
+		}
+		.descriptionWorkBeenDone {
+			color: rgb(115, 115, 115);
+			font-size: 15px;
+		}
+	}
+	.descriptionContainerButton {
+		display: flex;
+		gap: 10px;
+	}
+	.descriptionButton {
+		margin-top: 20px;
+		display: 1 0 45%;
+		border-radius: 10px;
+		padding: 10px;
+		text-align: center;
+		background-color: rgba(231, 191, 32, 0.75);
+		font-size: 20px;
+	}
+}

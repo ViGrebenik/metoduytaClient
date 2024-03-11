@@ -1,14 +1,8 @@
-import { useCallback, useState } from 'react'
+/* eslint-disable react/prop-types */
+import { useCallback } from 'react'
 import styles from './CheckBoxButton.module.scss'
 
-const CheckboxButtons = () => {
-	const [buttonsState, setButtonsState] = useState([
-		{ name: 'Выровнять полы', checked: false },
-		{ name: 'Выровнять стены', checked: false },
-		{ name: 'Сантехнические работы', checked: false },
-		{ name: 'Электромонтажные работы', checked: false }
-	])
-
+const CheckboxButtons = ({ buttonsState, setButtonsState }) => {
 	const handleButtonClick = useCallback(index => {
 		setButtonsState(prevState => {
 			const newState = [...prevState]

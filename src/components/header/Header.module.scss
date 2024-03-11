@@ -2,25 +2,27 @@
 
 .header {
 	position: sticky;
-	z-index: 20;
+	z-index: 100;
 	top: 0;
-	backdrop-filter: blur(6px);
-	background: -webkit-linear-gradient(
-		89deg,
-		rgba(0, 0, 0, 0.9),
-		rgba(23, 23, 23, 0.9),
-		rgba(38, 39, 39, 0.9),
-		rgba(23, 23, 23, 0.9),
-		rgba(0, 0, 0, 0.9)
-	);
-	background: linear-gradient(
-		89deg,
-		rgba(0, 0, 0, 0.9),
-		rgba(23, 23, 23, 0.9),
-		rgba(38, 39, 39, 0.9),
-		rgba(23, 23, 23, 0.9),
-		rgba(0, 0, 0, 0.9)
-	);
+	backdrop-filter: blur(10px);
+	background-color: #00000054;
+	// backdrop-filter: blur(6px);
+	// background: -webkit-linear-gradient(
+	// 	89deg,
+	// 	rgba(0, 0, 0, 0.9),
+	// 	rgba(23, 23, 23, 0.9),
+	// 	rgba(38, 39, 39, 0.9),
+	// 	rgba(23, 23, 23, 0.9),
+	// 	rgba(0, 0, 0, 0.9)
+	// );
+	// background: linear-gradient(
+	// 	89deg,
+	// 	rgba(0, 0, 0, 0.9),
+	// 	rgba(23, 23, 23, 0.9),
+	// 	rgba(38, 39, 39, 0.9),
+	// 	rgba(23, 23, 23, 0.9),
+	// 	rgba(0, 0, 0, 0.9)
+	// );
 }
 
 .headerWrapper {
@@ -33,7 +35,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #fff;
+	color: $white;
+	padding: 10px 0px;
 }
 
 .logoContainer {
@@ -58,11 +61,11 @@
 	line-height: 1;
 	font-weight: bold;
 	font-size: 20px;
-	color: #cacaca;
+	color: $fontColor;
 }
 .activeUrl {
 	a {
-		color: #d8d8d8;
+		color: $fontColorAccent;
 	}
 }
 
@@ -74,7 +77,7 @@
 			margin-right: 20px;
 			a {
 				text-decoration: none;
-				color: #858585;
+				color: $fontColor;
 				font-weight: bold;
 				transition: color 0.3s;
 				&.active {
@@ -129,10 +132,9 @@
 .containerContact {
 	display: flex;
 	flex-direction: column;
-	margin-top: 3px;
 	p {
-		font-size: 20px;
-		color: #d8d8d8;
+		font-size: 18px;
+		color: $fontColorAccent;
 		font-weight: 700;
 	}
 }
@@ -140,6 +142,7 @@
 	display: flex;
 	align-items: center;
 	gap: 2px;
+	font-size: 15px;
 	img {
 		width: 18px;
 		height: 18px;

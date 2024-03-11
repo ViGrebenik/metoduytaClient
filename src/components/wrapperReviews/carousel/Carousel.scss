@@ -1,12 +1,14 @@
-.carousel {
-	margin: 0 50px;
-	.carousel-item {
+@import 'src/assets/styles/variables';
+.carouselReviews {
+	// margin: 10px 20px;
+	.carouselItemReviews {
 		position: relative;
 		border-radius: 10px;
-		padding: 10px;
-		background-color: rgb(69, 69, 69);
+		margin: 20px 0px;
+		padding: 20px;
 		height: 200px;
 		cursor: pointer;
+		background-color: $bgDefaultAccentBlock;
 	}
 	.carouselTitle {
 		color: #d9d932;
@@ -22,12 +24,12 @@
 		border-radius: 10px;
 	}
 
-	.carouselDescription {
+	.carouselDescriptionReviews {
 		font-size: 12px;
 	}
 
 	.slick-slide > div {
-		margin: 20px 40px;
+		margin: 0px 20px;
 	}
 
 	.slick-dots {

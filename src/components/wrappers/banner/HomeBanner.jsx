@@ -1,8 +1,12 @@
+// import { useModal } from '../../../assets/services/ModalContext'
 import SliderBanner from '../../slider/SliderBanner'
-import CallRequestButton from '../../ui/popup/CallRequestButton'
+import Button from '../../ui/button/Button'
+// import CallRequestForm from '../../ui/popup/CallRequestForm'
 import styles from './HomeBanner.module.scss'
 
 const HomeBanner = () => {
+	// const { isModalOpen, closeModal } = useModal()
+
 	return (
 		<div className={styles.homeBanner}>
 			<div className={styles.bannerContainer}>
@@ -56,8 +60,9 @@ const HomeBanner = () => {
 							</div>
 						</div>
 						<div className={styles.titleAction}>
-							<CallRequestButton
-								bgC={'#ffd622'}
+							<Button
+								pd={'20px 20px'}
+								type='popUp'
 								title={'ЗАКАЗАТЬ РАССЧЕТ СМЕТЫ'}
 							/>
 							<p>КОНСУЛЬТАЦИЯ/ВЫЕЗДА ЗАМЕРЩИКА</p>

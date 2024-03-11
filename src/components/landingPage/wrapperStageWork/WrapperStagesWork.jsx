@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
-import useModal from '../../ui/useModal/useModal'
-import styles from './WrapperStagesWork.module.scss'
+// import useModal from '../../ui/useModal/useModal'
+import { useModal } from '../../../assets/services/ModalContext'
 import CallRequestForm from '../../ui/popup/CallRequestForm'
+import styles from './WrapperStagesWork.module.scss'
+// import CallRequestForm from '../../ui/popup/CallRequestForm'
 
 const stages = [
 	{

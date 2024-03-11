@@ -1,0 +1,33 @@
+@import 'src/assets/styles/variables';
+.containerButtonPortfolio {
+	display: flex;
+	border-radius: 5px;
+	align-items: center;
+	img {
+		width: 20px;
+		height: 20px;
+	}
+
+	.button {
+		display: flex;
+		gap: 5px;
+		cursor: pointer;
+		align-items: center;
+		border: none;
+		border-radius: 5px;
+		font-weight: bold;
+		color: $black;
+		transition: background-color 0.3s ease;
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+		&:hover {
+			background-color: $bgDefaultAccent;
+		}
+	}
+	p {
+		color: #8f8f8f;
+		font-size: 14px;
+	}
+}

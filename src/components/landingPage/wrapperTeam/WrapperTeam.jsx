@@ -3,12 +3,12 @@ import CarouselTeam from './carousel/CarouselTeam'
 
 const WrapperTeam = () => {
 	const items = [
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!'
+		{ name: 'Максим', post: 'Директор', discription: 'описание' },
+		{ name: 'Максим', post: 'Директор', discription: 'описание' },
+		{ name: 'Максим', post: 'Директор', discription: 'описание' },
+		{ name: 'Максим', post: 'Директор', discription: 'описание' },
+		{ name: 'Максим', post: 'Директор', discription: 'описание' },
+		{ name: 'Максим', post: 'Директор', discription: 'описание' }
 	]
 	return (
 		<div className={styles.WrapperTeam}>
@@ -16,18 +16,33 @@ const WrapperTeam = () => {
 				<div className={styles.containerBlock}>
 					<div className={styles.containerHeader}>
 						<div className={styles.containerContentHeader}>
-							<div className={styles.contentHeaderTitle}>Команда</div>
+							<div className={styles.contentHeaderTitle}>
+								Персонал компании Метод Уюта
+							</div>
 						</div>
 						<div className={styles.contentHeaderSubtitle}>
-							Вы можете доверить нам любое помещение и проект любой сложности.
+							Вы доверяете нам, мы – оправдываем ваши ожидания. Флагман нашей
+							компании – опытные мастера, которые опираются в работе на
+							европейские стандарты. Социальная ориентированность РВТ позволила
+							создать надежный оплот – команду специалистов, умеющих работать
+							слаженно, быстро, вместе с тем – качественно.
 						</div>
 					</div>
 					<div className={styles.containerSubtitleTeam}>
-						<div className={styles.SubtitleTeamTitle}>Картинка + описание</div>
 						<div className={styles.SubtitleTeamSubtitle}>
-							Картинка + описание
+							<img src='/public/static/construction.svg' alt='icon' />У нас 5 У
+							нас 5 бригад укомплектованых мастерами
 						</div>
-						<div className={styles.SubtitleTeamDiscription}>Описание</div>
+						<div className={styles.SubtitleTeamSubtitle}>
+							<img src='/public/static/construction.svg' alt='icon' />
+							Cредний стаж – 8 лет
+						</div>
+						<div className={styles.SubtitleTeamDiscription}>
+							<img src='/public/static/construction.svg' alt='icon' />
+							Каждый ремонт выполняют специализированные бригады. В комплексном
+							ремонте квартиры участвуют от 2 до 6 мастеров разного профиля и
+							прораб.
+						</div>
 					</div>
 					<CarouselTeam items={items} />
 				</div>

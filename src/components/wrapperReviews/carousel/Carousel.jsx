@@ -16,12 +16,12 @@ const Carousel = ({ items }) => {
 	}
 
 	return (
-		<div className='carousel'>
+		<div className='carouselReviews'>
 			<Slider {...settings}>
 				{items.map((item, index) => (
-					<div key={index} className='carousel-item'>
+					<div key={index} className='carouselItemReviews'>
 						<div className='carouselTitle'>ОТЗЫВЫ</div>
-						<div className='carouselDescription'>{item}</div>
+						<div className='carouselDescriptionReviews'>{item}</div>
 						<div className='carouselblock'></div>
 					</div>
 				))}

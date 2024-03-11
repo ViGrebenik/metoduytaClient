@@ -6,11 +6,13 @@ import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 import { routes } from './routes.data'
 import FooterSignature from '../components/footer/footerSignature/FooterSignature'
+// import CalculatorUIHome from '../components/calculator/uiHome/CalculatorUIHome'
 
 const Router = () => {
 	return (
 		<BrowserRouter>
 			<Header />
+			{/* <CalculatorUIHome /> */}
 			<Routes>
 				{routes.map(route => (
 					<Route

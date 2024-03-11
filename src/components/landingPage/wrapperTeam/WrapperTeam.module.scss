@@ -20,10 +20,10 @@
 .containerHeader {
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
+	padding: 20px 40px;
 	border-radius: 5px;
-	background-color: #2727273b;
-	border: 2px solid #616161;
+	background-color: $bgDefaultAccentBlock;
+	font-weight: 700;
 }
 
 .contentHeaderTitle {
@@ -32,33 +32,39 @@
 	color: $accent;
 }
 .contentHeaderSubtitle {
-	font-size: 20px;
-	color: $fontColorAccent;
+	font-size: 18px;
+	color: $fontColor;
 }
 
 .containerSubtitleTeam {
 	display: flex;
 	gap: 10px;
 	height: 200px;
+	font-size: 20px;
+	color: $fontColor;
+	font-weight: 700;
+	margin-bottom: 10px;
+	img {
+		display: block;
+		width: 40px;
+		height: 40px;
+	}
 }
 .SubtitleTeamTitle {
 	flex: 1 0 25%;
-	background-color: #2727273b;
+	background-color: $bgDefaultAccentBlock;
 	padding: 20px;
 	border-radius: 10px;
-	border: 2px solid #616161;
 }
 .SubtitleTeamSubtitle {
 	flex: 1 0 25%;
-	background-color: #2727273b;
-	padding: 20px;
+	background-color: $bgDefaultAccentBlock;
+	padding: 20px 40px;
 	border-radius: 10px;
-	border: 2px solid #616161;
 }
 .SubtitleTeamDiscription {
 	flex: 1 0 48%;
-	background-color: #2727273b;
+	background-color: $bgDefaultAccentBlock;
 	padding: 20px;
 	border-radius: 10px;
-	border: 2px solid #616161;
 }

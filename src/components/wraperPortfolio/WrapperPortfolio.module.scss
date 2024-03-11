@@ -21,8 +21,6 @@
 }
 
 .containerContent {
-	// background-color: rgb(53 53 53 / 57%);
-	// backdrop-filter: blur(3px);
 	padding: 0px 10px;
 	border-radius: 5px;
 	width: 100%;
@@ -38,31 +36,6 @@
 	color: $fontColor;
 }
 
-.containerButtonPortfolio {
-	display: flex;
-	border-radius: 5px;
-	align-items: center;
-	justify-content: end;
-	width: 100%;
-	.button {
-		text-align: center;
-		padding: 20px 20px;
-		border: none;
-		border-radius: 5px;
-		font-size: 22px;
-		font-weight: bold;
-		background-color: $accent;
-		color: $black;
-		transition: background-color 0.3s ease;
-		&:hover {
-			background-color: $fontColor;
-		}
-	}
-	p {
-		color: #8f8f8f;
-		font-size: 14px;
-	}
-}
 .containerMain {
 	display: flex;
 	flex-wrap: wrap;

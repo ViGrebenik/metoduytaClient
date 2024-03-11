@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom'
+import Button from '../ui/button/Button'
 import styles from './WrapperPortfolio.module.scss'
 import SliderMain from './sliderMain/SliderMain'
-import ScrollToTop from '../ui/linkScrollTo/ScrollToTop'
 
 const WrapperPortfolio = () => {
-	const scrollToTop = ScrollToTop()
 	return (
 		<div className={styles.wrapperPortfolio}>
 			<div className={styles.container}>
@@ -18,17 +16,11 @@ const WrapperPortfolio = () => {
 								Хороший ремонт – это реальность.
 							</div>
 						</div>
-						<div className={styles.containerButtonPortfolio}>
-							<div className={styles.containerButtonPortfolio}>
-								<Link
-									to={'/portfolio'}
-									onClick={scrollToTop}
-									className={styles.button}
-								>
-									Посмотреть все работы
-								</Link>
-							</div>
-						</div>
+						<Button
+							title={'ПОСМОТРЕТЬ ВСЕ РАБОТЫ'}
+							fontSize={'22px'}
+							redirectTo={'/portfolio'}
+						/>
 					</div>
 					<div className={styles.containerMain}>
 						<div className={styles.containerMainItem}>
