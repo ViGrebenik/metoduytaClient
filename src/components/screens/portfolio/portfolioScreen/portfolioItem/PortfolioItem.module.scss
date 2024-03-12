@@ -10,7 +10,6 @@
 	border-radius: 5px;
 	font-size: 1.5em;
 	cursor: pointer;
-	// padding: 10px 20px;
 }
 .mainItemBlockSlider {
 	position: relative;
@@ -31,21 +30,13 @@
 	padding: 10px 20px;
 	font-size: 10px;
 }
-.contentItemTitle {
-	// margin-top: 20px;
+
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+	}
+	.containerHeader {
+		flex-wrap: wrap;
+		gap: 20px;
+	}
 }
-// .titleService {
-// 	font-size: 15px;
-// }
-// .titleCheck {
-// 	font-size: 15px;
-// }
-// .contentItemSubtitle {
-// 	font-size: 15px;
-// }
-// .subtitleAddress {
-// 	font-size: 15px;
-// }
-// .subtitleQuadrature {
-// 	font-size: 15px;
-// }

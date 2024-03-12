@@ -48,3 +48,12 @@
 	border: 2px solid #252525;
 	border-radius: 10px;
 }
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+	}
+	.containerHeader {
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+}
