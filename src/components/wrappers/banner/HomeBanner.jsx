@@ -1,8 +1,10 @@
+import { useMediaQuery } from 'react-responsive'
 import SliderBanner from '../../slider/SliderBanner'
 import Button from '../../ui/button/Button'
 import styles from './HomeBanner.module.scss'
 
 const HomeBanner = () => {
+	const isMobile = useMediaQuery({ maxWidth: 1024 })
 	return (
 		<div className={styles.homeBanner}>
 			<div className={styles.bannerContainer}>
@@ -64,13 +66,15 @@ const HomeBanner = () => {
 							</div>
 						</div>
 					</div>
-					<SliderBanner
-						slides={[
-							'/static/archive/item01.jpg',
-							'/static/archive/item02.jpg',
-							'/static/archive/item03.jpg'
-						]}
-					/>
+					{!isMobile && (
+						<SliderBanner
+							slides={[
+								'/static/archive/item01.jpg',
+								'/static/archive/item02.jpg',
+								'/static/archive/item03.jpg'
+							]}
+						/>
+					)}
 				</div>
 			</div>
 		</div>

@@ -94,8 +94,78 @@
 	}
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.homeBanner {
+		padding: 3vw 0vw;
+	}
+	.bannerInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5vw;
+	}
+	.infoTitle {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		h1 {
+			font-size: 7.125vw;
+			margin-bottom: 2vw;
+		}
+	}
+	.bannerAdvantages {
+		flex-direction: row;
+		flex-wrap: wrap;
+		.advantageItem {
+			flex: 1 0 33%;
+		}
+	}
+
+	.advantageDescriptionMain {
+		font-size: 2.5vw;
+	}
+	.advantageDescription {
+		font-size: 1.5vw;
+	}
+}
+
 @media only screen and (max-width: 767px) {
 	.bannerContainer {
-		margin: 0 1.2vw;
+		margin: 0 2vw;
+	}
+	.bannerInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5vw;
+		h1 {
+			font-size: 7.125vw;
+		}
+	}
+	.bannerInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5vw;
+	}
+	.infoTitle {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		h1 {
+			font-size: 7.125vw;
+			margin-bottom: 2vw;
+		}
+	}
+	.bannerAdvantages {
+		flex-direction: row;
+		flex-wrap: wrap;
+		.advantageItem {
+			flex: 1 0 45%;
+		}
+	}
+
+	.advantageDescriptionMain {
+		font-size: 2.5vw;
+	}
+	.advantageDescription {
+		font-size: 1.5vw;
 	}
 }
