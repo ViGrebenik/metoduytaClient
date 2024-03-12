@@ -107,7 +107,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px),
 	only screen and (max-width: 767px) {
 	.headerContainer {
-		padding: 10px 25px;
+		padding: 15px 25px;
 	}
 	.logoContainer {
 		display: flex;
@@ -117,15 +117,15 @@
 		text-decoration: none;
 		color: inherit;
 		img {
-			width: 30px;
-			height: 30px;
+			width: 40px;
+			height: 40px;
 		}
 	}
 
 	.title {
 		line-height: 1;
 		font-weight: bold;
-		font-size: 16px;
+		font-size: 20px;
 		color: $fontColor;
 	}
 }
