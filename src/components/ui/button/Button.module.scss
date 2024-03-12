@@ -28,3 +28,18 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 767px) {
+	.containerButtonPortfolio {
+		img {
+			width: 4.5vw;
+			height: 4.5vw;
+		}
+
+		.button {
+			font-size: 5.2vw;
+			background-color: #ffd622;
+			padding: 4.5vw 6.5vw;
+		}
+	}
+}
