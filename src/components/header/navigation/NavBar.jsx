@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import styles from './Header.module.scss'
+import styles from './Navbar.module.scss'
 
 const NavBar = () => {
 	const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false)
@@ -8,8 +8,6 @@ const NavBar = () => {
 	const location = useLocation()
 	useEffect(() => {
 		setCurrentPage(location.pathname)
-	}, [location])
-	useEffect(() => {
 		const handleOutsideClick = event => {
 			if (
 				event.target.closest('.dropdown') === null ||
@@ -25,7 +23,7 @@ const NavBar = () => {
 		return () => {
 			window.removeEventListener('click', handleOutsideClick)
 		}
-	}, [])
+	}, [location.pathname])
 
 	const handleDropdownToggleHover = () => {
 		setServicesDropdownOpen(true)

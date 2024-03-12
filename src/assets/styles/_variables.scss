@@ -6,10 +6,38 @@ $fontColorAccent: #d3d3d3d9;
 $black: #202020;
 $white: #c9c9c9;
 
-$bgdefault: hsla(0, 0%, 11%, 0.85); // написть цвет
-$bgDefaultAccent: #989898; // написать цвет
+$bgdefault: hsla(0, 0%, 11%, 0.85);
+$bgDefaultAccent: #212121eb;
 
 $bgDefaultAccentBlock: rgb(21 21 21);
 $default-font: 'Sofia Sans', sans-serif;
 
+$bgblur: -webkit-linear-gradient(
+	89deg,
+	rgba(0, 0, 0, 0.9),
+	rgba(23, 23, 23, 0.9),
+	rgba(38, 39, 39, 0.9),
+	rgba(23, 23, 23, 0.9),
+	rgba(0, 0, 0, 0.9)
+);
+$bgblurIO: linear-gradient(
+	89deg,
+	rgba(0, 0, 0, 0.9),
+	rgba(23, 23, 23, 0.9),
+	rgba(38, 39, 39, 0.9),
+	rgba(23, 23, 23, 0.9),
+	rgba(0, 0, 0, 0.9)
+);
+
 $mobile: 480px;
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+	}
+}

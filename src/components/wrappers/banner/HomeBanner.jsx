@@ -1,12 +1,8 @@
-// import { useModal } from '../../../assets/services/ModalContext'
 import SliderBanner from '../../slider/SliderBanner'
 import Button from '../../ui/button/Button'
-// import CallRequestForm from '../../ui/popup/CallRequestForm'
 import styles from './HomeBanner.module.scss'
 
 const HomeBanner = () => {
-	// const { isModalOpen, closeModal } = useModal()
-
 	return (
 		<div className={styles.homeBanner}>
 			<div className={styles.bannerContainer}>
@@ -18,10 +14,6 @@ const HomeBanner = () => {
 							</span>
 							КВАРТИР ПОД КЛЮЧ
 						</h1>
-						<h2>
-							Выполним качественный ремонт по четсной цене в срок блягодаря
-							многолетнему опыту
-						</h2>
 						<div className={styles.bannerAdvantages}>
 							<div className={styles.advantageItem}>
 								<img src='/static/construction.svg' alt='fkk' />
@@ -58,14 +50,18 @@ const HomeBanner = () => {
 									</div>
 								</div>
 							</div>
-						</div>
-						<div className={styles.titleAction}>
-							<Button
-								pd={'20px 20px'}
-								type='popUp'
-								title={'ЗАКАЗАТЬ РАССЧЕТ СМЕТЫ'}
-							/>
-							<p>КОНСУЛЬТАЦИЯ/ВЫЕЗДА ЗАМЕРЩИКА</p>
+							<div className={styles.titleAction}>
+								<Button
+									fontSize={'1.2vw'}
+									pd={'1.5vw 1.5vw'}
+									type='popUp'
+									title={'ЗАКАЗАТЬ РАССЧЕТ СМЕТЫ'}
+								/>
+								<p>
+									КОНСУЛЬТАЦИЯ И <br />
+									ВЫЕЗДА ЗАМЕРЩИКА
+								</p>
+							</div>
 						</div>
 					</div>
 					<SliderBanner

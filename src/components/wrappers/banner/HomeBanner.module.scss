@@ -1,6 +1,6 @@
 @import 'src/assets/styles/variables';
 .homeBanner {
-	padding: 40px 0px 40px 0px;
+	padding: 2vw 0vw;
 }
 
 .bannerContainer {
@@ -11,87 +11,66 @@
 
 .bannerInfo {
 	display: flex;
-	gap: 5px;
+	gap: 0.5vw;
 }
 
 .infoTitle {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	flex: 1 1 25%;
 	h1 {
 		position: relative;
 		width: 100%;
 		z-index: 4;
-		border-radius: 10px;
-		font-size: 51px;
+		border-radius: 0.8vw;
+		font-size: 3.125vw;
 		line-height: 1;
 		font-weight: bold;
 		color: #989898;
-		margin-bottom: 82px;
 		backdrop-filter: blur(10px);
 		span {
 			color: $accent;
 		}
-	}
-	h2 {
-		display: none;
-		text-align: end;
-		font-size: 20px;
-		line-height: 1;
-		font-weight: bold;
-		color: $fontColorAccent;
-		margin-bottom: 36px;
-		width: 100%;
-		z-index: 4;
-		border-radius: 5px;
-		background-color: rgb(53 53 53 / 57%);
-		padding: 10px;
 	}
 }
 
 .titleAction {
 	display: flex;
 	background-color: $bgDefaultAccentBlock;
-	border-radius: 8px;
+	border-radius: 0.8vw;
 	align-items: center;
-	gap: 10px;
-	margin-top: 5px;
+	gap: 1vw;
+	margin-top: 0.5vw;
 	width: 100%;
 	z-index: 40;
-	button {
-		padding: 15px 15px;
-		border: none;
-		border-radius: 5px;
-		font-size: 20px;
-		font-weight: bold;
-		color: $black;
-	}
-
 	p {
-		font-size: 13px;
 		font-weight: 800;
 		color: $fontColor;
+		font-size: 1vw;
+		line-height: 1.5;
+		width: 40%;
 	}
 }
 
 .bannerAdvantages {
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	gap: 0.5vw;
 }
 
 .advantageItem {
-	z-index: 40;
 	display: flex;
-	gap: 5px;
 	background-color: $bgDefaultAccentBlock;
-	border-radius: 10px;
-	font-size: 1.5em;
-	padding: 10px;
+	border-radius: 0.8vw;
+	padding: 0.8vw;
 	width: 100%;
+	gap: 0.8pvw;
 	img {
-		width: 30px;
-		height: 30px;
+		position: relative;
+		top: -0.7vw;
+		width: 2.5vw;
+		height: 2.5vw;
 	}
 }
 .advantageBlock {
@@ -99,12 +78,24 @@
 	flex-direction: column;
 }
 .advantageDescriptionMain {
-	font-size: 20px;
+	font-size: 1.5vw;
 	font-weight: 800;
 	color: $fontColor;
+	margin-bottom: 0.5vw;
 }
 .advantageDescription {
-	font-size: 12px;
+	font-size: 0.8vw;
 	color: $fontColorAccent;
 	font-weight: 800;
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+	.bannerContainer {
+		margin: 0 1.2vw;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.bannerContainer {
+		margin: 0 1.2vw;
+	}
 }

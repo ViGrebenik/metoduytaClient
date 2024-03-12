@@ -1,4 +1,4 @@
-import NavBar from '../header/NavBar'
+import NavBar from '../header/navigation/NavBar'
 import SocialLink from '../ui/socialLink/SocialLink'
 import styles from './Footer.module.scss'
 const Footer = () => {

@@ -14,9 +14,9 @@ const Button = ({
 	pd
 }) => {
 	const CustomButton = styled.div`
-		font-size: ${props => props.fontSize || '14px'};
+		font-size: ${props => props.fontSize || '0.8vw'};
 		background-color: ${props => props.bgC || '#ffd622'};
-		padding: ${props => props.pd || '5px 10px'};
+		padding: ${props => props.pd || '0.5vw 1vw'};
 		${props => props.className && ` ${props.className}`};
 	`
 
@@ -32,7 +32,9 @@ const Button = ({
 						pd={pd}
 						className={styles.button}
 					>
-						<Link to={redirectTo}>{title}</Link>
+						<Link to={redirectTo}>
+							<span>{title}</span>
+						</Link>
 					</CustomButton>
 				</div>
 			) : (
@@ -45,7 +47,7 @@ const Button = ({
 						onClick={() => openModal()}
 					>
 						{arrow && <img src='/static/arrow.svg' alt='arrow' />}
-						{title}
+						<span>{title}</span>
 					</CustomButton>
 				</div>
 			)}

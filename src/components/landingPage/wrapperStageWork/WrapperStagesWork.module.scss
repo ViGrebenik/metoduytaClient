@@ -37,7 +37,7 @@
 .containerWrapper {
 	display: flex;
 	position: relative;
-	margin: 0 -100px;
+	// margin: 0 -100px;
 }
 
 .containerStageWork {
@@ -107,6 +107,7 @@
 
 .containerWrapperDescription {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 20px;
 }
 

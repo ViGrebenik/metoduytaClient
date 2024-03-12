@@ -4,8 +4,8 @@
 	border-radius: 5px;
 	align-items: center;
 	img {
-		width: 20px;
-		height: 20px;
+		width: 1.5vw;
+		height: 1.5vw;
 	}
 
 	.button {
@@ -15,7 +15,7 @@
 		align-items: center;
 		border: none;
 		border-radius: 5px;
-		font-weight: bold;
+		font-weight: 800;
 		color: $black;
 		transition: background-color 0.3s ease;
 		a {
@@ -23,11 +23,8 @@
 			color: inherit;
 		}
 		&:hover {
+			color: $white;
 			background-color: $bgDefaultAccent;
 		}
-	}
-	p {
-		color: #8f8f8f;
-		font-size: 14px;
 	}
 }
