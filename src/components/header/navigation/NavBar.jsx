@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useModal } from '../../../assets/services/ModalContext'
 import styles from './Navbar.module.scss'
 
 const NavBar = () => {
 	const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false)
 	const [currentPage, setCurrentPage] = useState('')
+	const { isOpen, toggleMenu } = useModal()
 	const location = useLocation()
 	useEffect(() => {
 		setCurrentPage(location.pathname)
@@ -34,7 +36,7 @@ const NavBar = () => {
 	}
 
 	return (
-		<div className={styles.menu}>
+		<div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
 			<ul>
 				<li>
 					<div
@@ -98,6 +100,7 @@ const NavBar = () => {
 					<Link
 						to={'/portfolio'}
 						className={currentPage === '/portfolio' ? styles.active : ''}
+						onClick={toggleMenu}
 					>
 						ПРИМЕРЫ РАБОТ
 					</Link>

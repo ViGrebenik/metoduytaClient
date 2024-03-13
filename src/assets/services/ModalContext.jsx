@@ -12,7 +12,7 @@ export const ModalProvider = ({ children }) => {
 	const closeModal = () => setIsModalOpen(false)
 
 	const toggleMenu = () => {
-		setIsOpen(!isOpen)
+		setIsOpen(prev => !prev)
 	}
 
 	return (

@@ -1,5 +1,11 @@
 @import 'src/assets/styles/variables';
 .menu {
+	&.open {
+		position: absolute;
+		padding: 0px 30px 10px 30px;
+		background-color: $bgdefault;
+		width: 100%;
+	}
 	ul {
 		display: flex;
 		font-size: 16px;
@@ -37,9 +43,10 @@
 		top: 100%;
 		left: -20px;
 		width: 300px;
-		z-index: 100;
+		z-index: 10000;
 		border-radius: 10px;
-		backdrop-filter: blur(5px);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		background-color: $bgDefaultAccentBlock;
 
 		li {
@@ -60,11 +67,6 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-	.menu {
-		ul {
-			font-size: 12px;
-		}
-	}
 	.dropdown {
 		.submenu {
 			width: 250px;
@@ -79,9 +81,13 @@
 
 @media only screen and (max-width: 767px) {
 	.menu {
+		position: absolute;
+		height: 100vh;
 		ul {
+			padding-top: 20px;
+			gap: 40px;
 			flex-direction: column;
-			font-size: 12px;
+			font-size: 25px;
 		}
 	}
 	.dropdown {

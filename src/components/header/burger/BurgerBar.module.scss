@@ -2,11 +2,13 @@
 
 .menuBackdrop {
 	position: absolute;
-	backdrop-filter: blur(6px);
-	background: $bgblur;
-	background: $bgblurIO;
+	backdrop-filter: blur(10px);
+	background-color: $bgdefault;
 	width: 100%;
 	z-index: 999;
+	&.open {
+		height: 100vh;
+	}
 }
 
 .menuContent {
@@ -14,4 +16,15 @@
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	animation: fadeIn 0.4s ease forwards;
+}
+@media only screen and (max-width: 767px) {
+	.menuBackdrop {
+		height: 100vh;
+	}
+	.menuContent {
+		padding: 20px;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		animation: fadeIn 0.4s ease forwards;
+	}
 }

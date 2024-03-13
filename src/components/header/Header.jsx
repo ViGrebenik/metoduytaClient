@@ -6,7 +6,6 @@ import { useModal } from '../../assets/services/ModalContext'
 import Button from '../ui/button/Button'
 import CallRequestForm from '../ui/popup/CallRequestForm'
 import styles from './Header.module.scss'
-import BurgerBar from './burger/BurgerBar'
 import NavBar from './navigation/NavBar'
 
 const Header = () => {
@@ -31,12 +30,13 @@ const Header = () => {
 									УЮТА
 								</p>
 							</Link>
-							<label
-								checked={isOpen}
-								onChange={toggleMenu}
-								className={styles.burgerMenuButton}
-							>
-								<input type='checkbox' id='burger' />
+							<label htmlFor='toggle' className={styles.burgerMenuButton}>
+								<input
+									type='checkbox'
+									id='toggle'
+									checked={isOpen}
+									onChange={toggleMenu}
+								/>
 								<span></span>
 								<span></span>
 								<span></span>
@@ -64,8 +64,8 @@ const Header = () => {
 					)}
 				</div>
 			</div>
+			{isOpen && <NavBar />}
 			{isModalOpen && <CallRequestForm onClose={closeModal} />}
-			{isOpen && <BurgerBar />}
 		</header>
 	)
 }
