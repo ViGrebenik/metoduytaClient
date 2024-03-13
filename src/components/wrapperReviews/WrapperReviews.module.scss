@@ -1,12 +1,8 @@
 @import 'src/assets/styles/variables';
-.wrapperReviews {
-	// background-color: rgb(37, 37, 37);
-}
 .container {
 	margin: 0 auto;
 	max-width: 1280px;
-	padding-top: 30px;
-	margin-top: 5px;
+	padding: 30px 0px;
 	border-radius: 10px;
 }
 .containerBlock {
@@ -22,11 +18,12 @@
 .containerContent {
 }
 .contentHeaderTitle {
+	font-size: 30px;
+	font-weight: 800;
 	color: $accent;
 }
 
 .containerMain {
-	// margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 	position: relative;
@@ -35,7 +32,6 @@
 
 .sliderContainer {
 	display: flex;
-	// transition: transform 0.5s;
 	gap: 20px;
 	height: 300px;
 }
@@ -61,7 +57,7 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: $accent;
 	color: white;
 	border: none;
 	padding: 10px;
@@ -80,5 +76,11 @@
 
 .prevButton:hover,
 .nextButton:hover {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: $accent;
+}
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+		padding: 30px 0px;
+	}
 }

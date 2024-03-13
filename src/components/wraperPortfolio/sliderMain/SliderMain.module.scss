@@ -2,15 +2,14 @@
 	.browseIcon {
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 99%;
+		border-radius: 5px;
 		top: 0;
 		transition: background-color 0.3s ease;
 		cursor: pointer;
 		&::after {
 			content: url('/public/static/slider/browseSlider.svg');
 			position: absolute;
-			top: 10px;
-			left: 10%;
 			top: 35%;
 			left: 40%;
 			opacity: 0;
@@ -36,10 +35,8 @@
 		border: none;
 		padding: 0px 0px;
 		cursor: pointer;
-		border-radius: 4px;
-		margin-left: 10px;
 		img {
-			width: 40px;
+			width: 100px;
 			height: 100px;
 		}
 	}
@@ -49,11 +46,11 @@
 	}
 
 	button:first-child {
-		left: 30px; /* Отступ слева для кнопки "Previous" */
+		left: 30px;
 	}
 
 	button:last-child {
-		right: 10px; /* Отступ справа для кнопки "Next" */
+		right: 0px;
 	}
 }
 
@@ -61,5 +58,31 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	border-radius: 8px;
+	border-radius: 5px;
+	img {
+		border-radius: 5px;
+		position: relative;
+		top: -1px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.sliderContainer {
+		.browseIcon {
+			&::after {
+				content: url('/static/slider/browseSliderMobile.svg');
+			}
+		}
+		.arrowSlider {
+			img {
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+	.mainItemBlockSlider {
+		img {
+			top: 0.5px;
+		}
+	}
 }

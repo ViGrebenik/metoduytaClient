@@ -1,6 +1,4 @@
 @import 'src/assets/styles/variables';
-.WrapperFAQ {
-}
 
 .container {
 	margin: 0 auto;
@@ -33,11 +31,6 @@
 	padding: 20px;
 }
 .faq {
-	h2 {
-		margin-bottom: 20px;
-		font-size: 24px;
-	}
-
 	.question {
 		cursor: pointer;
 		padding: 10px;
@@ -88,5 +81,20 @@
 		opacity: 0;
 		transform: translateY(-20px);
 		transition: opacity 0.8s, transform 0.8s;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+		max-width: 1280px;
+		margin-bottom: 50px;
+	}
+	.contentHeaderTitle {
+		font-size: 25px;
+		margin-bottom: 10px;
+		color: $accent;
+		font-weight: 800;
+		border-radius: 5px;
+		padding: 10px;
 	}
 }

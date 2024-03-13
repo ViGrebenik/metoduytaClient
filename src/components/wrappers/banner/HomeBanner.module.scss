@@ -88,15 +88,13 @@
 	color: $fontColorAccent;
 	font-weight: 800;
 }
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.bannerContainer {
 		margin: 0 1.2vw;
 	}
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.homeBanner {
-		padding: 2vw 0vw;
+		padding: 10px 0vw;
 	}
 	.bannerInfo {
 		display: flex;

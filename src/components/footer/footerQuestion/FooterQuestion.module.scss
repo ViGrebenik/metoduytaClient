@@ -8,16 +8,16 @@
 .containerBlock {
 	display: flex;
 	flex-direction: column;
+	max-width: 1280px;
+	margin: auto;
 }
 .containerFeedback {
 	display: flex;
-	margin: auto;
-	max-width: 1280px;
-	width: 100%;
+	flex-wrap: wrap;
 	padding: 20px 0px;
 }
 .feedbackBlockQuestion {
-	flex: 1 0 48%;
+	flex: 1 0 49%;
 	margin-right: 10px;
 	display: flex;
 	flex-direction: column;
@@ -44,4 +44,11 @@
 	font-size: 17px;
 	line-height: 1;
 	color: $fontColor;
+}
+@media only screen and (max-width: 767px) {
+	.containerBlock {
+		display: flex;
+		flex-direction: column;
+		margin: 0 20px;
+	}
 }

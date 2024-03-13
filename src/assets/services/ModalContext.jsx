@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState, useContext } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 const ModalContext = createContext()
 
 export const ModalProvider = ({ children }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
-
 	const [isOpen, setIsOpen] = useState(false)
+	// const [isDarkTheme, setIsDarkTheme] = useState(false)
 
 	const openModal = () => setIsModalOpen(true)
 	const closeModal = () => setIsModalOpen(false)
@@ -17,7 +17,15 @@ export const ModalProvider = ({ children }) => {
 
 	return (
 		<ModalContext.Provider
-			value={{ isModalOpen, openModal, closeModal, toggleMenu, isOpen }}
+			value={{
+				isModalOpen,
+				openModal,
+				closeModal,
+				toggleMenu,
+				isOpen
+				// toggleTheme,
+				// isDarkTheme
+			}}
 		>
 			{children}
 		</ModalContext.Provider>

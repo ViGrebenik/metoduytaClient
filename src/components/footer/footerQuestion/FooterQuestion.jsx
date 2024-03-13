@@ -20,7 +20,9 @@ const FooterQuestion = () => {
 								</div>
 							))}
 						</div>
-						<FeedbackForm />
+						<div className={styles.feedbackBlockQuestion}>
+							<FeedbackForm />
+						</div>
 					</div>
 				</div>
 			</div>

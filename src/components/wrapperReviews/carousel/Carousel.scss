@@ -1,6 +1,6 @@
 @import 'src/assets/styles/variables';
 .carouselReviews {
-	margin: 0px 40px;
+	margin: 0px 30px;
 	.carouselItemReviews {
 		position: relative;
 		border-radius: 10px;
@@ -11,8 +11,10 @@
 		background-color: $bgDefaultAccentBlock;
 	}
 	.carouselTitle {
-		color: #d9d932;
+		color: $accent;
+		font-size: 20px;
 		text-align: center;
+		margin-bottom: 10px;
 	}
 	.carouselblock {
 		position: absolute;
@@ -25,7 +27,7 @@
 	}
 
 	.carouselDescriptionReviews {
-		font-size: 12px;
+		margin-bottom: 15px;
 	}
 
 	.slick-slide > div {
@@ -66,7 +68,7 @@
 		background: transparent;
 	}
 	.slick-dots li button:hover {
-		background-color: rgba(255, 255, 255, 0) !important;
+		background-color: rgba(191, 191, 191, 0) !important;
 	}
 
 	.slick-dots li button:hover,
@@ -88,7 +90,7 @@
 		left: 0;
 		width: 20px;
 		height: 20px;
-		content: url('https://upload.wikimedia.org/wikipedia/commons/b/b7/Rule_Segment_-_Circle_open_-_20px.svg');
+		content: url('/public/static/slider/circleSlider.svg');
 		text-align: center;
 		opacity: 0.25;
 		color: rgb(201, 201, 201);
@@ -100,27 +102,25 @@
 		opacity: 0.75;
 		color: rgb(186, 186, 186);
 	}
-
-	.leftButton,
-	.rightButton {
-		position: absolute;
-		left: 50%;
-		// top: 50%;
-		transform: translateY(-50%);
-		width: 40px;
-		height: 40px;
-		background-color: rgba(0, 0, 0, 0.5);
-		color: white;
-		font-size: 24px;
-		border: none;
-		cursor: pointer;
+	.slick-prev {
+		left: -30px;
 	}
 
-	.leftButton {
-		left: -50px;
+	.slick-prev:before {
+		content: url('/public/static/slider/arrowSliderLeft.svg');
 	}
-
-	.rightButton {
-		right: -50px;
+	.slick-next:before {
+		content: url('/public/static/slider/arrowSliderRight.svg');
+	}
+}
+@media only screen and (max-width: 767px) {
+	.carouselReviews {
+		.carouselblock {
+			width: 40px;
+			height: 40px;
+		}
+		.carouselDescriptionReviews {
+			font-size: 13px;
+		}
 	}
 }

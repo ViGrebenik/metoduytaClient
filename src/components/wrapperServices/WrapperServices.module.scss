@@ -1,6 +1,6 @@
 @import 'src/assets/styles/variables';
 .wrapperServices {
-	height: 800px;
+	margin: 0px 0px 60px 0px;
 }
 .container {
 	margin: 0 auto;
@@ -44,6 +44,23 @@
 	font-weight: 800;
 }
 .contentHeaderSubtitle {
-	font-size: 15px;
+	font-size: 20px;
+	margin-top: 10px;
+	font-weight: 800;
 	color: $fontColor;
+}
+
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0px 20px;
+	}
+	.contentHeaderTitle {
+		font-size: 25px;
+		color: $accent;
+		font-weight: 800;
+	}
+	.contentHeaderSubtitle {
+		font-size: 15px;
+		color: $fontColor;
+	}
 }

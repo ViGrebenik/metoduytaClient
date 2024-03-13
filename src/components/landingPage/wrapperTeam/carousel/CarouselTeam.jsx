@@ -1,18 +1,17 @@
 /* eslint-disable react/prop-types */
 import Slider from 'react-slick'
-import ArrowTeam from './ArrowTeam'
+// import ArrowTeam from './ArrowTeam'
 import './Carousel.scss'
+import { useMediaQuery } from 'react-responsive'
 
 const CarouselTeam = ({ items }) => {
+	const isMobile = useMediaQuery({ maxWidth: 767 })
 	const settings = {
-		// dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 4,
+		slidesToShow: isMobile ? 1 : 4,
 		slidesToScroll: 1,
-		waitForAnimate: true,
-		nextArrow: <ArrowTeam className={'leftButton'} />,
-		prevArrow: <ArrowTeam className={'rightButton'} />
+		waitForAnimate: true
 	}
 
 	return (

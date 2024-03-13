@@ -1,7 +1,4 @@
 @import 'src/assets/styles/variables';
-.WrapperTeam {
-	// background-color: #2727273b;
-}
 .container {
 	margin: 0 auto;
 	max-width: 1280px;
@@ -40,7 +37,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
-	height: 200px;
 	font-size: 20px;
 	color: $fontColor;
 	font-weight: 700;
@@ -68,4 +64,54 @@
 	background-color: $bgDefaultAccentBlock;
 	padding: 20px;
 	border-radius: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+	}
+
+	.contentHeaderTitle {
+		font-size: 25px;
+		margin-bottom: 10px;
+		font-weight: 800;
+		color: $accent;
+	}
+	.contentHeaderSubtitle {
+		font-size: 15px;
+		color: $fontColor;
+	}
+
+	.containerSubtitleTeam {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		font-size: 20px;
+		color: $fontColor;
+		font-weight: 700;
+		margin-bottom: 10px;
+		img {
+			display: block;
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.SubtitleTeamTitle {
+		flex: 1 0 25%;
+		background-color: $bgDefaultAccentBlock;
+		padding: 20px;
+		border-radius: 10px;
+	}
+	.SubtitleTeamSubtitle {
+		flex: 1 0 25%;
+		background-color: $bgDefaultAccentBlock;
+		padding: 20px 40px;
+		border-radius: 10px;
+	}
+	.SubtitleTeamDiscription {
+		flex: 1 0 48%;
+		background-color: $bgDefaultAccentBlock;
+		padding: 20px;
+		border-radius: 10px;
+	}
 }

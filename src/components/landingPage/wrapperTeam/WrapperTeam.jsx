@@ -16,16 +16,10 @@ const WrapperTeam = () => {
 				<div className={styles.containerBlock}>
 					<div className={styles.containerHeader}>
 						<div className={styles.containerContentHeader}>
-							<div className={styles.contentHeaderTitle}>
-								Персонал компании Метод Уюта
-							</div>
+							<div className={styles.contentHeaderTitle}>Персонал компании</div>
 						</div>
 						<div className={styles.contentHeaderSubtitle}>
-							Вы доверяете нам, мы – оправдываем ваши ожидания. Флагман нашей
-							компании – опытные мастера, которые опираются в работе на
-							европейские стандарты. Социальная ориентированность РВТ позволила
-							создать надежный оплот – команду специалистов, умеющих работать
-							слаженно, быстро, вместе с тем – качественно.
+							Вы доверяете нам, мы – оправдываем ваши ожидания.
 						</div>
 					</div>
 					<div className={styles.containerSubtitleTeam}>

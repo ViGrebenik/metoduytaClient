@@ -3,7 +3,6 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	border-radius: 10px;
 }
 
 .mainItemContent {
@@ -50,4 +49,42 @@
 	margin-bottom: 5px;
 	text-align: end;
 	font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+	.titleService {
+		font-size: 16px;
+	}
+	.titleCheck {
+		font-size: 16px;
+		font-weight: 800;
+		color: $fontColorAccent;
+		img {
+			position: relative;
+			top: 3px;
+			left: -5px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+	.contentItemSubtitle {
+		display: flex;
+		justify-content: space-between;
+		font-size: 16px;
+		flex-direction: column;
+	}
+	.subtitleAddress {
+		color: black;
+		font-weight: 800;
+		padding: 5px 10px;
+		border-radius: 5px;
+		background-color: $accent;
+		font-size: 16px;
+	}
+	.subtitleQuadrature {
+		font-weight: 800;
+		color: $fontColorAccent;
+		margin-bottom: 5px;
+		text-align: end;
+		font-size: 16px;
+	}
 }

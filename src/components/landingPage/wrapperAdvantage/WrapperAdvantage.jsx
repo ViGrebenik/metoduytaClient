@@ -1,4 +1,5 @@
 import styles from './WrapperAdvantage.module.scss'
+import { advantages } from './dataAdvantage'
 
 const WrapperAdvantage = () => {
 	return (
@@ -13,71 +14,17 @@ const WrapperAdvantage = () => {
 							</div>
 						</div>
 					</div>
+
 					<div className={styles.containerWrapper}>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
+						{advantages.map((service, index) => (
+							<div className={styles.containerItem} key={index}>
+								<div className={styles.itemBlock}>
+									<img src={service.iconImg} alt='icon' />
+									<div className={styles.ItemTitle}>{service.title}</div>
+								</div>
+								<div className={styles.BlockSubtitle}>{service.subTitle}</div>
 							</div>
-						</div>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
-							</div>
-						</div>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
-							</div>
-						</div>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
-							</div>
-						</div>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
-							</div>
-						</div>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
-							</div>
-						</div>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
-							</div>
-						</div>
-						<div className={styles.containerItem}>
-							<img src='/static/construction.svg' alt='logo' />
-							<div className={styles.containerItemTitle}>Преимущество</div>
-							<div className={styles.containerItemSubtitle}>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem
-								ipsum dolor sit amet consectetur, adipisicing elit.
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>

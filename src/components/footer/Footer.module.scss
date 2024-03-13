@@ -65,3 +65,38 @@
 	color: $fontColor;
 	font-weight: 800;
 }
+
+@media only screen and (max-width: 767px) {
+	.containerBasementBorders {
+		margin: 0 20px;
+	}
+	.socialLink {
+		width: 30px;
+		height: 30px;
+		background-color: rgb(83, 83, 83);
+	}
+	.basementInfo {
+		display: flex;
+		flex-direction: column;
+	}
+	.infoAdress {
+		font-size: 12px;
+		height: 50px;
+		text-align: end;
+		padding-top: 20px;
+		color: $fontColor;
+		font-weight: 800;
+	}
+	.infoContact {
+		font-size: 12px;
+		height: 50px;
+		text-align: end;
+		padding-top: 30px;
+		margin-bottom: 40px;
+		color: $fontColor;
+		font-weight: 800;
+	}
+	.navigationInfoCampania {
+		font-size: 15px;
+	}
+}

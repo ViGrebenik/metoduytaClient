@@ -1,8 +1,10 @@
+import { useMediaQuery } from 'react-responsive'
 import Button from '../ui/button/Button'
 import styles from './WrapperPortfolio.module.scss'
 import PortfolioCart from './portfolioCart/PortfolioCart'
 
 const WrapperPortfolio = () => {
+	const isMobile = useMediaQuery({ maxWidth: 767 })
 	return (
 		<div className={styles.wrapperPortfolio}>
 			<div className={styles.container}>
@@ -16,12 +18,14 @@ const WrapperPortfolio = () => {
 								Хороший ремонт – это реальность.
 							</div>
 						</div>
-						<Button
-							title={'ПОСМОТРЕТЬ ВСЕ РАБОТЫ'}
-							fontSize={'16px'}
-							redirectTo={'/portfolio'}
-							pd={'20px 20px'}
-						/>
+						{!isMobile && (
+							<Button
+								title={'ПОСМОТРЕТЬ ВСЕ РАБОТЫ'}
+								fontSize={'16px'}
+								redirectTo={'/portfolio'}
+								pd={'20px 20px'}
+							/>
+						)}
 					</div>
 					<div className={styles.containerMain}>
 						<div className={styles.containerMainItem}>
@@ -37,6 +41,14 @@ const WrapperPortfolio = () => {
 							<PortfolioCart />
 						</div>
 					</div>
+					{isMobile && (
+						<Button
+							title={'ПОСМОТРЕТЬ ВСЕ РАБОТЫ'}
+							fontSize={'16px'}
+							redirectTo={'/portfolio'}
+							pd={'20px 20px'}
+						/>
+					)}
 				</div>
 			</div>
 		</div>

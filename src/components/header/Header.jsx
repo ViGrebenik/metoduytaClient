@@ -9,11 +9,21 @@ import styles from './Header.module.scss'
 import NavBar from './navigation/NavBar'
 
 const Header = () => {
-	const { isModalOpen, closeModal, isOpen, toggleMenu } = useModal()
+	const {
+		isModalOpen,
+		closeModal,
+		isOpen,
+		toggleMenu
+		// toggleTheme,
+		// isDarkTheme
+	} = useModal()
 	const isMobile = useMediaQuery({ maxWidth: 1024 })
 
 	return (
 		<header className={styles.header}>
+			{/* <button onClick={toggleTheme}>
+				{isDarkTheme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+			</button> */}
 			<div className={styles.headerWrapper}>
 				<div className={styles.headerContainer}>
 					{isMobile ? (

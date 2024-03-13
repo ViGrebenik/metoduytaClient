@@ -5,8 +5,6 @@
 	margin: 0 auto;
 	max-width: 1280px;
 	padding-top: 30px;
-	margin-top: 5px;
-	border-radius: 10px;
 }
 .containerWrapper {
 	display: flex;
@@ -41,9 +39,7 @@
 .contentHeaderTitle {
 	width: 100%;
 	z-index: 4;
-	border-radius: 5px;
 	font-size: 49px;
-	backdrop-filter: blur(3px);
 	line-height: 1;
 	font-weight: bold;
 	margin-bottom: 5px;
@@ -60,19 +56,57 @@
 	padding: 20px;
 	flex-direction: column;
 	background-color: $bgDefaultAccentBlock;
+	.itemBlock {
+		display: flex;
+		align-items: center;
+		.ItemTitle {
+			font-size: 20px;
+		}
+		img {
+			position: relative;
+			top: -8px;
+			width: 15%;
+		}
+	}
+	.BlockSubtitle {
+		font-size: 15px;
+		color: rgb(109, 109, 109);
+	}
 }
 
-.containerItem img {
-	width: 20%; /* Пропорция 30% */
-	margin-bottom: 10px; /* Отступ между изображением и заголовком */
-}
-
-.containerItemTitle {
-	font-size: 25px; /* Пропорция 20% */
-	margin-bottom: 10px; /* Отступ между заголовком и текстом */
-}
-
-.containerItemSubtitle {
-	font-size: 15px;
-	color: rgb(109, 109, 109);
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+		padding-top: 0px;
+	}
+	.contentHeaderTitle {
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+	.containerItem img {
+		width: 10%;
+		margin-bottom: 5px;
+	}
+	.containerItem {
+		flex: 1 0 49%;
+		display: flex;
+		border-radius: 10px;
+		padding: 10px 10px;
+		flex-direction: column;
+		background-color: $bgDefaultAccentBlock;
+		.itemBlock {
+			display: flex;
+			align-items: center;
+			.ItemTitle {
+				font-size: 12px;
+			}
+			img {
+				top: 0;
+			}
+		}
+		.BlockSubtitle {
+			font-size: 10px;
+			color: rgb(109, 109, 109);
+		}
+	}
 }

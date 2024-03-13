@@ -37,10 +37,10 @@ const SliderMain = ({ arrow = true }) => {
 			{arrow && (
 				<>
 					<button className={styles.arrowSlider} onClick={prevSlide}>
-						<img src='/public/static/slider/arrowSliderLeft.svg' alt='arrow' />
+						<img src='/static/slider/arrowSliderLeft.svg' alt='arrow' />
 					</button>
 					<button className={styles.arrowSlider} onClick={nextSlide}>
-						<img src='/public/static/slider/arrowSliderRight.svg' alt='arrow' />
+						<img src='/static/slider/arrowSliderRight.svg' alt='arrow' />
 					</button>
 				</>
 			)}

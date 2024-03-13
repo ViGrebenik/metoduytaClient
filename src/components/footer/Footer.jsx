@@ -1,14 +1,16 @@
+import { useMediaQuery } from 'react-responsive'
 import NavBar from '../header/navigation/NavBar'
 import SocialLink from '../ui/socialLink/SocialLink'
 import styles from './Footer.module.scss'
 const Footer = () => {
+	const isMobile = useMediaQuery({ maxWidth: 767 })
 	return (
 		<div className={styles.wrapperFooter}>
 			<div className={styles.container}>
 				<div className={styles.containerBasement}>
 					<div className={styles.containerBasementBorders}>
 						<div className={styles.basementNavigation}>
-							<NavBar />
+							{!isMobile && <NavBar />}
 							<div className={styles.navigationInfoCampania}>
 								<span>Метод Уюта </span>- комплексный ремонт и дизайн.
 								<br />
