@@ -54,8 +54,8 @@ const HomeBanner = () => {
 							</div>
 							<div className={styles.titleAction}>
 								<Button
-									fontSize={'1.2vw'}
-									pd={'1.5vw 1.5vw'}
+									fontSize={'28px'}
+									pd={'20px 20px'}
 									type='popUp'
 									title={'ЗАКАЗАТЬ РАССЧЕТ СМЕТЫ'}
 								/>

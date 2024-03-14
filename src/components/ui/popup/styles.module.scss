@@ -21,7 +21,7 @@
 }
 .containerButton {
 	display: flex;
-	background-color: rgb(53 53 53 / 57%);
+	background-color: $bgDefaultAccentBlock;
 	border-radius: 3px;
 	cursor: pointer;
 	padding: 5px;
@@ -62,7 +62,7 @@
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.96);
 	z-index: 999;
 	animation: fadeIn 0.4s ease forwards;
 	&.visible {
@@ -71,29 +71,51 @@
 }
 
 .modal-content {
-	background-color: $bgDefaultAccentBlock;
+	background-color: rgb(35, 35, 35);
 	padding: 20px 30px;
 	border-radius: 5px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	position: relative;
 	width: 500px;
 	.feedbackFormTitle {
-		font-size: 30px;
+		font-size: clamp(18px, 25px, 30px);
 		font-weight: 800;
 		color: $accent;
 	}
 	.feedbackFormSubtitle {
-		color: white;
+		color: $fontColor;
 		font-size: 15px;
-		margin-bottom: 20px;
+		font-weight: 800;
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 
 	.close {
 		position: absolute;
-		top: 10px;
+		top: 5px;
 		right: 10px;
 		cursor: pointer;
-		font-size: 20px;
+		font-size: 30px;
 		color: #d0d0d0;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.modal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 999;
+		animation: fadeIn 0.4s ease forwards;
+		&.visible {
+			animation: fadeOut 0.3s ease forwards;
+		}
+	}
+	.modal-content {
+		margin: 0 20px;
 	}
 }

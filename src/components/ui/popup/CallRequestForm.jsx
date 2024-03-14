@@ -21,9 +21,7 @@ const CallRequestForm = ({ onClose }) => {
 					&times;
 				</span>
 				<div className={styles.feedbackFormTitle}>Закажи обратную связь</div>
-				<div className={styles.feedbackFormSubtitle}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				</div>
+				<div className={styles.feedbackFormSubtitle}>мы вам перезвоним</div>
 				<FeedbackForm questionForm={false} handleSubmit={handleSubmit} />
 			</div>
 		</div>

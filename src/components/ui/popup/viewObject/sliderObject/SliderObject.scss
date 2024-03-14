@@ -84,3 +84,25 @@
 		// background-color: rgba(0, 0, 0, 0.7);
 	}
 }
+@media only screen and (max-width: 767px) {
+	.slider-container {
+		width: 100%; /* Ширина контейнера, можете настроить по своему усмотрению */
+		margin: 0 auto; /* Центрирование контейнера */
+	}
+
+	.slick-dots li {
+		width: 50px !important;
+		height: 50px !important;
+		display: inline-block;
+		margin: 0 5px; /* Расстояние между точками */
+	}
+	.slick-dots {
+		position: absolute;
+		bottom: 0px; /* Расположение точек снизу */
+		list-style: none;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+}
