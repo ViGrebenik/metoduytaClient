@@ -1,6 +1,4 @@
 @import 'src/assets/styles/variables';
-.wrapperDesigner {
-}
 
 .container {
 	margin: 0 auto;
@@ -21,7 +19,7 @@
 	margin-top: 20px;
 	.contentHeaderTitle {
 		margin: 0 auto;
-		font-size: 45px;
+		font-size: clamp(18px, 25px, 45px);
 		color: $fontColorAccent;
 		font-weight: 800;
 		width: 80%;
@@ -29,6 +27,7 @@
 }
 .containerCompanyDescription {
 	display: flex;
+	flex-wrap: wrap;
 	margin-top: 20px;
 	gap: 10px;
 	margin-bottom: 50px;
@@ -36,10 +35,10 @@
 		&:first-child {
 			flex: 1 0 48%;
 			.blockTagline {
-				font-size: 40px;
+				font-size: clamp(25px, 33px, 40px);
 				color: $fontColor;
 				font-weight: 800;
-				margin-bottom: 40px;
+				margin-bottom: 20px;
 				line-height: 1;
 				span {
 					color: $accent;
@@ -48,6 +47,7 @@
 			.blockDescription {
 				font-size: 15px;
 				color: $white;
+				font-weight: 700;
 				span {
 					display: block;
 					width: 90%;
@@ -122,6 +122,126 @@
 						&:hover {
 							color: $white;
 							border: 2px solid $accent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+	}
+	.containerHeader {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-top: 20px;
+		.contentHeaderTitle {
+			margin: 0 auto;
+			color: $fontColorAccent;
+			font-weight: 800;
+			width: 80%;
+		}
+	}
+
+	.containerCompanyDescription {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 20px;
+		gap: 10px;
+		margin-bottom: 50px;
+		.companyDescriptionBlock {
+			&:first-child {
+				flex: 1 0 52%;
+				.blockTagline {
+					color: $fontColor;
+					font-weight: 800;
+					margin-bottom: 20px;
+					line-height: 1;
+					span {
+						color: $accent;
+					}
+				}
+				.blockDescription {
+					font-size: 15px;
+					color: $white;
+					span {
+						display: block;
+						width: 90%;
+						margin-top: 10px;
+					}
+				}
+			}
+			&:last-child {
+				flex: 1 0 48%;
+				margin-top: 10px;
+				.blockQualities {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 10px;
+					.qualities {
+						flex: 1 0 45%;
+						border-radius: 10px;
+						background-color: $bgdefault;
+						display: flex;
+						gap: 10px;
+						font-size: 1.5em;
+						padding: 20px;
+						align-items: start;
+						img {
+							width: 50px;
+							height: 50px;
+						}
+						.qualitiesBlock {
+							display: flex;
+							flex-direction: column;
+							.qualitiesTitle {
+								font-size: 20px;
+								font-weight: 800;
+								line-height: 1;
+								color: $white;
+							}
+							.qualitiesSubtitle {
+								margin-top: 10px;
+								font-size: 15px;
+								line-height: 1;
+								color: $fontColor;
+							}
+						}
+					}
+				}
+				.blockAction {
+					margin-top: 10px;
+					border-radius: 10px;
+					background-color: $bgdefault;
+					padding: 20px;
+					.headerText {
+						font-size: 20px;
+						font-weight: 800;
+						line-height: 1.5;
+						color: $white;
+						span {
+							color: $accent;
+						}
+					}
+					.buttonAction {
+						display: flex;
+						justify-content: end;
+						button {
+							border-radius: 10px;
+							background-color: initial;
+							font-weight: 800;
+							color: $fontColorAccent;
+							border: 2px solid $white;
+							padding: 20px;
+							margin-top: 20px;
+							transition: color 0.5s ease, border 0.5s ease;
+							&:hover {
+								color: $white;
+								border: 2px solid $accent;
+							}
 						}
 					}
 				}

@@ -1,7 +1,4 @@
 @import 'src/assets/styles/variables';
-.wrapperDesigner {
-}
-
 .container {
 	margin: 0 auto;
 	max-width: 1280px;
@@ -168,6 +165,171 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.container {
+		margin: 0 20px;
+	}
+	.containerBlock {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+
+	.containerHeader {
+		.contentHeaderTitle {
+			font-size: 33px;
+		}
+	}
+	.containerContacts {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		.containerContactsDescription {
+			flex: 1 0 50%;
+			display: flex;
+			flex-direction: column;
+			margin-top: 20px;
+			margin-bottom: 0px;
+			.contactsDescription {
+				&:nth-child(1) {
+					padding-left: 20px;
+					border-radius: 10px;
+					background-color: $bgdefault;
+					padding-top: 10px;
+					.blockTagline {
+						font-size: 33px;
+						color: $fontColor;
+						font-weight: 800;
+						line-height: 1;
+						span {
+							color: $accent;
+						}
+					}
+					.blockDescription {
+						margin-top: 10px;
+						margin-bottom: 10px;
+						font-size: 20px;
+						color: $white;
+						line-height: 1;
+						span {
+							display: block;
+							width: 90%;
+						}
+					}
+				}
+				&:nth-child(2) {
+					display: flex;
+					flex-direction: column;
+					margin-top: 5px;
+					gap: 10px;
+					.blockQualities {
+						.qualities {
+							border-radius: 10px;
+							background-color: $bgdefault;
+							display: flex;
+							gap: 10px;
+							font-size: 1.5em;
+							padding: 10px 20px;
+							align-items: start;
+							img {
+								width: 50px;
+								height: 50px;
+							}
+							.qualitiesBlock {
+								display: flex;
+								flex-direction: column;
+								.qualitiesTitle {
+									font-size: 20px;
+									font-weight: 800;
+									line-height: 1;
+									color: $white;
+								}
+								.qualitiesSubtitle {
+									margin-top: 10px;
+									font-size: 15px;
+									line-height: 1;
+									color: $fontColor;
+								}
+							}
+						}
+					}
+				}
+				&:nth-child(3) {
+					display: flex;
+					margin-top: 10px;
+					gap: 10px;
+					.blockQualities {
+						.qualities {
+							border-radius: 10px;
+							background-color: $bgdefault;
+							display: flex;
+							gap: 10px;
+							font-size: 1.5em;
+							padding: 10px 20px;
+							align-items: start;
+							img {
+								width: 50px;
+								height: 50px;
+							}
+							.qualitiesBlock {
+								display: flex;
+								flex-direction: column;
+								.qualitiesTitle {
+									font-size: 20px;
+									font-weight: 800;
+									line-height: 1;
+									color: $white;
+								}
+								.qualitiesSubtitle {
+									margin-top: 10px;
+									font-size: 15px;
+									line-height: 1;
+									color: $fontColor;
+								}
+							}
+						}
+					}
+					.itemSocialLink {
+						display: flex;
+						width: 100%;
+						justify-content: center;
+						border-radius: 10px;
+						align-items: center;
+						img {
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+		.containerContactsFormAction {
+			flex: 1 0 53%;
+			height: 100%;
+			background-color: $bgdefault;
+			border-radius: 10px;
+			margin-top: 20px;
+			padding: 20px;
+		}
+		.containerContactsFormCart {
+			flex: 1 0 53%;
+			height: 400px;
+			background-color: $bgdefault;
+			border-radius: 10px;
+			margin-top: 20px;
+			backdrop-filter: blur(6px);
+			img {
+				// filter: blur(1px);
+				filter: grayscale(100%);
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 }

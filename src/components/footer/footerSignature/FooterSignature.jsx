@@ -13,7 +13,7 @@ const FooterSignature = () => {
 								<span>Политика конфиденциальности</span>
 							</div>
 						</div>
-						<div className={styles.containerDeveloper}>Cайт разработан VI.</div>
+						<div className={styles.containerDeveloper}></div>
 					</div>
 				</div>
 			</div>
