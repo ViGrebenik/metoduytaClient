@@ -15,9 +15,6 @@ const ViewObject = ({ onClose }) => {
 	return (
 		<div className={classNames(styles.modal, { [styles.visible]: isVisible })}>
 			<div className={styles.modalContent}>
-				{/* <span className={styles.close} onClick={onClosePopUP}>
-					&times;
-				</span> */}
 				<PortfolioCart onClosePopUP={onClosePopUP} />
 			</div>
 		</div>

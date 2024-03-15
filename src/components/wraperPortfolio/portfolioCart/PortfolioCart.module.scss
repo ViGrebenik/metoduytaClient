@@ -10,17 +10,29 @@
 	justify-content: space-between;
 	padding: 10px 20px;
 }
-.contentItemTitle {
-}
+
 .titleService {
 	font-size: 20px;
 	font-weight: 800;
 	color: $accent;
+	&.portfolioPage {
+		font-size: 17px;
+	}
 }
 .titleCheck {
 	font-size: 20px;
 	font-weight: 800;
 	color: $fontColorAccent;
+	&.portfolioPage {
+		font-size: 17px;
+		img {
+			position: relative;
+			top: 3px;
+			left: -5px;
+			width: 30px;
+			height: 30px;
+		}
+	}
 	img {
 		position: relative;
 		top: 3px;
@@ -34,6 +46,9 @@
 	justify-content: space-between;
 	font-size: 20px;
 	flex-direction: column;
+	&.portfolioPage {
+		font-size: 17px;
+	}
 }
 .subtitleAddress {
 	color: black;
@@ -42,6 +57,9 @@
 	border-radius: 5px;
 	background-color: $accent;
 	font-size: 20px;
+	&.portfolioPage {
+		font-size: 17px;
+	}
 }
 .subtitleQuadrature {
 	font-weight: 800;
@@ -49,7 +67,11 @@
 	margin-bottom: 5px;
 	text-align: end;
 	font-size: 20px;
+	&.portfolioPage {
+		font-size: 17px;
+	}
 }
+
 @media only screen and (max-width: 767px) {
 	.titleService {
 		font-size: 16px;

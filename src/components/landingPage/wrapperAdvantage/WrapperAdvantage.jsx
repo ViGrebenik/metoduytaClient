@@ -1,3 +1,4 @@
+import ItemAdvantage from '../../ui/itemAdvantage/ItemAdvantage'
 import styles from './WrapperAdvantage.module.scss'
 import { advantages } from './dataAdvantage'
 
@@ -17,13 +18,7 @@ const WrapperAdvantage = () => {
 
 					<div className={styles.containerWrapper}>
 						{advantages.map((service, index) => (
-							<div className={styles.containerItem} key={index}>
-								<div className={styles.itemBlock}>
-									<img src={service.iconImg} alt='icon' />
-									<div className={styles.ItemTitle}>{service.title}</div>
-								</div>
-								<div className={styles.BlockSubtitle}>{service.subTitle}</div>
-							</div>
+							<ItemAdvantage item={service} key={index} />
 						))}
 					</div>
 				</div>

@@ -1,6 +1,7 @@
 @import 'src/assets/styles/variables';
 .containerCalculator {
 	display: flex;
+	flex-wrap: wrap;
 	background-color: $bgDefaultAccentBlock;
 	border-radius: 10px;
 }
@@ -89,6 +90,7 @@
 .calculatorBlock {
 	display: flex;
 	padding: 20px;
+	flex: 1 0 48%;
 	flex-direction: column;
 	background-color: $bgDefaultAccentBlock;
 	gap: 16px;
@@ -178,7 +180,6 @@
 			display: flex;
 			flex-direction: column;
 			width: 200px;
-			// background-color: $bgDefaultAccent;
 			.roomsItemButton {
 				display: flex;
 				justify-content: space-around;
@@ -246,5 +247,40 @@
 
 	.transition {
 		transition: 300ms ease;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.numberOfRoomsBlock {
+		display: flex;
+		margin-bottom: 10px;
+		.containerNumberOfRooms {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			width: 100%;
+			.numberOfRoomsItem {
+				display: flex;
+				flex-direction: column;
+				width: 200px;
+				.roomsItemButton {
+					display: flex;
+					justify-content: space-around;
+					border-radius: 5px;
+					background-color: #333;
+					span {
+						font-size: 25px;
+						color: $fontColorAccent;
+					}
+					button {
+						background-color: #333;
+						padding: 5px;
+						img {
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
 	}
 }

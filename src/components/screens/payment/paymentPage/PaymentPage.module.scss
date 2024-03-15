@@ -21,7 +21,7 @@
 	flex-direction: column;
 	.contentHeaderTitle {
 		margin-top: 20px;
-		font-size: 45px;
+		font-size: clamp(17px, 25px, 45px);
 		color: #ffd622;
 		font-weight: 800;
 		width: 80%;
@@ -32,7 +32,6 @@
 	gap: 10px;
 	.descriptionItem {
 		margin-top: 10px;
-		// border: 2px solid rgba(178, 178, 178, 0.382);
 		flex: 1 0 48%;
 		border-radius: 10px;
 		background-color: #2727273b;
@@ -44,11 +43,11 @@
 .containerPricesServices {
 	display: flex;
 	gap: 10px;
-
+	flex-wrap: wrap;
+	margin-top: 10px;
 	.pricesServices {
 		flex: 1 0 20%;
 		text-align: center;
-		margin-top: 10px;
 		border: 2px solid rgba(178, 178, 178, 0.382);
 		border-radius: 10px;
 		background-color: #2727273b;
@@ -68,14 +67,15 @@
 
 .containerAdvantages {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 10px;
-
+	margin-top: 20px;
 	.advantagesBlock {
 		flex: 1 0 20%;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
-		margin-top: 10px;
+
 		border: 2px solid rgba(178, 178, 178, 0.382);
 		border-radius: 10px;
 		background-color: #2727273b;
@@ -98,7 +98,6 @@
 }
 .actionItem {
 	margin-top: 10px;
-	// height: 400px;
 	border: 2px solid rgba(178, 178, 178, 0.382);
 	border-radius: 10px;
 	padding: 40px;
@@ -110,18 +109,19 @@
 .containerActions {
 	display: flex;
 	gap: 10px;
+	flex-wrap: wrap;
 	.actionItem {
 		&:first-child {
-			flex: 1 0 70%;
+			flex: 1 0 55%;
 			.actionItemTitle {
-				font-size: 35px;
+				font-size: clamp(17px, 25px, 35px);
 				font-weight: 800;
 				color: $accent;
 				margin-bottom: 20px;
 			}
 			.actionItemSubtitle {
 				width: 70%;
-				font-size: 20px;
+				font-size: clamp(12px, 17px, 25px);
 				color: $fontColorAccent;
 				font-weight: 700;
 			}
@@ -138,10 +138,8 @@
 				font-size: 25px;
 				font-weight: 800;
 				color: $accent;
-				// margin-bottom: 20px;
 			}
 			.actionItemSubtitle {
-				// width: 70%;
 				font-size: 15px;
 				color: $fontColorAccent;
 				font-weight: 700;
@@ -158,4 +156,36 @@
 	display: flex;
 	justify-content: end;
 	margin-top: 43px;
+}
+@media only screen and (max-width: 767px) {
+	.containerHeader {
+		.contentHeaderTitle {
+			margin-top: 30px;
+			margin-left: 20px;
+			font-size: clamp(17px, 25px, 45px);
+			color: #ffd622;
+			font-weight: 800;
+			width: 80%;
+		}
+	}
+	.container {
+		margin: 0 20px;
+	}
+	.actionItem {
+		margin-top: 10px;
+		border: 2px solid rgba(178, 178, 178, 0.382);
+		border-radius: 10px;
+		padding: 20px;
+		.calculator {
+			text-align: center;
+		}
+	}
+	.containerDescription {
+		display: flex;
+		flex-wrap: wrap;
+		.descriptionItem {
+			margin-top: 10px;
+			flex: 1 0 52%;
+		}
+	}
 }
