@@ -7,7 +7,7 @@ const CalculatorUIHome = () => {
 
 	return (
 		<div className={styles.container} onClick={openModal}>
-			<img src='/public/static/construction.svg' alt='calculator' />
+			<img src='/static/construction.svg' alt='calculator' />
 			{isModalOpen && <CallRequestForm type={true} onClose={closeModal} />}
 		</div>
 	)

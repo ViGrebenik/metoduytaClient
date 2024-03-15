@@ -6,7 +6,6 @@ const ModalContext = createContext()
 export const ModalProvider = ({ children }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [isOpen, setIsOpen] = useState(false)
-	// const [isDarkTheme, setIsDarkTheme] = useState(false)
 
 	const openModal = () => setIsModalOpen(true)
 	const closeModal = () => setIsModalOpen(false)
@@ -22,8 +21,8 @@ export const ModalProvider = ({ children }) => {
 				openModal,
 				closeModal,
 				toggleMenu,
-				isOpen
-				// toggleTheme,
+				isOpen,
+				setIsOpen
 				// isDarkTheme
 			}}
 		>

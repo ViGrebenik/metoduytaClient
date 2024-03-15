@@ -17,6 +17,14 @@
 .containerHeader {
 	display: flex;
 	justify-content: space-between;
+	.containerContent {
+		&:first-child {
+			flex: 1 0 80%;
+		}
+		&:last-child {
+			flex: 1 0 25%;
+		}
+	}
 }
 
 .contentHeaderTitle {

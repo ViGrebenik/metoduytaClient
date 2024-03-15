@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useModal } from '../../../assets/services/ModalContext'
 import styles from './Navbar.module.scss'
+// import { useMediaQuery } from 'react-responsive'
 
 const NavBar = () => {
 	const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false)
 	const [currentPage, setCurrentPage] = useState('')
-	const { isOpen, toggleMenu } = useModal()
+	const { isOpen, setIsOpen } = useModal()
 	const location = useLocation()
+
 	useEffect(() => {
 		setCurrentPage(location.pathname)
 		const handleOutsideClick = event => {
@@ -55,6 +57,7 @@ const NavBar = () => {
 								<li>
 									<Link
 										to={'/servicesDesigner'}
+										onClick={() => setIsOpen(false)}
 										className={
 											currentPage === '/servicesDesigner' ? styles.active : ''
 										}
@@ -65,6 +68,7 @@ const NavBar = () => {
 								<li>
 									<Link
 										to={'/servicesComplex'}
+										onClick={() => setIsOpen(false)}
 										className={
 											currentPage === '/servicesComplex' ? styles.active : ''
 										}
@@ -75,6 +79,7 @@ const NavBar = () => {
 								<li>
 									<Link
 										to={'/servicesDesigner'}
+										onClick={() => setIsOpen(false)}
 										className={
 											currentPage === '/servicesDesigne' ? styles.active : ''
 										}
@@ -85,6 +90,7 @@ const NavBar = () => {
 								<li>
 									<Link
 										to={'/servicesComplex'}
+										onClick={() => setIsOpen(false)}
 										className={
 											currentPage === '/servicesComple' ? styles.active : ''
 										}
@@ -100,7 +106,7 @@ const NavBar = () => {
 					<Link
 						to={'/portfolio'}
 						className={currentPage === '/portfolio' ? styles.active : ''}
-						onClick={toggleMenu}
+						onClick={() => setIsOpen(false)}
 					>
 						ПРИМЕРЫ РАБОТ
 					</Link>
@@ -109,6 +115,7 @@ const NavBar = () => {
 					<Link
 						to={'/payment'}
 						className={currentPage === '/payment' ? styles.active : ''}
+						onClick={() => setIsOpen(false)}
 					>
 						ЦЕНА
 					</Link>
@@ -117,6 +124,7 @@ const NavBar = () => {
 					<Link
 						to={'/calculator'}
 						className={currentPage === '/calculator' ? styles.active : ''}
+						onClick={() => setIsOpen(false)}
 					>
 						КАЛЬКУЛЯТОР
 					</Link>
@@ -132,6 +140,7 @@ const NavBar = () => {
 				<li>
 					<Link
 						to={'/aboutUs'}
+						onClick={() => setIsOpen(false)}
 						className={currentPage === '/aboutUs' ? styles.active : ''}
 					>
 						О КОМПАНИИ
@@ -140,6 +149,7 @@ const NavBar = () => {
 				<li>
 					<Link
 						to={'/contacts'}
+						onClick={() => setIsOpen(false)}
 						className={currentPage === '/contacts' ? styles.active : ''}
 					>
 						КОНТАКТЫ

@@ -24,15 +24,15 @@ const WrapperTeam = () => {
 					</div>
 					<div className={styles.containerSubtitleTeam}>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/public/static/construction.svg' alt='icon' />У нас 5 У
-							нас 5 бригад укомплектованых мастерами
+							<img src='/static/construction.svg' alt='icon' />У нас 5 У нас 5
+							бригад укомплектованых мастерами
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/public/static/construction.svg' alt='icon' />
+							<img src='/static/construction.svg' alt='icon' />
 							Cредний стаж – 8 лет
 						</div>
 						<div className={styles.SubtitleTeamDiscription}>
-							<img src='/public/static/construction.svg' alt='icon' />
+							<img src='/static/construction.svg' alt='icon' />
 							Каждый ремонт выполняют специализированные бригады. В комплексном
 							ремонте квартиры участвуют от 2 до 6 мастеров разного профиля и
 							прораб.

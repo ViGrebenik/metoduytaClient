@@ -18,14 +18,16 @@ const WrapperPortfolio = () => {
 								Хороший ремонт – это реальность.
 							</div>
 						</div>
-						{!isMobile && (
-							<Button
-								title={'ПОСМОТРЕТЬ ВСЕ РАБОТЫ'}
-								fontSize={'16px'}
-								redirectTo={'/portfolio'}
-								pd={'20px 20px'}
-							/>
-						)}
+						<div className={styles.containerContent}>
+							{!isMobile && (
+								<Button
+									title={'ПОСМОТРЕТЬ ВСЕ РАБОТЫ'}
+									fontSize={'16px'}
+									redirectTo={'/portfolio'}
+									pd={'20px 20px'}
+								/>
+							)}
+						</div>
 					</div>
 					<div className={styles.containerMain}>
 						<div className={styles.containerMainItem}>

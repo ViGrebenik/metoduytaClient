@@ -2,8 +2,8 @@
 .menu {
 	&.open {
 		position: absolute;
-		padding: 0px 30px 10px 30px;
-		background-color: $bgdefault;
+		padding: 20px 30px 10px 30px;
+		background-color: rgba(30, 30, 30, 0.936);
 		width: 100%;
 	}
 	ul {
@@ -45,14 +45,12 @@
 		width: 300px;
 		z-index: 10000;
 		border-radius: 10px;
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		background-color: $bgDefaultAccentBlock;
+		background-color: $black;
 
 		li {
 			padding: 0px 20px;
-			margin-bottom: 10px;
-			margin-top: 10px;
+			margin-bottom: 20px;
+			margin-top: 20px;
 
 			a {
 				color: $fontColor;
@@ -69,7 +67,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.dropdown {
 		.submenu {
-			width: 250px;
+			// width: 250px;
 			li {
 				a {
 					font-size: 12px;
@@ -83,8 +81,8 @@
 	.menu {
 		position: absolute;
 		height: 100vh;
+
 		ul {
-			padding-top: 20px;
 			gap: 40px;
 			flex-direction: column;
 			font-size: 25px;
@@ -92,10 +90,10 @@
 	}
 	.dropdown {
 		.submenu {
-			width: 250px;
+			position: relative;
 			li {
 				a {
-					font-size: 12px;
+					font-size: 16px;
 				}
 			}
 		}

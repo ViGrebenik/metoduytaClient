@@ -1,8 +1,8 @@
 @import 'src/assets/styles/variables';
 .containerButtonPortfolio {
-	display: flex;
 	border-radius: 5px;
 	align-items: center;
+	width: 100%;
 	img {
 		width: 1.5vw;
 		height: 1.5vw;
@@ -10,6 +10,7 @@
 
 	.button {
 		display: flex;
+		justify-content: center;
 		gap: 5px;
 		cursor: pointer;
 		align-items: center;
@@ -30,18 +31,4 @@
 }
 
 @media only screen and (max-width: 767px) {
-	// .containerButtonPortfolio {
-	// 	justify-content: center;
-	// 	width: 100%;
-	// 	img {
-	// 		width: 4.5vw;
-	// 		height: 4.5vw;
-	// 	}
-
-	// 	.button {
-	// 		font-size: 5.2vw;
-	// 		background-color: #ffd622;
-	// 		padding: 4.5vw 6.5vw;
-	// 	}
-	// }
 }

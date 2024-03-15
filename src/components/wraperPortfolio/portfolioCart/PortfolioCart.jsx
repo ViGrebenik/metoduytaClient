@@ -22,10 +22,7 @@ const PortfolioCart = ({ portfolioPage = false }) => {
 							portfolioPage ? styles.portfolioPage : ''
 						}`}
 					>
-						<img
-							src='/public/static/slider/geolocated.svg'
-							alt='geolocatedIcon'
-						/>
+						<img src='/static/slider/geolocated.svg' alt='geolocatedIcon' />
 						Ул.Cавушкина 12к3
 					</div>
 				</div>

@@ -6,7 +6,7 @@ import styles from './HomeBanner.module.scss'
 const HomeBanner = () => {
 	const isMobile = useMediaQuery({ maxWidth: 1024 })
 	const isMobileLittle = useMediaQuery({ maxWidth: 724 })
-	const fontSize = isMobileLittle ? '27px' : '18px'
+	const fontSize = isMobileLittle ? '22px' : '21px'
 
 	return (
 		<div className={styles.homeBanner}>
@@ -58,7 +58,7 @@ const HomeBanner = () => {
 							<div className={styles.titleAction}>
 								<Button
 									fontSize={fontSize}
-									pd={'20px 20px'}
+									pd={'25px 20px'}
 									type='popUp'
 									title={'ЗАКАЗАТЬ РАССЧЕТ СМЕТЫ'}
 								/>
