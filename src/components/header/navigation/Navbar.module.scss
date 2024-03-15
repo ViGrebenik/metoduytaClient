@@ -8,6 +8,7 @@
 	}
 	ul {
 		display: flex;
+		align-items: center;
 		font-size: 16px;
 		gap: 20px;
 		li {
@@ -30,15 +31,23 @@
 .dropdown {
 	position: relative;
 	.dropdownToggle {
+		align-items: center;
+		display: flex;
 		color: $fontColor;
 		font-weight: bold;
 		cursor: pointer;
+		img {
+			position: relative;
+			top: -1px;
+			width: 30px;
+			height: 30px;
+		}
 		&:hover {
 			color: $accent;
 		}
 	}
 	.submenu {
-		display: none;
+		display: block;
 		position: absolute;
 		top: 100%;
 		left: -20px;
@@ -58,9 +67,6 @@
 				font-weight: 800;
 			}
 		}
-	}
-	&:hover .submenu {
-		display: block;
 	}
 }
 
@@ -85,6 +91,7 @@
 		ul {
 			gap: 40px;
 			flex-direction: column;
+			align-items: start;
 			font-size: 25px;
 		}
 	}

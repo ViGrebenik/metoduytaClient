@@ -24,8 +24,8 @@ const WrapperTeam = () => {
 					</div>
 					<div className={styles.containerSubtitleTeam}>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/static/construction.svg' alt='icon' />У нас 5 У нас 5
-							бригад укомплектованых мастерами
+							<img src='/static/construction.svg' alt='icon' />У нас 5 бригад
+							укомплектованых мастерами
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
 							<img src='/static/construction.svg' alt='icon' />

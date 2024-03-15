@@ -8,7 +8,7 @@ import PortfolioItemContainer from '../../portfolio/portfolioScreen/portfolioIte
 import styles from './CoverServices.module.scss'
 import { advantages } from './dataAdvantage'
 
-const CoverServices = ({ title, subtitle, portfolioPage = false }) => {
+const CoverServices = ({ title, subtitle = '', portfolioPage = false }) => {
 	return (
 		<div className={styles.wrapperDesigner}>
 			<div className={styles.container}>
@@ -48,10 +48,10 @@ const CoverServices = ({ title, subtitle, portfolioPage = false }) => {
 					) : (
 						<>
 							<div className={styles.containerExamples}>
-								<PortfolioCart />
+								<PortfolioCart check={true} />
 							</div>
 							<div className={styles.containerExamples}>
-								<PortfolioCart />
+								<PortfolioCart check={true} />
 							</div>
 						</>
 					)}

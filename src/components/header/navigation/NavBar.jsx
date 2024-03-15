@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useModal } from '../../../assets/services/ModalContext'
 import styles from './Navbar.module.scss'
-// import { useMediaQuery } from 'react-responsive'
 
 const NavBar = () => {
 	const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false)
@@ -12,45 +11,23 @@ const NavBar = () => {
 
 	useEffect(() => {
 		setCurrentPage(location.pathname)
-		const handleOutsideClick = event => {
-			if (
-				event.target.closest('.dropdown') === null ||
-				event.target.closest('.submenu') !== null
-			) {
-				return
-			}
-			setServicesDropdownOpen(false)
-		}
-
-		window.addEventListener('click', handleOutsideClick)
-
-		return () => {
-			window.removeEventListener('click', handleOutsideClick)
-		}
 	}, [location.pathname])
-
-	const handleDropdownToggleHover = () => {
-		setServicesDropdownOpen(true)
-	}
-
-	const handleDropdownToggleLeave = () => {
-		setServicesDropdownOpen(false)
-	}
 
 	return (
 		<div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
 			<ul>
 				<li>
-					<div
-						className={styles.dropdown}
-						onMouseEnter={handleDropdownToggleHover}
-						onMouseLeave={handleDropdownToggleLeave}
-					>
+					<div className={styles.dropdown}>
 						<div
 							className={styles.dropdownToggle}
 							onClick={() => setServicesDropdownOpen(!isServicesDropdownOpen)}
 						>
 							УСЛУГИ
+							{isServicesDropdownOpen ? (
+								<img src='/static/arrowdown.svg' alt='arrow' />
+							) : (
+								<img src='/static/arrowUp.svg' alt='arrow' />
+							)}
 						</div>
 						{isServicesDropdownOpen && (
 							<ul className={styles.submenu}>
@@ -128,15 +105,7 @@ const NavBar = () => {
 					>
 						КАЛЬКУЛЯТОР
 					</Link>
-				</li>{' '}
-				{/* <li>
-					<Link
-						to={'/blog'}
-						className={currentPage === '/blog' ? styles.active : ''}
-					>
-						БЛОГ
-					</Link>
-				</li> */}
+				</li>
 				<li>
 					<Link
 						to={'/aboutUs'}

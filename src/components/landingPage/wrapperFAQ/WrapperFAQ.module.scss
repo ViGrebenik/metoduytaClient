@@ -47,6 +47,7 @@
 			padding-left: 10px;
 			color: $fontColorAccent;
 			font-weight: 800;
+			font-size: clamp(18px, 25px, 30px);
 		}
 
 		.answer {
@@ -96,5 +97,59 @@
 		font-weight: 800;
 		border-radius: 5px;
 		padding: 10px;
+	}
+	.faq {
+		.question {
+			cursor: pointer;
+			padding: 10px;
+			margin-bottom: 10px;
+			border-radius: 10px;
+			background-color: $bgDefaultAccentBlock;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $bgDefaultAccentBlock;
+			}
+
+			.questionText {
+				padding-left: 10px;
+				color: $fontColorAccent;
+				font-weight: 800;
+				font-size: 20px;
+			}
+
+			.answer {
+				border-top: 2px solid;
+				font-weight: 800;
+				line-height: 1;
+				color: $fontColor;
+				padding: 20px 10px;
+				margin-top: 10px;
+			}
+		}
+
+		/* Анимация для входа */
+		.questionEnter {
+			opacity: 0;
+			transform: translateY(-20px);
+		}
+
+		.questionEnterActive {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity 0.8s, transform 0.8s;
+		}
+
+		/* Анимация для выхода */
+		.questionExit {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.questionExitActive {
+			opacity: 0;
+			transform: translateY(-20px);
+			transition: opacity 0.8s, transform 0.8s;
+		}
 	}
 }

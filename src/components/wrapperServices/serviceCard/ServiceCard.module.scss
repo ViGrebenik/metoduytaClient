@@ -156,7 +156,7 @@
 		position: relative;
 		overflow: hidden;
 		flex: 1 0 49%;
-		height: 230px;
+		height: 250px;
 		border-radius: 10px;
 		background-size: cover;
 		background-position: center;
@@ -172,6 +172,7 @@
 		text-align: left;
 	}
 	.serviceCardDescription {
+		margin-top: 20px;
 		font-size: 15px;
 		font-weight: 800;
 		color: $fontColorAccent;

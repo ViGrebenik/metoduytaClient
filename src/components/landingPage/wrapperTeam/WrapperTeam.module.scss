@@ -70,6 +70,14 @@
 	.container {
 		margin: 0 20px;
 	}
+	.containerHeader {
+		display: flex;
+		flex-direction: column;
+		padding: 20px 20px;
+		border-radius: 5px;
+		background-color: $bgDefaultAccentBlock;
+		font-weight: 700;
+	}
 
 	.contentHeaderTitle {
 		font-size: 25px;
@@ -92,26 +100,28 @@
 		margin-bottom: 10px;
 		img {
 			display: block;
-			width: 40px;
-			height: 40px;
+			width: 30px;
+			height: 30px;
 		}
 	}
 	.SubtitleTeamTitle {
-		flex: 1 0 25%;
+		flex: 1 0 53%;
 		background-color: $bgDefaultAccentBlock;
 		padding: 20px;
 		border-radius: 10px;
 	}
 	.SubtitleTeamSubtitle {
-		flex: 1 0 25%;
+		flex: 1 0 53%;
+		font-size: 18px;
 		background-color: $bgDefaultAccentBlock;
-		padding: 20px 40px;
+		padding: 20px 20px;
 		border-radius: 10px;
 	}
 	.SubtitleTeamDiscription {
 		flex: 1 0 48%;
 		background-color: $bgDefaultAccentBlock;
 		padding: 20px;
+		font-size: 18px;
 		border-radius: 10px;
 	}
 }

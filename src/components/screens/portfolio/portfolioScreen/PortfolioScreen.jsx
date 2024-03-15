@@ -5,7 +5,7 @@ const PortfolioScreen = () => {
 		<>
 			<CoverServices
 				title={'ПОРТФОЛИО'}
-				subtitle={'БОЛЬШАЯ ЧАСТЬ РАБОТ ЗА ПОСЛЕДНЕЕ ВРЕМЯ'}
+				// subtitle={'БОЛЬШАЯ ЧАСТЬ РАБОТ ЗА ПОСЛЕДНЕЕ ВРЕМЯ'}
 				portfolioPage={true}
 			/>
 		</>

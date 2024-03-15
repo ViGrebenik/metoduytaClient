@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import classNames from 'classnames'
 import { useState } from 'react'
-import styles from './ViewObject.module.scss'
 import PortfolioCart from '../../portfolioCart/PortfolioCart'
+import styles from './ViewObject.module.scss'
 
 const ViewObject = ({ onClose }) => {
 	const [isVisible, setIsVisible] = useState(false)

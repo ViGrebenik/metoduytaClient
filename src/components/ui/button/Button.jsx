@@ -14,9 +14,9 @@ const Button = ({
 	pd
 }) => {
 	const CustomButton = styled.div`
-		font-size: ${props => props.fontSize || 'clamp(15px, 18px, 25px)'};
+		font-size: ${props => props.fontSize || 'clamp(12px, 15px, 25px)'};
 		background-color: ${props => props.bgC || '#ffd622'};
-		padding: ${props => props.pd || '0.5vw 1vw'};
+		padding: ${props => props.pd || '10px 20px'};
 		${props => props.className && ` ${props.className}`};
 	`
 

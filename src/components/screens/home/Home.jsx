@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive'
 import FooterQuestion from '../../footer/footerQuestion/FooterQuestion'
 import WrapperAdvantage from '../../landingPage/wrapperAdvantage/WrapperAdvantage'
 import WrapperFAQ from '../../landingPage/wrapperFAQ/WrapperFAQ'
@@ -9,6 +10,7 @@ import WrapperServices from '../../wrapperServices/WrapperServices'
 import HomeBanner from '../../wrappers/banner/HomeBanner'
 
 const Home = () => {
+	const isMobile = useMediaQuery({ maxWidth: 724 })
 	return (
 		<>
 			<section>
@@ -26,9 +28,11 @@ const Home = () => {
 			<section>
 				<WrapperAdvantage />
 			</section>
-			<section>
-				<WrapperStagesWork />
-			</section>
+			{!isMobile && (
+				<section>
+					<WrapperStagesWork />
+				</section>
+			)}
 			<section>
 				<WrapperTeam />
 			</section>

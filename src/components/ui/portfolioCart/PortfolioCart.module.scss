@@ -1,10 +1,17 @@
+@import 'src/assets/styles/variables';
+.container {
+	display: contents;
+}
 .modalContent {
 	backdrop-filter: blur(10px);
-	background-color: #111111f2;
+	background-color: $bgDefaultAccentBlock;
 	padding: 40px 40px 20px 40px;
 	border-radius: 5px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	max-width: 1300px;
+	&.check {
+		max-width: 100%;
+	}
 	.close {
 		position: absolute;
 		top: 0px;
@@ -20,7 +27,7 @@
 	}
 	.objectDescription {
 		flex: 1 0 48%;
-		margin: 0px 0px 20px 20px;
+		margin: 0px 0px 0px 20px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -68,7 +75,6 @@
 
 @media only screen and (max-width: 767px) {
 	.modalContent {
-		// margin: 0 20px;
 		padding: 40px 20px 10px 20px;
 		border-radius: 5px;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -125,5 +131,13 @@
 			background-color: rgba(231, 191, 32, 0.75);
 			font-size: 20px;
 		}
+	}
+}
+@media only screen and (max-width: 420px) {
+	.modalContent {
+		padding: 40px 20px 10px 20px;
+		border-radius: 5px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		max-width: 400px;
 	}
 }

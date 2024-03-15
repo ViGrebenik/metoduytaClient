@@ -5,6 +5,12 @@
 	.slick-slide > div {
 		margin: 0px 10px;
 	}
+	.slick-prev {
+		left: -40px;
+	}
+	.slick-next {
+		right: -30px;
+	}
 }
 
 .carouselItemTeam {
@@ -72,6 +78,13 @@
 	cursor: pointer;
 }
 
+.slick-prev:before {
+	content: url('/public/static/slider/arrowSliderLeft.svg');
+}
+.slick-next:before {
+	content: url('/public/static/slider/arrowSliderRight.svg');
+}
+
 .slick-dots li button {
 	font-size: 0;
 	line-height: 0;
@@ -116,34 +129,4 @@
 .slick-dots li.slick-active button:before {
 	opacity: 0.75;
 	color: rgb(186, 186, 186);
-}
-
-.leftButton,
-.rightButton {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 40px;
-	height: 40px;
-	background-color: rgba(0, 0, 0, 0.5);
-	color: white;
-	font-size: 24px;
-	border: none;
-	cursor: pointer;
-}
-
-.leftButton {
-	left: -50px;
-}
-
-.rightButton {
-	right: -50px;
-}
-
-.slick-slide {
-	transition: transform 0.5s;
-	&.middle-card {
-		z-index: 1;
-		transform: scale(1.1);
-	}
 }

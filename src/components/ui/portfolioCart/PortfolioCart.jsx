@@ -3,9 +3,9 @@ import SliderObject from '../popup/viewObject/sliderObject/SliderObject'
 import styles from './PortfolioCart.module.scss'
 
 // eslint-disable-next-line react/prop-types
-const PortfolioCart = ({ onClosePopUP = null }) => {
+const PortfolioCart = ({ onClosePopUP = null, check = false }) => {
 	return (
-		<div className={styles.modalContent}>
+		<div className={`${styles.modalContent} ${check ? styles.check : ''}`}>
 			{onClosePopUP && (
 				<span className={styles.close} onClick={onClosePopUP}>
 					&times;

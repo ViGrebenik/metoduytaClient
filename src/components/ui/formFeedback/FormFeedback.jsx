@@ -16,6 +16,7 @@ const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
 
 	return (
 		<div className={styles.feedbackForm}>
+			<div className={styles.headerTitle}>Форма обратной связи</div>
 			<form onSubmit={handleSubmit}>
 				<div>
 					<input
@@ -36,7 +37,7 @@ const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
 					/>
 				</div>
 				{questionForm && (
-					<div>
+					<div className={styles.question}>
 						<label htmlFor='question'>Опишите свой вопрос</label>
 						<textarea
 							id='question'
