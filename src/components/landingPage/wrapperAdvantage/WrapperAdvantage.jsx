@@ -10,9 +10,6 @@ const WrapperAdvantage = () => {
 					<div className={styles.containerHeader}>
 						<div className={styles.containerContentHeader}>
 							<div className={styles.contentHeaderTitle}>Наши преимущества</div>
-							<div className={styles.contentHeaderSubtitle}>
-								Вы можете доверить нам любое помещение и проект любой сложности.
-							</div>
 						</div>
 					</div>
 

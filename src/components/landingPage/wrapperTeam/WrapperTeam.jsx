@@ -24,18 +24,27 @@ const WrapperTeam = () => {
 					</div>
 					<div className={styles.containerSubtitleTeam}>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/static/construction.svg' alt='icon' />У нас 5 бригад
-							укомплектованых мастерами
+							<img src='/public/static/advantage/v1/people.svg' alt='icon' />У
+							нас 5 бригад укомплектованых мастерами разного профиля.
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/static/construction.svg' alt='icon' />
+							<img
+								src='/public/static/advantage/v1/statistics.svg'
+								alt='icon'
+							/>
 							Cредний стаж – 8 лет
 						</div>
-						<div className={styles.SubtitleTeamDiscription}>
-							<img src='/static/construction.svg' alt='icon' />
-							Каждый ремонт выполняют специализированные бригады. В комплексном
-							ремонте квартиры участвуют от 2 до 6 мастеров разного профиля и
-							прораб.
+						<div className={styles.SubtitleTeamSubtitle}>
+							<img
+								src='/public/static/advantage/v1/statistics.svg'
+								alt='icon'
+							/>
+							??????
+						</div>
+						<div className={styles.SubtitleTeamSubtitle}>
+							<img src='/public/static/advantage/v1/teamwork.svg' alt='icon' />
+							Каждый ремонт выполняют специализированные бригады. В составе от
+							2-6 мастеров разного профиля и прораба.
 						</div>
 					</div>
 					<CarouselTeam items={items} />

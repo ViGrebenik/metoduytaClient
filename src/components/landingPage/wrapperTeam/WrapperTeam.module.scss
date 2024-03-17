@@ -17,20 +17,21 @@
 .containerHeader {
 	display: flex;
 	flex-direction: column;
-	padding: 20px 40px;
+	padding: 20px 20px;
 	border-radius: 5px;
 	background-color: $bgDefaultAccentBlock;
 	font-weight: 700;
 }
 
 .contentHeaderTitle {
-	font-size: 30px;
+	font-size: 33px;
 	font-weight: 800;
 	color: $accent;
+	margin-bottom: 5px;
 }
 .contentHeaderSubtitle {
 	font-size: 18px;
-	color: $fontColor;
+	color: $fontColorAccent;
 }
 
 .containerSubtitleTeam {
@@ -38,8 +39,7 @@
 	flex-wrap: wrap;
 	gap: 10px;
 	font-size: 20px;
-	color: $fontColor;
-	font-weight: 700;
+	font-weight: 800;
 	margin-bottom: 10px;
 	img {
 		display: block;
@@ -47,23 +47,38 @@
 		height: 40px;
 	}
 }
-.SubtitleTeamTitle {
-	flex: 1 0 25%;
-	background-color: $bgDefaultAccentBlock;
-	padding: 20px;
-	border-radius: 10px;
-}
 .SubtitleTeamSubtitle {
-	flex: 1 0 25%;
+	flex: 1 0 35%;
+	display: flex;
 	background-color: $bgDefaultAccentBlock;
-	padding: 20px 40px;
+	padding: 20px 20px;
+	align-items: center;
 	border-radius: 10px;
+	color: $fontColorAccent;
+	img {
+		margin-right: 10px;
+		display: block;
+		position: relative;
+		top: -3px;
+		width: 50px;
+		height: 50px;
+	}
 }
 .SubtitleTeamDiscription {
 	flex: 1 0 48%;
+	display: flex;
 	background-color: $bgDefaultAccentBlock;
 	padding: 20px;
+	color: $fontColorAccent;
 	border-radius: 10px;
+	img {
+		margin-right: 5px;
+		display: block;
+		position: relative;
+		top: -3px;
+		width: 50px;
+		height: 50px;
+	}
 }
 
 @media only screen and (max-width: 767px) {

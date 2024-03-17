@@ -55,10 +55,9 @@ const CoverServices = ({ title, subtitle = '', portfolioPage = false }) => {
 							</div>
 						</>
 					)}
-
-					<WrapperReviews />
-					<WrapperServices />
 				</div>
+				<WrapperReviews />
+				<WrapperServices />
 			</div>
 		</div>
 	)

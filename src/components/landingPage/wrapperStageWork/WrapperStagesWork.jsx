@@ -1,33 +1,12 @@
 import { useEffect, useState } from 'react'
-import styles from './WrapperStagesWork.module.scss'
 import { useModal } from '../../../assets/services/ModalContext'
-
-const stages = [
-	{
-		number: 'ОБРАЩЕНИЕ',
-		title: 'Этап 01',
-		description:
-			'Записаться можно по номеру телефонa или через форму обратной связи на сайте.'
-	},
-	{
-		number: 'ЗАМЕР',
-		title: 'Этап 02',
-		description: 'Рассчитаем площадь, объем материалов, стоимость работ.'
-	},
-	{
-		number: 'ДОГОВОР',
-		title: 'Этап 03',
-		description: 'Установим сроки, заключим договор'
-	},
-	{ number: '04', title: 'Этап 05', description: 'Описание 04' },
-	{ number: '05', title: 'Этап 05', description: 'Описание 05' },
-	{ number: '06', title: 'Этап 06', description: 'Описание 06' }
-]
+import styles from './WrapperStagesWork.module.scss'
+import { stages } from './dataStageWork'
 
 const WrapperStagesWork = () => {
+	const { openModal } = useModal()
 	const [hoveredCircle, setHoveredCircle] = useState(stages[0])
 	const [hoveredText, setHoveredText] = useState(stages[0])
-	const { openModal } = useModal()
 
 	const handleHover = circle => {
 		setHoveredCircle(circle)
@@ -55,7 +34,6 @@ const WrapperStagesWork = () => {
 					<div className={styles.containerWrapper}>
 						{stages.map((stage, index) => (
 							<div className={styles.containerStageWork} key={index}>
-								<div className={styles.line}></div>
 								<div
 									className={
 										stage === hoveredCircle ? styles.circleShow : styles.circle
@@ -63,9 +41,9 @@ const WrapperStagesWork = () => {
 									onMouseEnter={() => handleHover(stage)}
 									onMouseLeave={handleMouseLeave}
 								>
-									<p>{stage.number}</p>
+									<img src='/public/static/advantage/garantiy.svg' alt='logo' />
+									<p>{stage.title}</p>
 								</div>
-								<div className={styles.line}></div>
 							</div>
 						))}
 					</div>
@@ -88,7 +66,7 @@ const WrapperStagesWork = () => {
 							onClick={() => openModal()}
 							className={styles.WrapperDescriptionButton}
 						>
-							Получить консультацию
+							<div>Получить консультацию</div>
 						</div>
 					</div>
 				</div>

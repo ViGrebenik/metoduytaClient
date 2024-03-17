@@ -23,18 +23,19 @@ const Home = () => {
 				<WrapperReviews />
 			</section>
 			<section>
-				<WrapperServices />
+				<WrapperAdvantage />
 			</section>
 			<section>
-				<WrapperAdvantage />
+				<WrapperTeam />
 			</section>
 			{!isMobile && (
 				<section>
 					<WrapperStagesWork />
 				</section>
 			)}
+
 			<section>
-				<WrapperTeam />
+				<WrapperServices />
 			</section>
 			<section>
 				<WrapperFAQ />

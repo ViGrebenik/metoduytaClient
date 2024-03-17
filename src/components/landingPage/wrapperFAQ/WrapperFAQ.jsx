@@ -1,6 +1,6 @@
 import FAQ from './FAQ'
-import styles from './WrapperFAQ.module.scss'
 import { faqData } from './FAQData'
+import styles from './WrapperFAQ.module.scss'
 
 const WrapperFAQ = () => {
 	return (
@@ -12,6 +12,10 @@ const WrapperFAQ = () => {
 							<div className={styles.contentHeaderTitle}>
 								Часто зававемые вопросы
 							</div>
+						</div>
+						<div className={styles.contentHeaderSubtitle}>
+							Если же у вас еще остались сомнения, то мы подготовили ответы на
+							самые популярные вопросы:
 						</div>
 					</div>
 					<FAQ faqData={faqData} />

@@ -63,14 +63,13 @@
 	display: flex;
 	background-color: $bgDefaultAccentBlock;
 	border-radius: 0.8vw;
-	padding: 0.8vw;
+	padding: 20px;
 	width: 100%;
-	gap: 0.8pvw;
 	img {
 		position: relative;
-		top: -0.7vw;
-		width: 2.5vw;
-		height: 2.5vw;
+		width: 50px;
+		height: 50px;
+		margin-right: 10px;
 	}
 }
 .advantageBlock {
@@ -78,13 +77,13 @@
 	flex-direction: column;
 }
 .advantageDescriptionMain {
-	font-size: 1.5vw;
+	font-size: clamp(16px, 4vw, 22px);
 	font-weight: 800;
 	color: $fontColor;
-	margin-bottom: 0.5vw;
+	margin-bottom: 5px;
 }
 .advantageDescription {
-	font-size: 0.8vw;
+	font-size: clamp(8px, 4vw, 12px);
 	color: $fontColorAccent;
 	font-weight: 800;
 }
@@ -117,13 +116,6 @@
 		.advantageItem {
 			flex: 1 0 33%;
 		}
-	}
-
-	.advantageDescriptionMain {
-		font-size: 2.5vw;
-	}
-	.advantageDescription {
-		font-size: 1.5vw;
 	}
 }
 
@@ -165,19 +157,13 @@
 		gap: 3pvw;
 		img {
 			position: relative;
-			top: -10px;
-			width: 30px;
-			height: 30px;
-			margin-right: 5px;
+			width: 40px;
+			height: 40px;
 		}
 	}
 
 	.advantageDescriptionMain {
-		font-size: 18px;
 		margin-bottom: 1.5vw;
-	}
-	.advantageDescription {
-		font-size: 14px;
 	}
 	.titleAction {
 		margin-top: 30px;

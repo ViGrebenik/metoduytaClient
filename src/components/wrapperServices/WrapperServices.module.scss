@@ -39,28 +39,20 @@
 	}
 }
 .contentHeaderTitle {
-	font-size: 30px;
+	font-size: clamp(22px, 4vw, 30px);
 	color: $accent;
 	font-weight: 800;
 }
 .contentHeaderSubtitle {
-	font-size: 20px;
+	font-size: clamp(14px, 3vw, 16px);
 	margin-top: 10px;
 	font-weight: 800;
+	width: 80%;
 	color: $fontColor;
 }
 
 @media only screen and (max-width: 767px) {
 	.container {
 		margin: 0px 20px;
-	}
-	.contentHeaderTitle {
-		font-size: 25px;
-		color: $accent;
-		font-weight: 800;
-	}
-	.contentHeaderSubtitle {
-		font-size: 15px;
-		color: $fontColor;
 	}
 }

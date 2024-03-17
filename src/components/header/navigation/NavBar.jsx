@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { Link, useLocation } from 'react-router-dom'
 import { useModal } from '../../../assets/services/ModalContext'
 import styles from './Navbar.module.scss'
@@ -8,10 +9,22 @@ const NavBar = () => {
 	const [currentPage, setCurrentPage] = useState('')
 	const { isOpen, setIsOpen } = useModal()
 	const location = useLocation()
-
+	const isMobile = useMediaQuery({ maxWidth: 726 })
 	useEffect(() => {
 		setCurrentPage(location.pathname)
 	}, [location.pathname])
+
+	const handleMouseEnter = () => {
+		if (!isMobile) {
+			setServicesDropdownOpen(true)
+		}
+	}
+
+	const handleMouseLeave = () => {
+		if (!isMobile) {
+			setServicesDropdownOpen(false)
+		}
+	}
 
 	return (
 		<div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
@@ -21,6 +34,8 @@ const NavBar = () => {
 						<div
 							className={styles.dropdownToggle}
 							onClick={() => setServicesDropdownOpen(!isServicesDropdownOpen)}
+							onMouseEnter={handleMouseEnter}
+							onMouseLeave={handleMouseLeave}
 						>
 							УСЛУГИ
 							{isServicesDropdownOpen ? (
@@ -30,7 +45,11 @@ const NavBar = () => {
 							)}
 						</div>
 						{isServicesDropdownOpen && (
-							<ul className={styles.submenu}>
+							<ul
+								className={styles.submenu}
+								onMouseEnter={handleMouseEnter}
+								onMouseLeave={handleMouseLeave}
+							>
 								<li>
 									<Link
 										to={'/servicesDesigner'}

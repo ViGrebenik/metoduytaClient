@@ -12,46 +12,65 @@
 	flex-direction: column;
 }
 
-.containerHeader {
-	display: flex;
-	flex-direction: column;
-}
-
-.contentHeaderTitle {
-	font-size: 30px;
-	color: $accent;
-	font-weight: 800;
-	border-radius: 5px;
-	padding: 10px;
-}
-
 .containerFAQ {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
 }
+
+.containerHeader {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 20px;
+	border-radius: 5px;
+	background-color: $bgDefaultAccentBlock;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.contentHeaderTitle {
+	font-size: 33px;
+	font-weight: 800;
+	color: $accent;
+	margin-bottom: 5px;
+}
+.contentHeaderSubtitle {
+	font-size: 18px;
+	color: $fontColorAccent;
+}
 .faq {
 	.question {
 		cursor: pointer;
-		padding: 10px;
+		padding: 20px;
 		margin-bottom: 10px;
 		border-radius: 10px;
 		background-color: $bgDefaultAccentBlock;
 		transition: background-color 0.3s;
+		img {
+			width: 30px;
+			height: 30px;
+		}
 
 		&:hover {
 			background-color: $bgDefaultAccentBlock;
 		}
 
 		.questionText {
+			display: flex;
+			justify-content: space-between;
 			padding-left: 10px;
 			color: $fontColorAccent;
+
 			font-weight: 800;
 			font-size: clamp(18px, 25px, 30px);
+			div {
+				text-align: center;
+			}
 		}
 
 		.answer {
-			border-top: 2px solid;
+			border-top: 2px solid $bgDefaultAccent;
+			text-align: center;
 			font-weight: 800;
 			line-height: 1;
 			color: $fontColor;
