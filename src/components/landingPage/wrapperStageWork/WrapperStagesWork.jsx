@@ -41,7 +41,7 @@ const WrapperStagesWork = () => {
 									onMouseEnter={() => handleHover(stage)}
 									onMouseLeave={handleMouseLeave}
 								>
-									<img src='/public/static/advantage/garantiy.svg' alt='logo' />
+									<img src='/static/advantage/garantiy.svg' alt='logo' />
 									<p>{stage.title}</p>
 								</div>
 							</div>

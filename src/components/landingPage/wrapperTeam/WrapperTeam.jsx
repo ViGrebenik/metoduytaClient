@@ -24,25 +24,19 @@ const WrapperTeam = () => {
 					</div>
 					<div className={styles.containerSubtitleTeam}>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/public/static/advantage/v1/people.svg' alt='icon' />У
-							нас 5 бригад укомплектованых мастерами разного профиля.
+							<img src='/static/advantage/v1/people.svg' alt='icon' />У нас 5
+							бригад укомплектованых мастерами разного профиля.
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img
-								src='/public/static/advantage/v1/statistics.svg'
-								alt='icon'
-							/>
+							<img src='/static/advantage/v1/statistics.svg' alt='icon' />
 							Cредний стаж – 8 лет
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img
-								src='/public/static/advantage/v1/statistics.svg'
-								alt='icon'
-							/>
+							<img src='/static/advantage/v1/statistics.svg' alt='icon' />
 							??????
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/public/static/advantage/v1/teamwork.svg' alt='icon' />
+							<img src='/static/advantage/v1/teamwork.svg' alt='icon' />
 							Каждый ремонт выполняют специализированные бригады. В составе от
 							2-6 мастеров разного профиля и прораба.
 						</div>

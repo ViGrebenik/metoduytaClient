@@ -33,10 +33,7 @@ const HomeBanner = () => {
 								</div>
 							</div>
 							<div className={styles.advantageItem}>
-								<img
-									src='/public/static/advantage/garantiy.svg'
-									alt='dogovor'
-								/>
+								<img src='/static/advantage/garantiy.svg' alt='dogovor' />
 								<div className={styles.advantageBlock}>
 									<div className={styles.advantageDescriptionMain}>
 										Договор с фиксированной стоимостью
@@ -47,7 +44,7 @@ const HomeBanner = () => {
 								</div>
 							</div>
 							<div className={styles.advantageItem}>
-								<img src='/public/static/advantage/garantiyv3.svg' alt='fkk' />
+								<img src='/static/advantage/garantiyv3.svg' alt='fkk' />
 								<div className={styles.advantageBlock}>
 									<div className={styles.advantageDescriptionMain}>
 										ГАРАНТИЯ ОТ 2 ЛЕТ

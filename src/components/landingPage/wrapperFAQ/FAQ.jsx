@@ -35,15 +35,15 @@ const FAQ = ({ faqData }) => {
 					<div className={styles.question} onClick={() => handleToggle(index)}>
 						<div className={styles.questionText}>
 							{arrows[index] ? (
-								<img src='/public/static/arrowdown.svg' alt='arrow' />
+								<img src='/static/arrowdown.svg' alt='arrow' />
 							) : (
-								<img src='/public/static/arrowUp.svg' alt='arrow' />
+								<img src='/static/arrowUp.svg' alt='arrow' />
 							)}
 							<div>{item.question}</div>
 							{arrows[index] ? (
-								<img src='/public/static/arrowdown.svg' alt='arrow' />
+								<img src='/static/arrowdown.svg' alt='arrow' />
 							) : (
-								<img src='/public/static/arrowUp.svg' alt='arrow' />
+								<img src='/static/arrowUp.svg' alt='arrow' />
 							)}
 						</div>
 
