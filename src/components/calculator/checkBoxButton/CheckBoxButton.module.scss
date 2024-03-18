@@ -35,3 +35,17 @@
 		color: rgb(0, 0, 0);
 	}
 }
+@media only screen and (max-width: 767px) {
+	.buttonsBlock {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.buttonWrapper {
+			margin-bottom: 10px;
+		}
+
+		button {
+			padding: 10px 10px;
+		}
+	}
+}

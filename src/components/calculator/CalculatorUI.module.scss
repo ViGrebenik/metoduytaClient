@@ -229,7 +229,7 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	font-size: 20px;
+	font-size: clamp(16px, 2vw, 20px);
 	font-weight: bold;
 	color: #646464;
 	.checkBox {
@@ -261,6 +261,12 @@
 	}
 }
 @media only screen and (max-width: 767px) {
+	.calculatorActionFormBlock {
+		flex: 1 0 48%;
+		background-color: $bgDefaultAccentBlock;
+		border-radius: 10px;
+		padding: 10px;
+	}
 	.calculatorBlock {
 		display: flex;
 		padding: 10px;
@@ -271,12 +277,11 @@
 		.containerNumberOfRooms {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 10px;
-			width: 100%;
+			gap: 20px;
 			.numberOfRoomsItem {
 				display: flex;
 				flex-direction: column;
-				width: 200px;
+				width: 150px;
 				.roomsItemButton {
 					display: flex;
 					justify-content: space-around;
@@ -296,6 +301,79 @@
 					}
 				}
 			}
+		}
+	}
+	.calculatorForm {
+		.blockTypeServices {
+			.typeServices {
+				display: flex;
+				gap: 15px;
+			}
+		}
+		.numberOfRooms {
+			display: flex;
+		}
+
+		& label {
+			display: block;
+			font-size: 16px;
+			margin: 5px 0px;
+			font-weight: bold;
+			color: $fontColor;
+		}
+
+		& input[type='range'] {
+			display: block;
+			width: 100%;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-size: 14px;
+			line-height: 1.5;
+			color: #333;
+
+			&:focus {
+				outline: none;
+				box-shadow: 0 0 4px 1px #333;
+			}
+		}
+
+		& input[type='radio'] {
+			margin-right: 8px;
+		}
+
+		& button[type='button'] {
+			display: block;
+			padding: 5px 10px;
+			border: none;
+			border-radius: 4px;
+			background-color: #333;
+			color: $fontColorAccent;
+			font-weight: bold;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #444;
+			}
+
+			&:disabled {
+				background-color: #ccc;
+				cursor: not-allowed;
+			}
+		}
+
+		& #numberOfRooms {
+			display: inline-block;
+			width: 32px;
+			text-align: center;
+			font-size: 14px;
+			color: #333;
+		}
+
+		& .roomsButtons {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 	}
 }

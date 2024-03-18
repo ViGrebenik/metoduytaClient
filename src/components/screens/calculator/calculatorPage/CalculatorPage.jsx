@@ -4,10 +4,12 @@ import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import FeedbackEstimate from '../../../wrappers/feedbackEstimate/FeedbackEstimate'
 import styles from './CalculatorPage.module.scss'
 import { dataText, services } from './DataText'
+import { useMediaQuery } from 'react-responsive'
 
 const CalculatorPage = () => {
 	const location = useLocation()
 	const currentPath = location.pathname
+	const isMobile = useMediaQuery({ maxWidth: 767 })
 	return (
 		<div className={styles.calculatorPage}>
 			<div className={styles.container}>
@@ -50,16 +52,18 @@ const CalculatorPage = () => {
 							демонтажу.
 						</div>
 					</div>
-					<div className={styles.containerPricesServices}>
-						{services.map((service, index) => (
-							<div className={styles.pricesServices} key={index}>
-								<div className={styles.servicesTitle}>{service.title}</div>
-								<div className={styles.servicesSubtitle}>
-									{service.price} руб.
+					{!isMobile && (
+						<div className={styles.containerPricesServices}>
+							{services.map((service, index) => (
+								<div className={styles.pricesServices} key={index}>
+									<div className={styles.servicesTitle}>{service.title}</div>
+									<div className={styles.servicesSubtitle}>
+										{service.price} руб.
+									</div>
 								</div>
-							</div>
-						))}
-					</div>
+							))}
+						</div>
+					)}
 					<div className={styles.containerCalculator}>
 						<CalculatorUI />
 					</div>

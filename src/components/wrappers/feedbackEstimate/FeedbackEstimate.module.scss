@@ -6,12 +6,15 @@
 	flex-wrap: wrap;
 	.actionItem {
 		&:first-child {
-			flex: 1 0 65%;
+			flex: 1 0 40%;
 			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			border-radius: 10px;
 			background-color: $bgDefaultAccentBlock;
 			.actionItemTitle {
-				font-size: clamp(17px, 25px, 35px);
+				font-size: clamp(20px, 3vw, 26px);
 				font-weight: 800;
 				color: $accent;
 				margin-bottom: 20px;
@@ -20,33 +23,46 @@
 				width: 100%;
 				color: $fontColorAccent;
 				font-weight: 700;
+				font-size: clamp(15px, 3vw, 20px);
+			}
+			.containerButton {
+				margin-top: 10px;
+				display: flex;
+				justify-content: end;
+				width: 100%;
+				.container {
+					width: max-content;
+				}
 			}
 		}
 		&:last-child {
-			background-color: $bgDefaultAccentBlock;
-			border-radius: 10px;
+			flex: 1 0 35%;
 			padding: 10px;
-			flex: 1 0 30%;
 			display: flex;
 			flex-direction: column;
-			img {
-				width: 50px;
-				height: 50px;
-			}
+			justify-content: space-between;
+			border-radius: 10px;
+			background-color: $bgDefaultAccentBlock;
 			.actionItemTitle {
-				font-size: 25px;
+				font-size: clamp(20px, 3vw, 26px);
 				font-weight: 800;
 				color: $accent;
+				margin-bottom: 20px;
 			}
 			.actionItemSubtitle {
-				font-size: 15px;
+				width: 100%;
 				color: $fontColorAccent;
 				font-weight: 700;
+				font-size: clamp(15px, 3vw, 20px);
 			}
-			.containerButtonItem {
+			.containerButton {
+				margin-top: 10px;
 				display: flex;
-				justify-content: start;
-				margin-top: 20px;
+				justify-content: end;
+				width: 100%;
+				.container {
+					width: max-content;
+				}
 			}
 		}
 	}

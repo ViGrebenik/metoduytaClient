@@ -88,10 +88,6 @@ const CalculatorUI = () => {
 	return (
 		<div className={styles.containerCalculator}>
 			<div className={styles.calculatorBlock}>
-				{/* <div className={styles.containerHeader}>
-					<div className={styles.contentHeaderTitle}>Расчет ремонта</div>
-					<div className={styles.contentHeaderSubtitle}></div>
-				</div> */}
 				<div className={styles.calculatorForm}>
 					<form>
 						<div className={styles.blockTypeServices}>
