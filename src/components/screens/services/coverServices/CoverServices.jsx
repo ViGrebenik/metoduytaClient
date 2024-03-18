@@ -1,14 +1,20 @@
 /* eslint-disable react/prop-types */
+import { useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import ItemAdvantage from '../../../ui/itemAdvantage/ItemAdvantage'
 import PortfolioCart from '../../../ui/portfolioCart/PortfolioCart'
-// import WrapperReviews from '../../../wrapperReviews/WrapperReviews'
-// import WrapperServices from '../../../wrapperServices/WrapperServices'
 import PortfolioItemContainer from '../../portfolio/portfolioScreen/portfolioItem/PortfolioItemContainer'
 import styles from './CoverServices.module.scss'
-import { advantages } from './dataAdvantage'
 
-const CoverServices = ({ title, subtitle = '', portfolioPage = false }) => {
+const CoverServices = ({
+	category,
+	title,
+	subtitle = '',
+	portfolioPage = false,
+	advantages
+}) => {
+	const location = useLocation()
+	const currentPath = location.pathname
 	return (
 		<div className={styles.wrapperDesigner}>
 			<div className={styles.container}>
@@ -17,8 +23,7 @@ const CoverServices = ({ title, subtitle = '', portfolioPage = false }) => {
 						<Breadcrumbs
 							breadcrumbs={[
 								{ name: 'Главная', url: '/' },
-								{ name: 'Категория', url: '/category' },
-								{ name: 'Страница', url: '/page' }
+								{ name: category, url: currentPath }
 							]}
 						/>
 					</div>

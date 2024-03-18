@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import WrapperReviews from '../../../wrapperReviews/WrapperReviews'
 import WrapperServices from '../../../wrapperServices/WrapperServices'
@@ -5,6 +6,8 @@ import styles from './AboutUsPage.module.scss'
 import { dataQualities, dataText } from './DataText'
 
 const AboutUsPage = () => {
+	const location = useLocation()
+	const currentPath = location.pathname
 	return (
 		<div className={styles.wrapperDesigner}>
 			<div className={styles.container}>
@@ -13,8 +16,7 @@ const AboutUsPage = () => {
 						<Breadcrumbs
 							breadcrumbs={[
 								{ name: 'Главная', url: '/' },
-								{ name: 'Категория', url: '/category' },
-								{ name: 'Страница', url: '/page' }
+								{ name: 'О компании', url: currentPath }
 							]}
 						/>
 					</div>

@@ -61,7 +61,7 @@ const CalculatorUI = () => {
 
 	useEffect(() => {
 		const keFbuildingType = buildingType == 'ВТОРИЧКА' ? 1.2 : 1.3
-		const keFroomArea = Number(roomArea) * 100
+		const keFroomArea = Number(roomArea) * 10000
 		const kefButtonsState = buttonsState
 			.filter(button => button.checked)
 			.map(button => button.coefficient)
@@ -88,14 +88,10 @@ const CalculatorUI = () => {
 	return (
 		<div className={styles.containerCalculator}>
 			<div className={styles.calculatorBlock}>
-				<div className={styles.containerHeader}>
-					<div className={styles.contentHeaderTitle}>
-						Калькулятор расчета ремонта
-					</div>
-					<div className={styles.contentHeaderSubtitle}>
-						Воспользуйтесь онлайн калькулятором / или более продающий текст
-					</div>
-				</div>
+				{/* <div className={styles.containerHeader}>
+					<div className={styles.contentHeaderTitle}>Расчет ремонта</div>
+					<div className={styles.contentHeaderSubtitle}></div>
+				</div> */}
 				<div className={styles.calculatorForm}>
 					<form>
 						<div className={styles.blockTypeServices}>
@@ -184,7 +180,7 @@ const CalculatorUI = () => {
 								</div>
 							</div>
 						</div>
-						<div>
+						<div className={styles.dopRadots}>
 							<label>Доп. работы</label>
 							<div>
 								<CheckboxButtons
@@ -197,18 +193,18 @@ const CalculatorUI = () => {
 				</div>
 			</div>
 			<div className={styles.calculatorActionFormBlock}>
-				<div className={styles.containerHeaderForm}>
-					<div className={styles.contentHeaderTitleForm}>
-						Предварительный расчет
-					</div>
-				</div>
-				<div className={styles.containerHeaderForm}>
-					<div className={styles.contentHeaderTitleForm}>{result} руб.</div>
-				</div>
-				<div className={styles.containerHeaderForm}>
-					<div className={styles.contentHeaderSubtitleForm}>
-						Сумма сметы является примерной. Для получения более точной
-						информации оставьте заявку на замер и расчет сметы.
+				<div className={styles.co}>
+					<div className={styles.containerHeaderForm}>
+						<div className={styles.contentHeaderTitleForm}>
+							Предварительный расчет
+						</div>
+						<div className={styles.contentHeaderTitleForm}>
+							<span>{result} руб.</span>
+						</div>
+						<div className={styles.contentHeaderSubtitleForm}>
+							Сумма сметы является примерной. Для получения более точной
+							информации оставьте заявку на замер и расчет сметы.
+						</div>
 					</div>
 				</div>
 				<FeedbackForm />

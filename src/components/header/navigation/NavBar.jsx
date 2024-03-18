@@ -38,11 +38,11 @@ const NavBar = () => {
 							onMouseLeave={handleMouseLeave}
 						>
 							УСЛУГИ
-							{isServicesDropdownOpen ? (
-								<img src='/static/arrowdown.svg' alt='arrow' />
-							) : (
-								<img src='/static/arrowUp.svg' alt='arrow' />
-							)}
+							<img
+								className={`${isServicesDropdownOpen ? styles.arrow : ''}`}
+								src='/static/arrowdown.svg'
+								alt='arrow'
+							/>
 						</div>
 						{isServicesDropdownOpen && (
 							<ul
@@ -50,17 +50,6 @@ const NavBar = () => {
 								onMouseEnter={handleMouseEnter}
 								onMouseLeave={handleMouseLeave}
 							>
-								<li>
-									<Link
-										to={'/servicesDesigner'}
-										onClick={() => setIsOpen(false)}
-										className={
-											currentPage === '/servicesDesigner' ? styles.active : ''
-										}
-									>
-										УСЛУГИ ДИЗАНЕРА
-									</Link>
-								</li>
 								<li>
 									<Link
 										to={'/servicesComplex'}
@@ -74,6 +63,28 @@ const NavBar = () => {
 								</li>
 								<li>
 									<Link
+										to={'/servicesComplex'}
+										onClick={() => setIsOpen(false)}
+										className={
+											currentPage === '/servicesComple' ? styles.active : ''
+										}
+									>
+										РЕМОНТ В НОВОСТРОЙКЕ
+									</Link>
+								</li>
+								<li>
+									<Link
+										to={'/servicesDesigner'}
+										onClick={() => setIsOpen(false)}
+										className={
+											currentPage === '/servicesDesigner' ? styles.active : ''
+										}
+									>
+										КОСМЕТИЧЕСКИЙ РЕМОНТ
+									</Link>
+								</li>
+								<li>
+									<Link
 										to={'/servicesDesigner'}
 										onClick={() => setIsOpen(false)}
 										className={
@@ -81,17 +92,6 @@ const NavBar = () => {
 										}
 									>
 										ДИЗАЙНЕРСКИЙ РЕМОНТ
-									</Link>
-								</li>
-								<li>
-									<Link
-										to={'/servicesComplex'}
-										onClick={() => setIsOpen(false)}
-										className={
-											currentPage === '/servicesComple' ? styles.active : ''
-										}
-									>
-										КОСМЕТИЧЕСКИЙ РЕМОНТ
 									</Link>
 								</li>
 							</ul>
@@ -107,7 +107,7 @@ const NavBar = () => {
 						ПРИМЕРЫ РАБОТ
 					</Link>
 				</li>
-				<li>
+				{/* <li>
 					<Link
 						to={'/payment'}
 						className={currentPage === '/payment' ? styles.active : ''}
@@ -115,7 +115,7 @@ const NavBar = () => {
 					>
 						ЦЕНА
 					</Link>
-				</li>
+				</li> */}
 				<li>
 					<Link
 						to={'/calculator'}

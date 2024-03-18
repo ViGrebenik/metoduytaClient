@@ -1,6 +1,6 @@
 @import 'src/assets/styles/variables';
 .containerItem {
-	flex: 1 0 25%;
+	flex: 1 0 23%;
 	display: flex;
 	gap: 5px;
 	border-radius: 10px;
@@ -11,19 +11,19 @@
 		display: flex;
 		align-items: center;
 		.ItemTitle {
-			font-size: 20px;
+			font-size: clamp(15px, 4vw, 20px);
 			font-weight: 800;
 			color: $fontColor;
 			margin-left: 5px;
 		}
 		img {
 			position: relative;
-			top: -10px;
-			width: 15%;
+			width: 50px;
+			height: 50px;
 		}
 	}
 	.BlockSubtitle {
-		font-size: 15px;
+		font-size: clamp(12px, 4vw, 15px);
 		font-weight: 800;
 		color: $fontColorAccentV2;
 	}
@@ -40,11 +40,10 @@
 			display: flex;
 			align-items: center;
 			.ItemTitle {
-				// font-size: 15px;
 			}
 			img {
-				width: 10%;
-				// top: 0;
+				width: 30px;
+				height: 30px;
 			}
 		}
 		.BlockSubtitle {

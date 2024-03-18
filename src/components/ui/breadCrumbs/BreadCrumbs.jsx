@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Link } from 'react-router-dom'
-import styles from './BreadCrumbs.module.scss' // Подключаем стили из SCSS модуля
+import { Link, useLocation } from 'react-router-dom'
+import styles from './BreadCrumbs.module.scss'
 
 const Breadcrumbs = ({ breadcrumbs }) => {
+	const location = useLocation()
+	const currentPath = location.pathname
 	return (
 		<div className={styles.containerBreadCrumbs}>
 			{breadcrumbs.map((breadcrumb, index) => (
@@ -10,13 +12,18 @@ const Breadcrumbs = ({ breadcrumbs }) => {
 					{index > 0 && (
 						<>
 							<img
-								src='/static/arrow.svg'
+								src='/static/advantage/arrowYellow.svg'
 								alt='arrow'
 								className={styles.separator}
 							/>
 						</>
 					)}
-					<Link to={breadcrumb.url} className={styles.breadcrumb}>
+					<Link
+						to={breadcrumb.url}
+						className={`${styles.breadcrumb} ${
+							currentPath === breadcrumb.url ? styles.active : ''
+						}`}
+					>
 						{breadcrumb.name}
 					</Link>
 				</div>

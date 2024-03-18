@@ -21,13 +21,6 @@ const WrapperServices = () => {
 					<div className={styles.containerWrapper}>
 						<div className={styles.containerItem}>
 							<ServiceCard
-								title='УСЛУГИ ДИЗАЙНЕРА ИНТЕРЬЕРА'
-								description='Изменить интерьер квартиры максимально быстро и с минимальными затратами – это реально.'
-								price='От 800 руб. м2'
-								imageUrl='/static/stoke/item01.jpg'
-								serviceUrl='/servicesDesigner'
-							/>
-							<ServiceCard
 								title='РЕМОНТ КВАРТИР ПОД КЛЮЧ'
 								description='Выполняем все виды работ, включая дизайн-проект!'
 								price='От 9500 руб. м2'
@@ -35,16 +28,23 @@ const WrapperServices = () => {
 								serviceUrl='/servicesComplex'
 							/>
 							<ServiceCard
-								title='Ремонт квартир в новостройке'
+								title='РЕМОНТ КВАРТИР В НОВОСТРОЙКЕ'
 								description='Для тех, кто недавно переехал в новое жилье и мечтает поскорее оформить свой уютный уголок'
 								price='От 7000 ₽/м2'
 								imageUrl='/static/stoke/item03.jpg'
+								serviceUrl='/servicesComplex'
+							/>
+							<ServiceCard
+								title='ДИЗАЙНЕРСКИЙ РЕМОНТ'
+								description='Изменить интерьер квартиры максимально быстро и с минимальными затратами – это реально.'
+								price='От 800 руб. м2'
+								imageUrl='/static/stoke/item01.jpg'
 								serviceUrl='/servicesDesigner'
 							/>
 							<ServiceCard
-								title='Услуга 2'
-								description='Описание услуги 2'
-								price='Цена 2'
+								title='КОСМЕТИЧЕСКИЙ РЕМОНТ'
+								description='ВЫПОЛНИМ ОБЬЕМ РАБОТ ПО ВАШЕЙ КВАРТИРЕ'
+								price='От 8000 ₽/м2'
 								imageUrl='/static/stoke/item04.jpg'
 								serviceUrl='/servicesComplex'
 							/>

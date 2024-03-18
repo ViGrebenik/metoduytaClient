@@ -3,7 +3,11 @@ import CoverServices from '../../services/coverServices/CoverServices'
 const PortfolioScreen = () => {
 	return (
 		<>
-			<CoverServices title={'ПОРТФОЛИО'} portfolioPage={true} />
+			<CoverServices
+				category={'Портфолио'}
+				title={'ПОРТФОЛИО'}
+				portfolioPage={true}
+			/>
 		</>
 	)
 }

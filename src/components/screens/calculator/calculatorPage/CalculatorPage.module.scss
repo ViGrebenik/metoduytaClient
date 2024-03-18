@@ -19,17 +19,19 @@
 .containerHeader {
 	display: flex;
 	flex-direction: column;
+	text-align: center;
 	align-items: center;
 	border-radius: 10px;
 	margin-top: 20px;
+	gap: 10px;
 	.contentHeaderTitle {
 		margin-top: 20px;
-		font-size: clamp(17px, 25px, 45px);
+		font-size: clamp(27px, 4vw, 45px);
 		color: #ffd622;
 		font-weight: 800;
 	}
 	.contentHeaderSubtitle {
-		font-size: clamp(15px, 18px, 25px);
+		font-size: clamp(16px, 4vw, 25px);
 		color: $fontColorAccent;
 		font-weight: 800;
 		margin-bottom: 40px;
@@ -41,6 +43,7 @@
 	flex-wrap: wrap;
 	.descriptionItem {
 		margin-top: 10px;
+		line-height: 1.2;
 		flex: 1 0 48%;
 		border-radius: 10px;
 		background-color: $bgDefaultAccentBlock;
@@ -63,6 +66,32 @@
 	padding: 40px;
 	.calculator {
 		text-align: center;
+	}
+}
+.containerPricesServices {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	.pricesServices {
+		flex: 1 0 20%;
+		text-align: center;
+		border: 2px solid rgba(178, 178, 178, 0.382);
+		border-radius: 10px;
+		background-color: #2727273b;
+		padding: 20px;
+		color: $fontColorAccent;
+		.servicesTitle {
+			font-size: 20px;
+			color: $fontColorAccent;
+			font-weight: 700;
+		}
+		.servicesSubtitle {
+			margin-top: 5px;
+			font-weight: 800;
+			font-size: 15px;
+			color: $accent;
+		}
 	}
 }
 .containerActions {
@@ -120,7 +149,6 @@
 		margin: 0 20px;
 	}
 	.containerHeader {
-		align-items: start;
 		border-radius: 10px;
 		margin-top: 20px;
 		.contentHeaderTitle {
@@ -145,6 +173,15 @@
 			padding: 20px;
 			font-size: 15px;
 			color: $fontColorAccent;
+		}
+	}
+	.containerPricesServices {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		margin-top: 10px;
+		.pricesServices {
+			flex: 1 0 50%;
 		}
 	}
 }

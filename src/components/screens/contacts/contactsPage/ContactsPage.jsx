@@ -1,8 +1,6 @@
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import FeedbackForm from '../../../ui/formFeedback/FormFeedback'
 import SocialLink from '../../../ui/socialLink/SocialLink'
-import WrapperReviews from '../../../wrapperReviews/WrapperReviews'
-import WrapperServices from '../../../wrapperServices/WrapperServices'
 import styles from './ContactsPage.module.scss'
 import { dataContacts, dataEmail } from './DataText'
 
@@ -77,8 +75,6 @@ const ContactsPage = () => {
 							<img src='/static/cart.png' alt='cart' />
 						</div>
 					</div>
-					<WrapperReviews />
-					<WrapperServices />
 				</div>
 			</div>
 		</div>

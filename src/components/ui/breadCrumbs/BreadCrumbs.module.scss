@@ -2,6 +2,7 @@
 .containerBreadCrumbs {
 	display: flex;
 	align-items: center;
+	margin: 10px 0px;
 }
 .crumbs {
 	display: flex;
@@ -15,10 +16,14 @@
 }
 
 .breadcrumb {
-	color: #b9b9b9; /* цвет ссылок */
-	text-decoration: none; /* убираем подчеркивание ссылок */
-	transition: color 0.3s; /* плавное изменение цвета при наведении */
+	font-weight: 800;
+	color: $fontColorAccent;
+	text-decoration: none;
+	transition: color 0.3s;
 	font-size: 20px;
+	&.active {
+		color: $fontColor;
+	}
 	span {
 		img {
 		}
