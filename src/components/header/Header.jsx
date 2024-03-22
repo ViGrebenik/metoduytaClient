@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
-// import { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
+import { animateScroll as scroll } from 'react-scroll'
 import { useModal } from '../../assets/services/ModalContext'
 import Button from '../ui/button/Button'
 import CallRequestForm from '../ui/popup/CallRequestForm'
@@ -9,26 +9,24 @@ import styles from './Header.module.scss'
 import NavBar from './navigation/NavBar'
 
 const Header = () => {
-	const {
-		isModalOpen,
-		closeModal,
-		isOpen,
-		toggleMenu
-		// toggleTheme,
-		// isDarkTheme
-	} = useModal()
+	const scrollToTop = () => {
+		scroll.scrollToTop()
+	}
+	const { isModalOpen, closeModal, isOpen, toggleMenu, setIsOpen } = useModal()
 	const isMobile = useMediaQuery({ maxWidth: 1024 })
-
 	return (
 		<header className={styles.header}>
-			{/* <button onClick={toggleTheme}>
-				{isDarkTheme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
-			</button> */}
 			<div className={styles.headerWrapper}>
 				<div className={styles.headerContainer}>
 					{isMobile ? (
 						<>
-							<Link to={'/'} className={styles.logoContainer}>
+							<Link
+								onClick={() => {
+									scrollToTop(), setIsOpen(false)
+								}}
+								to={'/'}
+								className={styles.logoContainer}
+							>
 								<img
 									src='/static/lamp.svg'
 									alt='Company Logo'
@@ -54,7 +52,11 @@ const Header = () => {
 						</>
 					) : (
 						<>
-							<Link to={'/'} className={styles.logoContainer}>
+							<Link
+								onClick={() => scrollToTop()}
+								to={'/'}
+								className={styles.logoContainer}
+							>
 								<img
 									src='/static/lamp.svg'
 									alt='Company Logo'

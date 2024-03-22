@@ -9,7 +9,6 @@
 	display: flex;
 	flex-direction: column;
 	margin-top: 20px;
-	margin-bottom: 100px;
 }
 
 .containerHeader {
@@ -17,9 +16,10 @@
 	flex-direction: column;
 	text-align: center;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	.contentHeaderTitle {
 		margin: 0 auto;
-		font-size: clamp(18px, 25px, 45px);
+		font-size: clamp(22px, 3vw, 33px);
 		color: $fontColorAccent;
 		font-weight: 800;
 		width: 80%;
@@ -30,27 +30,31 @@
 	flex-wrap: wrap;
 	margin-top: 20px;
 	gap: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	.companyDescriptionBlock {
 		&:first-child {
 			flex: 1 0 48%;
 			.blockTagline {
-				font-size: clamp(25px, 33px, 40px);
+				font-size: clamp(25px, 3vw, 40px);
 				color: $fontColor;
 				font-weight: 800;
-				margin-bottom: 20px;
 				line-height: 1;
+				padding: 10px 20px;
 				span {
 					color: $accent;
 				}
 			}
 			.blockDescription {
-				font-size: 15px;
+				font-size: 18px;
 				color: $white;
 				font-weight: 700;
 				span {
+					color: $fontColorAccent;
+					padding: 20px;
+					border-radius: 10px;
+					background-color: $bgDefaultAccentBlock;
 					display: block;
-					width: 90%;
+					line-height: 1.2;
 					margin-top: 10px;
 				}
 			}
@@ -62,36 +66,6 @@
 				display: flex;
 				flex-wrap: wrap;
 				gap: 10px;
-				.qualities {
-					flex: 1 0 45%;
-					border-radius: 10px;
-					background-color: $bgdefault;
-					display: flex;
-					gap: 10px;
-					font-size: 1.5em;
-					padding: 20px;
-					align-items: start;
-					img {
-						width: 50px;
-						height: 50px;
-					}
-					.qualitiesBlock {
-						display: flex;
-						flex-direction: column;
-						.qualitiesTitle {
-							font-size: 20px;
-							font-weight: 800;
-							line-height: 1;
-							color: $white;
-						}
-						.qualitiesSubtitle {
-							margin-top: 10px;
-							font-size: 15px;
-							line-height: 1;
-							color: $fontColor;
-						}
-					}
-				}
 			}
 			.blockAction {
 				margin-top: 10px;
@@ -111,6 +85,7 @@
 					display: flex;
 					justify-content: end;
 					button {
+						cursor: pointer;
 						border-radius: 10px;
 						background-color: initial;
 						font-weight: 800;
@@ -142,7 +117,7 @@
 			margin: 0 auto;
 			color: $fontColorAccent;
 			font-weight: 800;
-			width: 80%;
+			width: 100%;
 		}
 	}
 
@@ -151,15 +126,17 @@
 		flex-wrap: wrap;
 		margin-top: 20px;
 		gap: 10px;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 		.companyDescriptionBlock {
 			&:first-child {
 				flex: 1 0 52%;
 				.blockTagline {
 					color: $fontColor;
 					font-weight: 800;
-					margin-bottom: 20px;
+					margin-bottom: 0px;
+					text-align: start;
 					line-height: 1;
+					padding: 10px;
 					span {
 						color: $accent;
 					}
@@ -169,7 +146,7 @@
 					color: $white;
 					span {
 						display: block;
-						width: 90%;
+						width: 100%;
 						margin-top: 10px;
 					}
 				}
@@ -181,36 +158,6 @@
 					display: flex;
 					flex-wrap: wrap;
 					gap: 10px;
-					.qualities {
-						flex: 1 0 45%;
-						border-radius: 10px;
-						background-color: $bgdefault;
-						display: flex;
-						gap: 10px;
-						font-size: 1.5em;
-						padding: 20px;
-						align-items: start;
-						img {
-							width: 50px;
-							height: 50px;
-						}
-						.qualitiesBlock {
-							display: flex;
-							flex-direction: column;
-							.qualitiesTitle {
-								font-size: 20px;
-								font-weight: 800;
-								line-height: 1;
-								color: $white;
-							}
-							.qualitiesSubtitle {
-								margin-top: 10px;
-								font-size: 15px;
-								line-height: 1;
-								color: $fontColor;
-							}
-						}
-					}
 				}
 				.blockAction {
 					margin-top: 10px;

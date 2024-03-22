@@ -6,8 +6,12 @@ const ModalContext = createContext()
 export const ModalProvider = ({ children }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [isOpen, setIsOpen] = useState(false)
+	const [type, setType] = useState(null)
 
-	const openModal = () => setIsModalOpen(true)
+	const openModal = type => {
+		setType(type)
+		setIsModalOpen(true)
+	}
 	const closeModal = () => setIsModalOpen(false)
 
 	const toggleMenu = () => {
@@ -22,8 +26,8 @@ export const ModalProvider = ({ children }) => {
 				closeModal,
 				toggleMenu,
 				isOpen,
-				setIsOpen
-				// isDarkTheme
+				setIsOpen,
+				type
 			}}
 		>
 			{children}
@@ -31,5 +35,4 @@ export const ModalProvider = ({ children }) => {
 	)
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useModal = () => useContext(ModalContext)

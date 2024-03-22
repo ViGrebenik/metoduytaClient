@@ -25,11 +25,13 @@ const WrapperServices = () => {
 								description='Выполняем все виды работ, включая дизайн-проект!'
 								price='От 9500 руб. м2'
 								imageUrl='/static/stoke/item02.jpg'
+								specialСondition='Сделаем базовый дизайн-проект!'
 								serviceUrl='/servicesComplex'
 							/>
 							<ServiceCard
 								title='РЕМОНТ КВАРТИР В НОВОСТРОЙКЕ'
 								description='Для тех, кто недавно переехал в новое жилье и мечтает поскорее оформить свой уютный уголок'
+								specialСondition='Сделаем базовый дизайн-проект!'
 								price='От 7000 ₽/м2'
 								imageUrl='/static/stoke/item03.jpg'
 								serviceUrl='/servicesComplex'
@@ -37,6 +39,7 @@ const WrapperServices = () => {
 							<ServiceCard
 								title='ДИЗАЙНЕРСКИЙ РЕМОНТ'
 								description='Изменить интерьер квартиры максимально быстро и с минимальными затратами – это реально.'
+								specialСondition='Скидка на ремонт 10%!'
 								price='От 800 руб. м2'
 								imageUrl='/static/stoke/item01.jpg'
 								serviceUrl='/servicesDesigner'
@@ -44,6 +47,7 @@ const WrapperServices = () => {
 							<ServiceCard
 								title='КОСМЕТИЧЕСКИЙ РЕМОНТ'
 								description='ВЫПОЛНИМ ОБЬЕМ РАБОТ ПО ВАШЕЙ КВАРТИРЕ'
+								specialСondition='Сделаем базовый дизайн-проект!'
 								price='От 8000 ₽/м2'
 								imageUrl='/static/stoke/item04.jpg'
 								serviceUrl='/servicesComplex'

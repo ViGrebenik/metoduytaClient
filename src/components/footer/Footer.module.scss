@@ -29,9 +29,6 @@
 	}
 }
 
-.basementInfo {
-	flex: 1 0 30%;
-}
 .navigationInfoCampania {
 	font-size: 20px;
 }
@@ -48,6 +45,8 @@
 .basementInfo {
 	display: flex;
 	flex-direction: column;
+	flex: 1 0 30%;
+	gap: 20px;
 }
 .infoAdress {
 	font-size: 17px;
@@ -61,7 +60,6 @@
 	font-size: 17px;
 	height: 100px;
 	text-align: end;
-	padding-top: 30px;
 	color: $fontColor;
 	font-weight: 800;
 }

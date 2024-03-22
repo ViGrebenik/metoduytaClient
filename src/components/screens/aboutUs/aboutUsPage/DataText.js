@@ -19,47 +19,57 @@ export const dataText = {
 		],
 		[
 			'Узкопрофильные мастера выполняют ремонт в квартире используя профессиональный инструмент, что позволяет нам достигать высокого качества отделочных работ.'
-		],
-		[
-			'Cамостоятельно заказываем весь черновой строительный материал для ремонта квартиры.'
 		]
 	]
 }
 
-export const dataQualities = [
+export const advantages = [
 	{
 		title: 'Честный подход',
-		subTitle:
+		description:
 			'Фиксированный прайс, всегда в открытом доступе. Твердые цены на все виды работ.',
-		svg: '/static/construction.svg'
+		urlSvg: '/static/advantage/drawingV3.svg',
+		altSvg: 'drawingIcon'
 	},
 	{
 		title: 'Качество по СНиПам и ГОСТам',
-		subTitle:
+		description:
 			'Опытные специалисты со всеми допусками выполняют ремонт по всем нормам и стандартам.',
-		svg: '/static/construction.svg'
+		urlSvg: '/static/advantage/garantiy.svg',
+		altSvg: 'garantiaIcon'
+	},
+	{
+		title: 'Комплектация материалами',
+		description:
+			'Cамостоятельно заказываем весь черновой строительный материал для ремонта квартиры.',
+		urlSvg: '/static/advantage/garantiyv3.svg',
+		altSvg: 'garantiaIcon'
 	},
 	{
 		title: 'Технический надзор',
-		subTitle:
+		description:
 			'Организована независимая оценка и контроль качества выполняемых работ.',
-		svg: '/static/construction.svg'
+		urlSvg: '/static/advantage/garantiyv3.svg',
+		altSvg: 'garantiaIcon'
 	},
 	{
 		title: 'Гарантия оптимальной цены',
-		subTitle: 'Подробная прозрачная смета. ',
-		svg: '/static/construction.svg'
+		description: 'Подробная прозрачная смета. ',
+		urlSvg: '/static/advantage/garantiyv3.svg',
+		altSvg: 'garantiaIcon'
 	},
 	{
 		title: 'Не берем авансов',
-		subTitle:
+		description:
 			'Ремонт без предоплаты, оплата осуществляется по Актам выполненных и принятых работ',
-		svg: '/static/construction.svg'
+		urlSvg: '/static/advantage/garantiyv3.svg',
+		altSvg: 'garantiaIcon'
 	},
 	{
 		title: 'Гарантия качества ремонта',
-		subTitle:
+		description:
 			'24 месяца гарантии на все ремонтные работы, гарантийных случаев менее 2%.',
-		svg: '/static/construction.svg'
+		urlSvg: '/static/advantage/garantiyv3.svg',
+		altSvg: 'garantiaIcon'
 	}
 ]

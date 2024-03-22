@@ -8,12 +8,13 @@
 .mainItemContent {
 	display: flex;
 	justify-content: space-between;
-	padding: 10px 20px;
+	padding: 20px 20px;
 }
 
 .titleService {
 	font-size: 20px;
 	font-weight: 800;
+	margin-bottom: 10px;
 	color: $accent;
 	&.portfolioPage {
 		font-size: 17px;
@@ -53,7 +54,7 @@
 .subtitleAddress {
 	color: black;
 	font-weight: 800;
-	padding: 0px 20px;
+	padding: 5px 20px;
 	border-radius: 5px;
 	background-color: $accent;
 	font-size: 20px;

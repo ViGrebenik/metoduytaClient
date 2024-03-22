@@ -5,7 +5,14 @@ import styles from './ServiceCard.module.scss'
 import { useModal } from '../../../assets/services/ModalContext'
 
 // eslint-disable-next-line no-unused-vars
-const ServiceCard = ({ title, description, price, imageUrl, serviceUrl }) => {
+const ServiceCard = ({
+	title,
+	description,
+	price,
+	imageUrl,
+	serviceUrl,
+	specialСondition
+}) => {
 	const { openModal } = useModal()
 
 	const ServiceCardContainer = styled.div`
@@ -24,7 +31,7 @@ const ServiceCard = ({ title, description, price, imageUrl, serviceUrl }) => {
 						<Link to={serviceUrl}>{'ПОДРОБНЕЕ'}</Link>
 					</div>
 				</div>
-				<div className={styles.hoverContent}>
+				<div data-count={specialСondition} className={styles.hoverContent}>
 					<div className={styles.hoverText}>
 						<p className={styles.serviceCardDescription}>{description}</p>
 						<p className={styles.serviceCardPrice}>{price}</p>

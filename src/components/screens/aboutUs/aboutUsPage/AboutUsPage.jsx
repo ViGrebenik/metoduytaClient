@@ -1,9 +1,8 @@
 import { useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
-import WrapperReviews from '../../../wrapperReviews/WrapperReviews'
-import WrapperServices from '../../../wrapperServices/WrapperServices'
+import Advantage from '../../../ui/itemAdvantage/advantage/Advantage'
 import styles from './AboutUsPage.module.scss'
-import { dataQualities, dataText } from './DataText'
+import { advantages, dataText } from './DataText'
 
 const AboutUsPage = () => {
 	const location = useLocation()
@@ -35,25 +34,15 @@ const AboutUsPage = () => {
 								<span>{dataText.itemRight[0]}</span>
 								<span>{dataText.itemRight[1]}</span>
 								<span>{dataText.itemRight[2]}</span>
-								<br />
 								<span>{dataText.itemLeft[0]}</span>
 								<span>{dataText.itemLeft[1]}</span>
 								<span>{dataText.itemLeft[2]}</span>
-								<span>{dataText.itemLeft[3]}</span>
 							</div>
 						</div>
 						<div className={styles.companyDescriptionBlock}>
 							<div className={styles.blockQualities}>
-								{dataQualities.map((item, index) => (
-									<div className={styles.qualities} key={index}>
-										<img src={item.svg} alt='svg' />
-										<div className={styles.qualitiesBlock}>
-											<div className={styles.qualitiesTitle}>{item.title}</div>
-											<div className={styles.qualitiesSubtitle}>
-												{item.subTitle}
-											</div>
-										</div>
-									</div>
+								{advantages.map((advantage, index) => (
+									<Advantage advantage={advantage} key={index} />
 								))}
 							</div>
 							<div className={styles.blockAction}>
@@ -68,8 +57,6 @@ const AboutUsPage = () => {
 							</div>
 						</div>
 					</div>
-					<WrapperReviews />
-					<WrapperServices />
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import FeedbackForm from '../../../ui/formFeedback/FormFeedback'
 import SocialLink from '../../../ui/socialLink/SocialLink'
@@ -5,6 +6,8 @@ import styles from './ContactsPage.module.scss'
 import { dataContacts, dataEmail } from './DataText'
 
 const ContactsPage = () => {
+	const location = useLocation()
+	const currentPath = location.pathname
 	return (
 		<div className={styles.wrapperDesigner}>
 			<div className={styles.container}>
@@ -13,8 +16,7 @@ const ContactsPage = () => {
 						<Breadcrumbs
 							breadcrumbs={[
 								{ name: 'Главная', url: '/' },
-								{ name: 'Категория', url: '/category' },
-								{ name: 'Страница', url: '/page' }
+								{ name: 'Контакты', url: currentPath }
 							]}
 						/>
 					</div>

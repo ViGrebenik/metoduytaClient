@@ -1,7 +1,9 @@
 import { useMediaQuery } from 'react-responsive'
 import SliderBanner from '../../slider/SliderBanner'
 import Button from '../../ui/button/Button'
+import Advantage from '../../ui/itemAdvantage/advantage/Advantage'
 import styles from './HomeBanner.module.scss'
+import { advantages } from './dataAdvantage'
 
 const HomeBanner = () => {
 	const isMobile = useMediaQuery({ maxWidth: 1024 })
@@ -20,41 +22,9 @@ const HomeBanner = () => {
 							КВАРТИР ПОД КЛЮЧ
 						</h1>
 						<div className={styles.bannerAdvantages}>
-							<div className={styles.advantageItem}>
-								<img src='/static/advantage/drawingV3.svg' alt='drawing' />
-								<div className={styles.advantageBlock}>
-									<div className={styles.advantageDescriptionMain}>
-										ОТ ПРОЕКТА ДО РЕАЛИЗАЦИИ
-									</div>
-									<div className={styles.advantageDescription}>
-										Ваш ремонт будет сделан точно в соответствии с дизайн -
-										проектом и технической документацией.
-									</div>
-								</div>
-							</div>
-							<div className={styles.advantageItem}>
-								<img src='/static/advantage/garantiy.svg' alt='dogovor' />
-								<div className={styles.advantageBlock}>
-									<div className={styles.advantageDescriptionMain}>
-										Договор с фиксированной стоимостью
-									</div>
-									<div className={styles.advantageDescription}>
-										Без скрытый платажей
-									</div>
-								</div>
-							</div>
-							<div className={styles.advantageItem}>
-								<img src='/static/advantage/garantiyv3.svg' alt='fkk' />
-								<div className={styles.advantageBlock}>
-									<div className={styles.advantageDescriptionMain}>
-										ГАРАНТИЯ ОТ 2 ЛЕТ
-									</div>
-									<div className={styles.advantageDescription}>
-										Письменная гарантия от 2-х лет на все производимые виды
-										работ
-									</div>
-								</div>
-							</div>
+							{advantages.map((advantage, index) => (
+								<Advantage advantage={advantage} key={index} />
+							))}
 							<div className={styles.titleAction}>
 								<Button
 									fontSize={fontSize}

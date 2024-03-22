@@ -29,7 +29,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.914);
-	z-index: 999;
+	z-index: 99;
 	animation: fadeIn 0.2s ease forwards;
 	&.visible {
 		animation: fadeOut 0.2s ease forwards;

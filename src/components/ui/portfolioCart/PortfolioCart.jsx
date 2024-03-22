@@ -3,7 +3,7 @@ import SliderObject from '../popup/viewObject/sliderObject/SliderObject'
 import styles from './PortfolioCart.module.scss'
 
 // eslint-disable-next-line react/prop-types
-const PortfolioCart = ({ onClosePopUP = null, check = false }) => {
+const PortfolioCart = ({ onClosePopUP, check = false }) => {
 	return (
 		<div className={`${styles.modalContent} ${check ? styles.check : ''}`}>
 			{onClosePopUP && (
@@ -35,7 +35,11 @@ const PortfolioCart = ({ onClosePopUP = null, check = false }) => {
 							title={'РАССЧИТАТЬ СВОЮ СМЕТУ'}
 							redirectTo={'/calculator'}
 						/>
-						<Button title={'ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ'} type='popUp' />
+						<Button
+							onClick={() => onClosePopUP()}
+							title={'ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ'}
+							type='popUp'
+						/>
 					</div>
 				</div>
 			</div>
