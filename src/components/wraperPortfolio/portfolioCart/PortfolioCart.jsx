@@ -1,12 +1,17 @@
 /* eslint-disable react/prop-types */
+import { mockData } from '../mocData'
+//
 import SliderMain from '../sliderMain/SliderMain'
 import styles from './PortfolioCart.module.scss'
 
-const PortfolioCart = ({ portfolioPage = false }) => {
+const PortfolioCart = ({ portfolioPage = false, objectID }) => {
+	const { type, price, area, location } = mockData.find(
+		item => item.id === +objectID
+	)
 	return (
 		<>
 			<div className={styles.mainItemBlockSlider}>
-				<SliderMain portfolioPage={portfolioPage} />
+				<SliderMain objectID={objectID} portfolioPage={portfolioPage} />
 			</div>
 			<div className={styles.mainItemContent}>
 				<div className={styles.contentItemTitle}>
@@ -15,7 +20,7 @@ const PortfolioCart = ({ portfolioPage = false }) => {
 							portfolioPage ? styles.portfolioPage : ''
 						}`}
 					>
-						КАПИТАЛЬНЫЙ РЕМОНТ
+						{type}
 					</div>
 					<div
 						className={`${styles.titleCheck} ${
@@ -23,7 +28,7 @@ const PortfolioCart = ({ portfolioPage = false }) => {
 						}`}
 					>
 						<img src='/static/slider/geolocated.svg' alt='geolocatedIcon' />
-						Ул.Cавушкина 12к3
+						{location}
 					</div>
 				</div>
 				<div className={styles.contentItemSubtitle}>
@@ -32,14 +37,14 @@ const PortfolioCart = ({ portfolioPage = false }) => {
 							portfolioPage ? styles.portfolioPage : ''
 						}`}
 					>
-						74 м²
+						{area} м²
 					</div>
 					<div
 						className={`${styles.subtitleAddress} ${
 							portfolioPage ? styles.portfolioPage : ''
 						}`}
 					>
-						710 000 т.р
+						{price} т.р
 					</div>
 				</div>
 			</div>

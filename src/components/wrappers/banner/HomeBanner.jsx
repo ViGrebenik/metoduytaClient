@@ -28,7 +28,7 @@ const HomeBanner = () => {
 							<div className={styles.titleAction}>
 								<Button
 									fontSize={fontSize}
-									pd={'25px 20px'}
+									pd={'20px 10px'}
 									type='popUp'
 									title={'ЗАКАЗАТЬ РАССЧЕТ СМЕТЫ'}
 								/>
@@ -42,9 +42,10 @@ const HomeBanner = () => {
 					{!isMobile && (
 						<SliderBanner
 							slides={[
-								'/static/archive/item01.jpg',
-								'/static/archive/item02.jpg',
-								'/static/archive/item03.jpg'
+								'/static/archive/banner/item_01.jpeg',
+								'/static/archive/banner/item_02.jpeg',
+								'/static/archive/banner/item_03.jpeg',
+								'/static/archive/banner/item_05.jpeg'
 							]}
 						/>
 					)}

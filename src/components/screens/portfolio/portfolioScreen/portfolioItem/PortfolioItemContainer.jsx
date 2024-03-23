@@ -1,13 +1,13 @@
 import PortfolioCart from '../../../../wraperPortfolio/portfolioCart/PortfolioCart'
 import styles from './PortfolioItem.module.scss'
+import { mockData } from '../../../../wraperPortfolio/mocData'
 
 const PortfolioItemContainer = () => {
-	const items = Array(12).fill('')
 	return (
 		<div className={styles.containerMain}>
-			{items.map((_, index) => (
+			{mockData.map((item, index) => (
 				<div className={styles.containerMainItem} key={index}>
-					<PortfolioCart portfolioPage={true} />
+					<PortfolioCart portfolioPage={true} objectID={item.id} />
 				</div>
 			))}
 		</div>

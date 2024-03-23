@@ -1,14 +1,17 @@
-// import React, { Component } from 'react'
+/* eslint-disable react/prop-types */
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Slider from 'react-slick'
+import { mockData } from '../../../../wraperPortfolio/mocData'
 import './SliderObject.scss'
 
-const SliderObject = () => {
-	const baseUrl = '/static/archive'
+const SliderObject = ({ objectID }) => {
+	const { photos, id } = mockData.find(item => item.id === +objectID)
+	const baseUrl = `/static/archive/MocPortfolio/object_0${id}`
 	const settings = {
 		customPaging: function (i) {
 			return (
 				<a>
-					<img src={`${baseUrl}/item0${i + 1}.jpg`} />
+					<LazyLoadImage effect='blur' src={`${baseUrl}/item_0${i + 1}.jpeg`} />
 				</a>
 			)
 		},
@@ -22,24 +25,15 @@ const SliderObject = () => {
 	return (
 		<div className='slider-container'>
 			<Slider {...settings}>
-				<div>
-					<img src={baseUrl + '/item01.jpg'} />
-				</div>
-				<div>
-					<img src={baseUrl + '/item02.jpg'} />
-				</div>
-				<div>
-					<img src={baseUrl + '/item03.jpg'} />
-				</div>
-				<div>
-					<img src={baseUrl + '/item04.jpg'} />
-				</div>
-				<div>
-					<img src={baseUrl + '/item05.jpg'} />
-				</div>
-				<div>
-					<img src={baseUrl + '/item06.jpg'} />
-				</div>
+				{photos.map((item, index) => (
+					<div key={index}>
+						<LazyLoadImage
+							effect='blur'
+							src={item}
+							alt={`Image ${index + 1}`}
+						/>
+					</div>
+				))}
 			</Slider>
 		</div>
 	)

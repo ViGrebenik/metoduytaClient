@@ -7,7 +7,7 @@
 /* Стили для точек-пагинации */
 .slick-dots {
 	position: absolute;
-	bottom: 10px; /* Расположение точек снизу */
+	bottom: 0; /* Расположение точек снизу */
 	list-style: none;
 	text-align: center;
 	padding: 0;
@@ -16,8 +16,8 @@
 }
 
 .slick-dots li {
-	width: 80px !important;
-	height: 80px !important;
+	width: 75px !important;
+	height: 75px !important;
 	display: inline-block;
 	margin: 0 5px; /* Расстояние между точками */
 }
@@ -40,15 +40,21 @@
 	filter: grayscale(100%);
 }
 
-/* Возвращаем цветное изображение для активного слайда */
+.slick-dots li {
+	transition: top 0.3s ease; /* Добавляем анимацию для свойства top */
+	top: 0px;
+}
 .slick-dots li.slick-active img {
 	filter: grayscale(0%);
 }
 
-/* Стили для изображений слайдов */
+.slick-dots li.slick-active {
+	top: -15px;
+}
+
 .slider-container img {
-	width: 100%; /* Растягиваем изображения на всю ширину контейнера */
-	height: auto; /* Автоматическое вычисление высоты */
+	width: 100%;
+	height: auto;
 	border-radius: 10px;
 }
 

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import PortfolioCart from '../../portfolioCart/PortfolioCart'
 import styles from './ViewObject.module.scss'
 
-const ViewObject = ({ onClose }) => {
+const ViewObject = ({ onClose, objectID }) => {
 	const [isVisible, setIsVisible] = useState(false)
 
 	const onClosePopUP = () => {
@@ -15,7 +15,7 @@ const ViewObject = ({ onClose }) => {
 	return (
 		<div className={classNames(styles.modal, { [styles.visible]: isVisible })}>
 			<div className={styles.modalContent}>
-				<PortfolioCart onClosePopUP={onClosePopUP} />
+				<PortfolioCart objectID={objectID} onClosePopUP={onClosePopUP} />
 			</div>
 		</div>
 	)

@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import styles from './SliderBanner.module.scss'
 
 const SliderBanner = ({ slides }) => {
@@ -21,7 +23,8 @@ const SliderBanner = ({ slides }) => {
 		<div className={styles.sliderContainer}>
 			<div className={styles.infoSlider}>
 				{slides.map((slide, index) => (
-					<img
+					<LazyLoadImage
+						effect='blur'
 						key={index}
 						src={slide}
 						alt={`Slide ${index}`}

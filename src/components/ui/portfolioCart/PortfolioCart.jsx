@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
+import { mockData } from '../../wraperPortfolio/mocData'
 import Button from '../button/Button'
 import SliderObject from '../popup/viewObject/sliderObject/SliderObject'
 import styles from './PortfolioCart.module.scss'
 
-// eslint-disable-next-line react/prop-types
-const PortfolioCart = ({ onClosePopUP, check = false }) => {
+const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
+	const { type, description, listWorks } = mockData.find(
+		item => item.id === +objectID
+	)
 	return (
 		<div className={`${styles.modalContent} ${check ? styles.check : ''}`}>
 			{onClosePopUP && (
@@ -12,22 +16,21 @@ const PortfolioCart = ({ onClosePopUP, check = false }) => {
 				</span>
 			)}
 			<div className={styles.containerObject}>
-				<SliderObject />
+				<SliderObject objectID={objectID} />
 				<div className={styles.objectDescription}>
 					<div className={styles.descriptionItem}>
 						<div className={styles.descriptionTitle}>
-							<p>Тут какой ремонт</p>
+							<p>{type}</p>
 						</div>
-						<div className={styles.descriptionInfoObject}>
-							Тут данные о обьекте
-						</div>
+						<div className={styles.descriptionInfoObject}>{description}</div>
 						<div className={styles.descriptionWorkBeenDone}>
 							Тут какие работы были сделаны списком
 							<br />
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-							magnam recusandae doloremque! Minima odio numquam quae, autem
-							iste, omnis vitae dolorem perspiciatis officiis iusto est,
-							repudiandae reiciendis debitis corrupti distinctio!
+							<ul>
+								{listWorks.map((item, index) => (
+									<li key={index}>{item}</li>
+								))}
+							</ul>
 						</div>
 					</div>
 					<div className={styles.descriptionContainerButton}>
