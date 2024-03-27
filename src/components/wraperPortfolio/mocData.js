@@ -191,8 +191,7 @@ export const mockData = [
 		id: 8, // id
 		type: 'Капитальный', // тип ремонта
 		// тип квартиры
-		description:
-			'Ремонт под ключ однокомпатной квартиры в новом жк на Петроградке', // короткое описание
+		description: 'Ремонт под ключ ?', // короткое описание
 		listWorks: [
 			['штукатурка стен по маякам'],
 			['шпаклёвка стен под покраску'],
@@ -205,21 +204,20 @@ export const mockData = [
 		price: 865000, // цена ремонта
 		location: 'Ул.Петроградка 51',
 		photos: [
-			'/static/archive/MocPortfolio/object_07/item_01.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_02.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_03.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_04.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_05.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_06.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_07.jpeg'
+			'/static/archive/MocPortfolio/object_08/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_08/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_08/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_08/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_08/item_05.jpeg',
+			'/static/archive/MocPortfolio/object_08/item_06.jpeg',
+			'/static/archive/MocPortfolio/object_08/item_07.jpeg'
 		]
 	},
 	{
 		id: 9, // id
-		type: 'Капитальный', // тип ремонта
+		type: 'Косметический', // тип ремонта
 		// тип квартиры
-		description:
-			'Ремонт под ключ однокомпатной квартиры в новом жк на Петроградке', // короткое описание
+		description: 'Ремонт в ванной комнаты, зала, , балкона', // короткое описание
 		listWorks: [
 			['штукатурка стен по маякам'],
 			['шпаклёвка стен под покраску'],
@@ -232,13 +230,11 @@ export const mockData = [
 		price: 865000, // цена ремонта
 		location: 'Ул.Петроградка 51',
 		photos: [
-			'/static/archive/MocPortfolio/object_07/item_01.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_02.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_03.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_04.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_05.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_06.jpeg',
-			'/static/archive/MocPortfolio/object_07/item_07.jpeg'
+			'/static/archive/MocPortfolio/object_09/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_09/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_09/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_09/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_09/item_05.jpeg'
 		]
 	}
 ]

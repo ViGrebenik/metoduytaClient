@@ -5,10 +5,11 @@
 		position: relative;
 		border-radius: 10px;
 		margin: 20px 0px;
-		padding: 20px;
-		height: 200px;
 		cursor: pointer;
 		background-color: $bgDefaultAccentBlock;
+		img {
+			border-radius: 10px;
+		}
 	}
 	.carouselTitle {
 		color: $accent;

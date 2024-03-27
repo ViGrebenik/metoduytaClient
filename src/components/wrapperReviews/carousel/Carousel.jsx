@@ -19,9 +19,7 @@ const Carousel = ({ items }) => {
 			<Slider {...settings}>
 				{items.map((item, index) => (
 					<div key={index} className='carouselItemReviews'>
-						<div className='carouselTitle'>такой-то такой</div>
-						<div className='carouselDescriptionReviews'>{item}</div>
-						<div className='carouselblock'></div>
+						<img src={item} alt='reviews' />
 					</div>
 				))}
 			</Slider>

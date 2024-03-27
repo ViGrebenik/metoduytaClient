@@ -3,11 +3,11 @@ import Carousel from './carousel/Carousel'
 
 const WrapperReviews = () => {
 	const items = [
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!',
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime maiores explicabo alias. Officiis soluta nemo excepturi atque voluptates reprehenderit itaque perferendis illum quam, voluptas tempora enim veritatis fuga doloribus!'
+		['/public/static/archive/reviews/1.jpg'],
+		['/public/static/archive/reviews/2.jpg'],
+		['/public/static/archive/reviews/3.jpg'],
+		['/public/static/archive/reviews/4.jpg'],
+		['/public/static/archive/reviews/5.jpg']
 	]
 
 	return (
