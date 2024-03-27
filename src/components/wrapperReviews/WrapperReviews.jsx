@@ -3,11 +3,11 @@ import Carousel from './carousel/Carousel'
 
 const WrapperReviews = () => {
 	const items = [
-		['/public/static/archive/reviews/1.jpg'],
-		['/public/static/archive/reviews/2.jpg'],
-		['/public/static/archive/reviews/3.jpg'],
-		['/public/static/archive/reviews/4.jpg'],
-		['/public/static/archive/reviews/5.jpg']
+		['/static/archive/reviews/1.jpg'],
+		['/static/archive/reviews/2.jpg'],
+		['/static/archive/reviews/3.jpg'],
+		['/static/archive/reviews/4.jpg'],
+		['/static/archive/reviews/5.jpg']
 	]
 
 	return (
