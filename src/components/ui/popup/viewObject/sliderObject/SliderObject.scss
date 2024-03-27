@@ -6,8 +6,10 @@
 
 /* Стили для точек-пагинации */
 .slick-dots {
+	display: flex !important;
+	justify-content: center;
 	position: absolute;
-	bottom: 0; /* Расположение точек снизу */
+	bottom: 0;
 	list-style: none;
 	text-align: center;
 	padding: 0;

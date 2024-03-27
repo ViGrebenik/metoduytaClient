@@ -31,9 +31,10 @@ const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
 						<div className={styles.descriptionTitle}>
 							<p>{type}</p>
 						</div>
+						<div className={styles.descriptionInfoObject}>Тип квартиры</div>
+						<br />
 						<div className={styles.descriptionInfoObject}>{description}</div>
 						<div className={styles.descriptionWorkBeenDone}>
-							Тут какие работы были сделаны списком
 							<br />
 							<ul>
 								{listWorks.map((item, index) => (

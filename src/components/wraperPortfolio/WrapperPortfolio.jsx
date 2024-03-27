@@ -31,6 +31,9 @@ const WrapperPortfolio = () => {
 					</div>
 					<div className={styles.containerMain}>
 						<div className={styles.containerMainItem}>
+							<PortfolioCart objectID={'4'} />
+						</div>
+						<div className={styles.containerMainItem}>
 							<PortfolioCart objectID={'1'} />
 						</div>
 						<div className={styles.containerMainItem}>
@@ -38,9 +41,6 @@ const WrapperPortfolio = () => {
 						</div>
 						<div className={styles.containerMainItem}>
 							<PortfolioCart objectID={'3'} />
-						</div>
-						<div className={styles.containerMainItem}>
-							<PortfolioCart objectID={'1'} />
 						</div>
 					</div>
 					{isMobile && (

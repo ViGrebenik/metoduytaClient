@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { animateScroll as scroll } from 'react-scroll'
 import { useModal } from '../../assets/services/ModalContext'
 import Button from '../ui/button/Button'
-import CallRequestForm from '../ui/popup/CallRequestForm'
 import styles from './Header.module.scss'
 import NavBar from './navigation/NavBar'
 
@@ -12,7 +11,7 @@ const Header = () => {
 	const scrollToTop = () => {
 		scroll.scrollToTop()
 	}
-	const { isModalOpen, closeModal, isOpen, toggleMenu, setIsOpen } = useModal()
+	const { isOpen, toggleMenu, setIsOpen, openModal } = useModal()
 	const isMobile = useMediaQuery({ maxWidth: 1024 })
 	return (
 		<header className={styles.header}>
@@ -38,17 +37,24 @@ const Header = () => {
 									УЮТА
 								</p>
 							</Link>
-							<label htmlFor='toggle' className={styles.burgerMenuButton}>
-								<input
-									type='checkbox'
-									id='toggle'
-									checked={isOpen}
-									onChange={toggleMenu}
+							<div className={styles.headerMobile}>
+								<img
+									onClick={() => openModal()}
+									src='/public/static/telephone.svg'
+									alt='telephone'
 								/>
-								<span></span>
-								<span></span>
-								<span></span>
-							</label>
+								<label htmlFor='toggle' className={styles.burgerMenuButton}>
+									<input
+										type='checkbox'
+										id='toggle'
+										checked={isOpen}
+										onChange={toggleMenu}
+									/>
+									<span></span>
+									<span></span>
+									<span></span>
+								</label>
+							</div>
 						</>
 					) : (
 						<>
@@ -77,7 +83,6 @@ const Header = () => {
 				</div>
 			</div>
 			{isOpen && <NavBar />}
-			{/* {isModalOpen && <CallRequestForm onClose={closeModal} />} */}
 		</header>
 	)
 }

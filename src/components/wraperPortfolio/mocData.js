@@ -78,5 +78,62 @@ export const mockData = [
 			'/static/archive/MocPortfolio/object_03/item_05.jpeg',
 			'/static/archive/MocPortfolio/object_03/item_06.jpeg'
 		]
+	},
+	{
+		id: 4, // id
+		type: 'Капитальный ремонт', // тип ремонта
+		// тип квартиры
+		description: 'Студия совмещенная с балконом, расширили пространство', // короткое описание
+		listWorks: [
+			['штукатурка стен по маякам'],
+			['шпаклёвка стен под покраску'],
+			['покраска стен'],
+			['сантехнические работы'],
+			['электромонтажные работы'],
+			['сборка нового электрощита']
+		],
+		area: 56, // площадь квартиры
+		price: 654000, // цена ремонта
+		location: 'Ул.Беринга 12',
+		photos: [
+			'/static/archive/MocPortfolio/object_04/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_05.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_06.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_07.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_08.jpeg',
+			'/static/archive/MocPortfolio/object_04/item_09.jpeg'
+		]
+	},
+	{
+		id: 5, // id
+		type: 'Дизайнерский ремонт', // тип ремонта
+		// тип квартиры
+		description:
+			'Двух комнатная квартира с яркими решениями в коридоре и на кузне', // короткое описание
+		listWorks: [
+			['штукатурка стен по маякам'],
+			['шпаклёвка стен под покраску'],
+			['покраска стен'],
+			['сантехнические работы'],
+			['электромонтажные работы'],
+			['сборка нового электрощита']
+		],
+		area: 86, // площадь квартиры
+		price: 954000, // цена ремонта
+		location: 'Ул.Некрасово 44',
+		photos: [
+			'/static/archive/MocPortfolio/object_05/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_05.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_06.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_07.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_08.jpeg',
+			'/static/archive/MocPortfolio/object_05/item_09.jpeg'
+		]
 	}
 ]

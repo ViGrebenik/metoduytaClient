@@ -127,4 +127,18 @@
 		font-size: 20px;
 		color: $fontColor;
 	}
+	.headerMobile {
+		display: flex;
+		gap: 20px;
+		img {
+			cursor: pointer;
+			position: relative;
+			background-color: rgb(100 100 100 / 48%);
+			border-radius: 5px;
+			padding: 5px;
+			top: -5px;
+			width: 35px;
+			height: 35px;
+		}
+	}
 }
