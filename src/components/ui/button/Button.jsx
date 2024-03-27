@@ -11,7 +11,8 @@ const Button = ({
 	redirectTo = '/',
 	type = 'redirect',
 	arrow = false,
-	pd
+	pd,
+	active
 }) => {
 	const CustomButton = styled.div`
 		font-size: ${props => props.fontSize || 'clamp(12px, 15px, 25px)'};
@@ -21,6 +22,7 @@ const Button = ({
 	`
 
 	const { openModal } = useModal()
+	const typeActive = active ? active : openModal
 
 	return (
 		<>
@@ -44,7 +46,7 @@ const Button = ({
 						bgC={bgC}
 						pd={pd}
 						className={styles.button}
-						onClick={() => openModal()}
+						onClick={() => typeActive()}
 					>
 						{arrow && <img src='/static/arrow.svg' alt='arrow' />}
 						<span>{title}</span>

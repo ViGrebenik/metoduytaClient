@@ -204,7 +204,7 @@ const CalculatorUI = () => {
 						</div>
 					</div>
 				</div>
-				<FeedbackForm />
+				<FeedbackForm questionForm={false} />
 			</div>
 		</div>
 	)
