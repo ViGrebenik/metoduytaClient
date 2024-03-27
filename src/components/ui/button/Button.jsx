@@ -15,7 +15,7 @@ const Button = ({
 	active
 }) => {
 	const CustomButton = styled.div`
-		font-size: ${props => props.fontSize || 'clamp(12px, 15px, 25px)'};
+		font-size: ${props => props.fontSize || 'clamp(10px, 3vw, 18px)'};
 		background-color: ${props => props.bgC || '#ffd622'};
 		padding: ${props => props.pd || '10px 20px'};
 		${props => props.className && ` ${props.className}`};
