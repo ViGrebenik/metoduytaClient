@@ -8,10 +8,14 @@ import { routes } from './routes.data'
 import FooterSignature from '../components/footer/footerSignature/FooterSignature'
 import ScrollToTop from '../assets/services/ScrollToTop'
 import CalculatorUIHome from '../components/calculator/uiHome/CalculatorUIHome'
+import { useModal } from '../assets/services/ModalContext'
+import CallRequestForm from '../components/ui/popup/CallRequestForm'
 
 const Router = () => {
+	const { isModalOpen, closeModal } = useModal()
 	return (
 		<BrowserRouter>
+			{isModalOpen && <CallRequestForm onClose={closeModal} />}
 			<ScrollToTop />
 			<Header />
 			<CalculatorUIHome />

@@ -14,9 +14,9 @@
 	}
 	.close {
 		position: absolute;
-		top: -5px;
+		top: -2px;
 		z-index: 500;
-		right: 2px;
+		right: 4px;
 		cursor: pointer;
 		font-size: 30px;
 		color: #d0d0d0;
@@ -128,7 +128,7 @@
 }
 @media only screen and (max-width: 420px) {
 	.modalContent {
-		padding: 20px 20px 10px 20px;
+		padding: 30px 20px 20px 20px;
 		border-radius: 5px;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 		max-width: 400px;

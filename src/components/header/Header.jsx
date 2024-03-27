@@ -77,7 +77,7 @@ const Header = () => {
 				</div>
 			</div>
 			{isOpen && <NavBar />}
-			{isModalOpen && <CallRequestForm onClose={closeModal} />}
+			{/* {isModalOpen && <CallRequestForm onClose={closeModal} />} */}
 		</header>
 	)
 }
