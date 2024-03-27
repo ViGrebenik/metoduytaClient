@@ -52,29 +52,25 @@ const CalculatorUI = () => {
 
 	// Доп услуги
 	const [buttonsState, setButtonsState] = useState([
-		{ name: 'Выровнять полы', checked: false, coefficient: 1.5 },
-		{ name: 'Выровнять стены', checked: false, coefficient: 1.6 },
-		{ name: 'Сантехнические работы', checked: false, coefficient: 1.7 },
-		{ name: 'Электромонтажные работы', checked: false, coefficient: 1.8 }
+		{ name: 'Выровнять полы', checked: false, coefficient: 1.1 },
+		{ name: 'Выровнять стены', checked: false, coefficient: 1.1 },
+		{ name: 'Сантехнические работы', checked: false, coefficient: 1.1 },
+		{ name: 'Электромонтажные работы', checked: false, coefficient: 1.1 }
 	])
 
 	const [result, setResult] = useState(0)
 
 	useEffect(() => {
-		const keFbuildingType = buildingType == 'Старый фонд' ? 1.2 : 1.3
-		const keFroomArea = Number(roomArea) * 10000
+		const keFbuildingType = buildingType == 'СТАРЫЙ ФОНД' ? 1.3 : 1.1
+		const keFroomArea = Number(roomArea) * 9000
 		const kefButtonsState = buttonsState
 			.filter(button => button.checked)
 			.map(button => button.coefficient)
 			.reduce((accumulator, currentValue) => accumulator * currentValue, 1)
 		setResult(
 			Math.round(
-				keFroomArea *
-					keFbuildingType *
-					typeOfRepair *
-					kefButtonsState *
-					numberOfRooms *
-					numberOfBathroom
+				keFroomArea * keFbuildingType * typeOfRepair * kefButtonsState +
+					(numberOfRooms * 30000 + numberOfBathroom * 30000)
 			)
 		)
 	}, [
@@ -114,13 +110,13 @@ const CalculatorUI = () => {
 								<div className={styles.checkBoxBlock}>
 									<label className={styles.checkBox}>
 										<input
-											onChange={() => handleBuildingTypeChange('ВТОРИЧКА')}
+											onChange={() => handleBuildingTypeChange('СТАРЫЙ ФОНД')}
 											type='checkbox'
-											checked={buildingType === 'Старый фонд'}
+											checked={buildingType === 'СТАРЫЙ ФОНД'}
 										/>
 										<div className={styles.transition}></div>
 									</label>
-									<span>Старый фонд</span>
+									<span>СТАРЫЙ ФОНД</span>
 								</div>
 							</div>
 						</div>

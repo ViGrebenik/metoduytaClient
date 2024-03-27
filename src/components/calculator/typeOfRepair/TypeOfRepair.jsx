@@ -6,9 +6,9 @@ const TypeOfRepair = ({ setTypeOfRepair }) => {
 	const [selectedTypeIndex, setSelectedTypeIndex] = useState(null)
 
 	const typeOfRepair = [
-		{ name: 'Косметический', coefficient: 1.5 },
-		{ name: 'Капитальный', coefficient: 1.3 },
-		{ name: 'Дизайнерский', coefficient: 1.4 }
+		{ name: 'Косметический', coefficient: 1.1 },
+		{ name: 'Капитальный', coefficient: 1.2 },
+		{ name: 'Дизайнерский', coefficient: 1.5 }
 	]
 
 	const handleTypeClick = index => {

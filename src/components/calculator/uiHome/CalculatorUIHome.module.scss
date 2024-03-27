@@ -1,6 +1,7 @@
 @import 'src/assets/styles/variables';
 .container {
 	position: fixed;
+
 	height: 60px;
 	width: 60px;
 	top: 280px;
@@ -12,6 +13,9 @@
 	cursor: pointer;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+	&.isOpen {
+		display: none;
+	}
 	img {
 		width: 40px;
 		height: 40px;

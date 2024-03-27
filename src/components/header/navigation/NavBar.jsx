@@ -144,6 +144,21 @@ const NavBar = () => {
 					</Link>
 				</li>
 			</ul>
+			{isMobile && (
+				<div className={styles.socialLinkMobileHeader}>
+					<div className={styles.container}>
+						<div className={styles.containerNumber}>
+							<div className={styles.number}>+7 981 944 67 49</div>
+							<div className={styles.description}>с 9:00 до 22:00 (Пн-Вс)</div>
+						</div>
+						<div className={styles.socialLink}>
+							<img src='/static/socialInstagram.svg' alt='intagramSocialLink' />
+							<img src='/static/socialyoutube.svg' alt='intagramSocialLink' />
+							<img src='/static/socialTelegram.svg' alt='intagramSocialLink' />
+						</div>
+					</div>
+				</div>
+			)}
 		</div>
 	)
 }

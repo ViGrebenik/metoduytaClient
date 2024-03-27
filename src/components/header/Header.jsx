@@ -40,20 +40,22 @@ const Header = () => {
 							<div className={styles.headerMobile}>
 								<img
 									onClick={() => openModal()}
-									src='/public/static/telephone.svg'
+									src='/static/telephone.svg'
 									alt='telephone'
 								/>
-								<label htmlFor='toggle' className={styles.burgerMenuButton}>
-									<input
-										type='checkbox'
-										id='toggle'
-										checked={isOpen}
-										onChange={toggleMenu}
-									/>
-									<span></span>
-									<span></span>
-									<span></span>
-								</label>
+								<div className={styles.headerMobileBurger}>
+									<label htmlFor='toggle' className={styles.burgerMenuButton}>
+										<input
+											type='checkbox'
+											id='toggle'
+											checked={isOpen}
+											onChange={toggleMenu}
+										/>
+										<span></span>
+										<span></span>
+										<span></span>
+									</label>
+								</div>
 							</div>
 						</>
 					) : (

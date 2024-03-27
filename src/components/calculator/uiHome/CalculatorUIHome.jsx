@@ -2,11 +2,13 @@ import { useModal } from '../../../assets/services/ModalContext'
 import styles from './CalculatorUIHome.module.scss'
 
 const CalculatorUIHome = () => {
-	const { openModal } = useModal()
+	const { openModal, isModalOpen } = useModal()
 	const type = 'calculator'
-
 	return (
-		<div className={styles.container} onClick={() => openModal(type)}>
+		<div
+			className={`${styles.container} ${isModalOpen ? styles.isOpen : ''}`}
+			onClick={() => openModal(type)}
+		>
 			<img src='/static/advantage/calculator.svg' alt='calculator' />
 		</div>
 	)

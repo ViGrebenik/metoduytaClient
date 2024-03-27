@@ -133,12 +133,17 @@
 		img {
 			cursor: pointer;
 			position: relative;
-			background-color: rgb(100 100 100 / 48%);
 			border-radius: 5px;
 			padding: 5px;
-			top: -5px;
+			top: 1px;
 			width: 35px;
 			height: 35px;
 		}
+	}
+	.headerMobileBurger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px;
 	}
 }

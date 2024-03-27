@@ -135,5 +135,110 @@ export const mockData = [
 			'/static/archive/MocPortfolio/object_05/item_08.jpeg',
 			'/static/archive/MocPortfolio/object_05/item_09.jpeg'
 		]
+	},
+	{
+		id: 6, // id
+		type: 'Косметический', // тип ремонта
+		// тип квартиры
+		description: 'Ремонт на кухне и ванной компанте', // короткое описание
+		listWorks: [
+			['штукатурка стен по маякам'],
+			['шпаклёвка стен под покраску'],
+			['покраска стен'],
+			['сантехнические работы'],
+			['электромонтажные работы'],
+			['сборка нового электрощита']
+		],
+		area: 63, // площадь квартиры
+		price: 465000, // цена ремонта
+		location: 'Ул.Некрасово 44',
+		photos: [
+			'/static/archive/MocPortfolio/object_06/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_06/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_06/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_06/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_06/item_05.jpeg'
+		]
+	},
+	{
+		id: 7, // id
+		type: 'Капитальный', // тип ремонта
+		// тип квартиры
+		description:
+			'Ремонт под ключ однокомпатной квартиры в новом жк на Петроградке', // короткое описание
+		listWorks: [
+			['штукатурка стен по маякам'],
+			['шпаклёвка стен под покраску'],
+			['покраска стен'],
+			['сантехнические работы'],
+			['электромонтажные работы'],
+			['сборка нового электрощита']
+		],
+		area: 63, // площадь квартиры
+		price: 865000, // цена ремонта
+		location: 'Ул.Петроградка 51',
+		photos: [
+			'/static/archive/MocPortfolio/object_07/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_05.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_06.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_07.jpeg'
+		]
+	},
+	{
+		id: 8, // id
+		type: 'Капитальный', // тип ремонта
+		// тип квартиры
+		description:
+			'Ремонт под ключ однокомпатной квартиры в новом жк на Петроградке', // короткое описание
+		listWorks: [
+			['штукатурка стен по маякам'],
+			['шпаклёвка стен под покраску'],
+			['покраска стен'],
+			['сантехнические работы'],
+			['электромонтажные работы'],
+			['сборка нового электрощита']
+		],
+		area: 63, // площадь квартиры
+		price: 865000, // цена ремонта
+		location: 'Ул.Петроградка 51',
+		photos: [
+			'/static/archive/MocPortfolio/object_07/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_05.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_06.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_07.jpeg'
+		]
+	},
+	{
+		id: 9, // id
+		type: 'Капитальный', // тип ремонта
+		// тип квартиры
+		description:
+			'Ремонт под ключ однокомпатной квартиры в новом жк на Петроградке', // короткое описание
+		listWorks: [
+			['штукатурка стен по маякам'],
+			['шпаклёвка стен под покраску'],
+			['покраска стен'],
+			['сантехнические работы'],
+			['электромонтажные работы'],
+			['сборка нового электрощита']
+		],
+		area: 63, // площадь квартиры
+		price: 865000, // цена ремонта
+		location: 'Ул.Петроградка 51',
+		photos: [
+			'/static/archive/MocPortfolio/object_07/item_01.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_02.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_03.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_04.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_05.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_06.jpeg',
+			'/static/archive/MocPortfolio/object_07/item_07.jpeg'
+		]
 	}
 ]
