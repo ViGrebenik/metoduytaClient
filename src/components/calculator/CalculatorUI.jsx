@@ -14,6 +14,7 @@ const CalculatorUI = () => {
 	}
 	// тип жилья
 	const [buildingType, setBuildingType] = useState('')
+
 	const handleBuildingTypeChange = type => {
 		if (buildingType === type) {
 			setBuildingType('')
@@ -60,7 +61,7 @@ const CalculatorUI = () => {
 	const [result, setResult] = useState(0)
 
 	useEffect(() => {
-		const keFbuildingType = buildingType == 'ВТОРИЧКА' ? 1.2 : 1.3
+		const keFbuildingType = buildingType == 'Старый фонд' ? 1.2 : 1.3
 		const keFroomArea = Number(roomArea) * 10000
 		const kefButtonsState = buttonsState
 			.filter(button => button.checked)
@@ -115,11 +116,11 @@ const CalculatorUI = () => {
 										<input
 											onChange={() => handleBuildingTypeChange('ВТОРИЧКА')}
 											type='checkbox'
-											checked={buildingType === 'ВТОРИЧКА'}
+											checked={buildingType === 'Старый фонд'}
 										/>
 										<div className={styles.transition}></div>
 									</label>
-									<span>ВТОРИЧКА</span>
+									<span>Старый фонд</span>
 								</div>
 							</div>
 						</div>

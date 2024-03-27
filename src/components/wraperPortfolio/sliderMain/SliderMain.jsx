@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useMediaQuery } from 'react-responsive'
 import ViewObject from '../../ui/popup/viewObject/ViewObject'
 import { mockData } from '../mocData'
@@ -27,13 +26,11 @@ const SliderMain = ({ arrow = true, objectID, portfolioPage }) => {
 	const prevSlide = () => {
 		setCurrentSlide(currentSlide === 0 ? photos.length - 1 : currentSlide - 1)
 	}
-
 	return (
 		<div className={styles.sliderContainer}>
 			<div className={styles.mainItemBlockSlider}>
-				<LazyLoadImage
+				<img
 					height={imageHeight}
-					effect='blur'
 					key={photos[currentSlide]}
 					src={photos[currentSlide]}
 					alt={`Slide ${currentSlide}`}
