@@ -3,6 +3,7 @@
 .menuBackdrop {
 	position: absolute;
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	background-color: $bgdefault;
 	width: 100%;
 	z-index: 999;

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import styles from './Button.module.scss'
 import { useModal } from '../../../assets/services/ModalContext'
+import styles from './Button.module.scss'
 
 const Button = ({
 	title,
@@ -17,7 +17,7 @@ const Button = ({
 	const CustomButton = styled.div`
 		font-size: ${props => props.fontSize || 'clamp(10px, 3vw, 18px)'};
 		background-color: ${props => props.bgC || '#ffd622'};
-		padding: ${props => props.pd || '10px 20px'};
+		padding: ${props => props.pd || '8px 16px'};
 		${props => props.className && ` ${props.className}`};
 	`
 

@@ -8,6 +8,10 @@ const PortfolioCart = ({ portfolioPage = false, objectID }) => {
 	const { type, price, area, location } = mockData.find(
 		item => item.id === +objectID
 	)
+	const priceConverter = price.toLocaleString('en', {
+		minimumFractionDigits: 3,
+		maximumFractionDigits: 3
+	})
 	return (
 		<>
 			<div className={styles.mainItemBlockSlider}>
@@ -44,7 +48,7 @@ const PortfolioCart = ({ portfolioPage = false, objectID }) => {
 							portfolioPage ? styles.portfolioPage : ''
 						}`}
 					>
-						{price} т.р
+						{priceConverter} т.р
 					</div>
 				</div>
 			</div>

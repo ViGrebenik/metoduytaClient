@@ -1,13 +1,13 @@
 export const stages = [
 	{
-		title: 'КОНСУЛЬТАЦИЯ',
+		title: 'Консультация',
 		stage: 'Этап 01',
 		description:
 			'Записаться можно по номеру телефонa или через форму обратной связи на сайте.',
 		iconImg: '/static/advantage/standart.svg'
 	},
 	{
-		title: 'ЗАМЕР ПОМЩЕЩЕНИЯ',
+		title: 'Замер и смета',
 		stage: 'Этап 02',
 		description: 'Рассчитаем площадь, объем материалов, стоимость работ.',
 		iconImg: '/static/advantage/no/dogovor.svg'

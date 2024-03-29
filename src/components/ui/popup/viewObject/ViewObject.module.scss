@@ -35,3 +35,8 @@
 		animation: fadeOut 0.2s ease forwards;
 	}
 }
+@media only screen and (max-width: 767px) {
+	.modal {
+		top: 30px;
+	}
+}

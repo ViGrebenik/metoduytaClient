@@ -29,6 +29,7 @@
 		font-weight: bold;
 		color: $fontColor;
 		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		span {
 			color: $accent;
 		}

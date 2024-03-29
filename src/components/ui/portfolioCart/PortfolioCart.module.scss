@@ -3,7 +3,9 @@
 	display: contents;
 }
 .modalContent {
+	position: relative;
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	background-color: $bgDefaultAccentBlock;
 	padding: 20px 20px 20px 20px;
 	border-radius: 5px;
@@ -35,33 +37,75 @@
 	.descriptionItem {
 		.descriptionTitle {
 			line-height: 1;
-			margin-bottom: 20px;
 			color: rgb(255, 205, 67);
-			font-size: clamp(30px, 3vw, 40px);
+			font-size: clamp(28px, 3vw, 40px);
 			font-weight: bold;
 		}
-		.descriptionInfoObject {
-			font-size: clamp(15px, 3vw, 20px);
-		}
-		.descriptionWorkBeenDone {
-			color: rgb(115, 115, 115);
-			font-size: clamp(14px, 3vw, 17px);
+		.descriptionApartmentType {
+			margin-top: 5px;
+			color: rgb(76 76 76);
+			font-size: clamp(12px, 3vw, 20px);
 		}
 	}
-	.descriptionContainerButton {
-		display: flex;
-		gap: 10px;
-	}
-	.descriptionButton {
+	.descriptionInfoObject {
 		margin-top: 20px;
-		display: 1 0 45%;
-		border-radius: 10px;
-		padding: 10px;
-		text-align: center;
-		background-color: rgba(231, 191, 32, 0.75);
-		font-size: 20px;
+		color: $fontColorAccent;
+		font-weight: 700;
+		font-size: clamp(12px, 3vw, 20px);
+		margin-bottom: 5px;
+		span {
+			color: $accent;
+		}
+	}
+	.descriptionWorkBeenDone {
+		span {
+			font-weight: 700;
+			margin-bottom: 5px;
+			display: block;
+			color: $fontColorAccent;
+		}
+		color: rgb(76 76 76);
+		font-size: clamp(12px, 3vw, 17px);
+		li {
+			margin: 3px;
+		}
+		ul {
+			overflow-y: scroll;
+			height: 100px;
+			margin-bottom: 20px;
+			&::-webkit-scrollbar {
+				width: 10px; /* Ширина всего элемента навигации */
+			}
+			&::-webkit-scrollbar-track {
+				background: #4f4f4fb6;
+				border-radius: 10px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $accent; /* Цвет бегунка */
+				border-radius: 10px; /* Округление бегунка */
+			}
+		}
 	}
 }
+
+.descriptionContainerButton {
+	width: 90%;
+	display: flex;
+	gap: 10px;
+	position: relative;
+	bottom: 5px;
+}
+.descriptionButton {
+	margin-top: 20px;
+	display: 1 0 45%;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(231, 191, 32, 0.75);
+	font-size: 20px;
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
 	.modalContent {
 		max-width: 1000px;
@@ -102,7 +146,7 @@
 			.descriptionTitle {
 				line-height: 1;
 				margin-top: 10px;
-				margin-bottom: 10px;
+				margin-bottom: 0px;
 				color: rgb(255, 205, 67);
 				font-weight: bold;
 			}
@@ -111,9 +155,28 @@
 				height: 60px;
 				scrollbar-color: rgb(220, 207, 34) yellow;
 				overflow: auto;
+				span {
+					font-weight: 700;
+					margin-bottom: 0px;
+					display: block;
+					color: $fontColorAccent;
+				}
+				ul {
+					height: 50px;
+				}
+			}
+			.descriptionInfoObject {
+				margin-top: 5px;
+				color: $fontColorAccent;
+				font-weight: 700;
+				font-size: clamp(12px, 3vw, 20px);
+				span {
+					color: $accent;
+				}
 			}
 		}
 		.descriptionContainerButton {
+			width: 100%;
 			display: flex;
 			margin-top: 20px;
 			gap: 10px;

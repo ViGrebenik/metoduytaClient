@@ -68,7 +68,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 9999; /* Установка высокого z-index */
-		width: 30px;
+		width: 0px;
 		height: 30px;
 		background-color: rgba(255, 255, 255, 0);
 		border: none;
@@ -79,11 +79,17 @@
 	}
 
 	.slick-prev {
-		left: 10px;
+		left: 0px;
 	}
 
 	.slick-next {
-		right: 40px;
+		right: 45px;
+	}
+	.slick-prev:before {
+		content: url('/static/slider/arrowSliderLeft.svg');
+	}
+	.slick-next:before {
+		content: url('/static/slider/arrowSliderRight.svg');
 	}
 
 	/* Оформление кнопок при наведении */

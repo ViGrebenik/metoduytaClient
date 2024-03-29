@@ -1,15 +1,27 @@
 import styles from './WrapperTeam.module.scss'
-import CarouselTeam from './carousel/CarouselTeam'
+// import CarouselTeam from './carousel/CarouselTeam'
 
 const WrapperTeam = () => {
-	const items = [
-		{ name: 'Максим', post: 'Директор', discription: 'описание' },
-		{ name: 'Максим', post: 'Директор', discription: 'описание' },
-		{ name: 'Максим', post: 'Директор', discription: 'описание' },
-		{ name: 'Максим', post: 'Директор', discription: 'описание' },
-		{ name: 'Максим', post: 'Директор', discription: 'описание' },
-		{ name: 'Максим', post: 'Директор', discription: 'описание' }
-	]
+	// const items = [
+	// 	{
+	// 		name: 'Максим',
+	// 		post: 'Директор',
+	// 		discription: 'описание',
+	// 		backgroundUrl: '/static/DSC08377.jpg'
+	// 	},
+	// 	{
+	// 		name: 'Максим',
+	// 		post: 'Директор',
+	// 		discription: 'описание',
+	// 		backgroundUrl: '/static/DSC08377.jpg'
+	// 	},
+	// 	{
+	// 		name: 'Максим',
+	// 		post: 'Директор',
+	// 		discription: 'описание',
+	// 		backgroundUrl: '/static/DSC08377.jpg'
+	// 	}
+	// ]
 	return (
 		<div className={styles.WrapperTeam}>
 			<div className={styles.container}>
@@ -41,7 +53,7 @@ const WrapperTeam = () => {
 							2-6 мастеров разного профиля и прораба.
 						</div>
 					</div>
-					<CarouselTeam items={items} />
+					{/* <CarouselTeam items={items} /> */}
 				</div>
 			</div>
 		</div>
