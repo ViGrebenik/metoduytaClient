@@ -6,6 +6,8 @@ import Payment from '../components/screens/payment/Payment'
 import Portfolio from '../components/screens/portfolio/Portfolio'
 import PageServicesComplex from '../components/screens/services/pageComplex/PageServicesComplex'
 import PageServicesDesigner from '../components/screens/services/pageDesigner/PageServicesDesigner'
+import PageRedecorating from '../components/screens/services/pageRedecorating/PageRedecorating'
+import PageRenovationNewBuilding from '../components/screens/services/pageRenovationNewBuilding/PageRenovationNewBuilding'
 
 export const routes = [
 	{
@@ -23,6 +25,14 @@ export const routes = [
 	{
 		path: '/servicesComplex',
 		component: PageServicesComplex
+	},
+	{
+		path: '/renovationNewBuilding',
+		component: PageRenovationNewBuilding
+	},
+	{
+		path: '/redecorating',
+		component: PageRedecorating
 	},
 	{
 		path: '/payment',

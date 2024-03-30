@@ -63,7 +63,7 @@ const NavBar = () => {
 								</li>
 								<li>
 									<Link
-										to={'/servicesComplex'}
+										to={'/renovationNewBuilding'}
 										onClick={() => setIsOpen(false)}
 										className={
 											currentPage === '/servicesComple' ? styles.active : ''
@@ -74,7 +74,7 @@ const NavBar = () => {
 								</li>
 								<li>
 									<Link
-										to={'/servicesDesigner'}
+										to={'/redecorating'}
 										onClick={() => setIsOpen(false)}
 										className={
 											currentPage === '/servicesDesigner' ? styles.active : ''
