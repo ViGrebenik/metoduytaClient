@@ -107,6 +107,9 @@
 	.slick-prev {
 		left: -30px;
 	}
+	.slick-next {
+		right: 0px;
+	}
 
 	.slick-prev:before {
 		content: url('/static/slider/arrowSliderLeft.svg');
