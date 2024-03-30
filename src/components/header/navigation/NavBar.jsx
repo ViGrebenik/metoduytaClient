@@ -154,19 +154,16 @@ const NavBar = () => {
 						<div className={styles.socialLink}>
 							<div className={styles.container}>
 								<img
-									src='/public/static/socialLink/telegramV3.svg'
+									src='/static/socialLink/telegramV3.svg'
 									alt='intagramSocialLink'
 								/>
 							</div>
 							<div className={styles.container}>
-								<img
-									src='/public/static/socialLink/vk.svg'
-									alt='intagramSocialLink'
-								/>
+								<img src='/static/socialLink/vk.svg' alt='intagramSocialLink' />
 							</div>
 							<div className={styles.container}>
 								<img
-									src='/public/static/socialLink/whatsapp.svg'
+									src='/static/socialLink/whatsapp.svg'
 									alt='intagramSocialLink'
 								/>
 							</div>
