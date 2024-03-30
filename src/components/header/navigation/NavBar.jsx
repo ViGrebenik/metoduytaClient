@@ -152,9 +152,24 @@ const NavBar = () => {
 							<div className={styles.description}>с 9:00 до 22:00 (Пн-Вс)</div>
 						</div>
 						<div className={styles.socialLink}>
-							<img src='/static/socialInstagram.svg' alt='intagramSocialLink' />
-							<img src='/static/socialyoutube.svg' alt='intagramSocialLink' />
-							<img src='/static/socialTelegram.svg' alt='intagramSocialLink' />
+							<div className={styles.container}>
+								<img
+									src='/public/static/socialLink/telegramV3.svg'
+									alt='intagramSocialLink'
+								/>
+							</div>
+							<div className={styles.container}>
+								<img
+									src='/public/static/socialLink/vk.svg'
+									alt='intagramSocialLink'
+								/>
+							</div>
+							<div className={styles.container}>
+								<img
+									src='/public/static/socialLink/whatsapp.svg'
+									alt='intagramSocialLink'
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
