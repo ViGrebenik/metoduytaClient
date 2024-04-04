@@ -42,27 +42,27 @@ export const advantages = [
 		title: 'Комплектация материалами',
 		description:
 			'Cамостоятельно заказываем весь черновой строительный материал для ремонта квартиры.',
-		urlSvg: '/static/advantage/garantiyv3.svg',
+		urlSvg: '/static/advantage/boxes.svg',
 		altSvg: 'garantiaIcon'
 	},
 	{
 		title: 'Технический надзор',
 		description:
 			'Организована независимая оценка и контроль качества выполняемых работ.',
-		urlSvg: '/static/advantage/garantiyv3.svg',
+		urlSvg: '/static/advantage/exam.svg',
 		altSvg: 'garantiaIcon'
 	},
 	{
 		title: 'Гарантия оптимальной цены',
 		description: 'Подробная прозрачная смета. ',
-		urlSvg: '/static/advantage/garantiyv3.svg',
+		urlSvg: '/static/advantage/priceTag.svg',
 		altSvg: 'garantiaIcon'
 	},
 	{
 		title: 'Не берем авансов',
 		description:
 			'Ремонт без предоплаты, оплата осуществляется по Актам выполненных и принятых работ',
-		urlSvg: '/static/advantage/garantiyv3.svg',
+		urlSvg: '/public/static/advantage/v1/money.svg',
 		altSvg: 'garantiaIcon'
 	},
 	{

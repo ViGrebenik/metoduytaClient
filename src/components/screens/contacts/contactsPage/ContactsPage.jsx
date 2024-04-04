@@ -65,9 +65,20 @@ const ContactsPage = () => {
 										</div>
 									</div>
 								</div>
-								<SocialLink logoSvg={'/static/socialyoutube.svg'} />
-								<SocialLink logoSvg={'/static/socialTelegram.svg'} />
-								<SocialLink logoSvg={'/static/socialInstagram.svg'} />
+							</div>
+							<div className={styles.contactsSocialLink}>
+								<SocialLink
+									urlLink={'https://t.me/metod_uyta'}
+									logoSvg={'/static/socialLink/telegramV3.svg'}
+								/>
+								<SocialLink
+									urlLink={'https://vk.com/metod_uyta'}
+									logoSvg={'/static/socialLink/vk.svg'}
+								/>
+								<SocialLink
+									urlLink={'https://api.whatsapp.com/send?phone=89819470547'}
+									logoSvg={'/static/socialLink/whatsapp.svg'}
+								/>
 							</div>
 						</div>
 						<div className={styles.containerContactsFormAction}>

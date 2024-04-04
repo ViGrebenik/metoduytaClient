@@ -28,7 +28,7 @@ const CallRequestForm = ({ onClose }) => {
 				) : (
 					<>
 						<div className={styles.feedbackFormTitle}>
-							Закажи обратную связь
+							Закажите обратную связь
 						</div>
 						<div className={styles.feedbackFormSubtitle}>мы вам перезвоним</div>
 						<FeedbackForm questionForm={false} handleSubmit={handleSubmit} />

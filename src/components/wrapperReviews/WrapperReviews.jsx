@@ -7,7 +7,9 @@ const WrapperReviews = () => {
 		['/static/archive/reviews/2.jpg'],
 		['/static/archive/reviews/3.jpg'],
 		['/static/archive/reviews/4.jpg'],
-		['/static/archive/reviews/5.jpg']
+		['/static/archive/reviews/5.jpg'],
+		['/static/archive/reviews/6.jpg'],
+		['/static/archive/reviews/7.jpg']
 	]
 
 	return (

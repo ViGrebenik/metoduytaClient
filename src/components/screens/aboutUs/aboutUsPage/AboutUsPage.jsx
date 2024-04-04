@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+import { useModal } from '../../../../assets/services/ModalContext'
 import Breadcrumbs from '../../../ui/breadCrumbs/BreadCrumbs'
 import Advantage from '../../../ui/itemAdvantage/advantage/Advantage'
 import styles from './AboutUsPage.module.scss'
@@ -7,6 +8,8 @@ import { advantages, dataText } from './DataText'
 const AboutUsPage = () => {
 	const location = useLocation()
 	const currentPath = location.pathname
+	const { openModal } = useModal()
+	const type = 'calculator'
 	return (
 		<div className={styles.wrapperDesigner}>
 			<div className={styles.container}>
@@ -52,7 +55,9 @@ const AboutUsPage = () => {
 									<span> БЕСПЛАТНО</span>
 								</div>
 								<div className={styles.buttonAction}>
-									<button>РАСЧИТАТЬ СМЕТУ</button>
+									<button onClick={() => openModal(type)}>
+										РАСЧИТАТЬ СМЕТУ
+									</button>
 								</div>
 							</div>
 						</div>

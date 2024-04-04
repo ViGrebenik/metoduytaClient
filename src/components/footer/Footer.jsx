@@ -16,10 +16,26 @@ const Footer = () => {
 								<br />
 								Санкт-Петербург, Москва.
 							</div>
+
+							<div className={styles.containerNumber}>
+								<div className={styles.number}>+7 993 490-41-06</div>
+								<div className={styles.description}>
+									с 9:00 до 22:00 (Пн-Вс)
+								</div>
+							</div>
 							<div className={styles.navigationInfoSocialLink}>
-								<SocialLink logoSvg={'/static/socialyoutube.svg'} />
-								<SocialLink logoSvg={'/static/socialTelegram.svg'} />
-								<SocialLink logoSvg={'/static/socialInstagram.svg'} />
+								<SocialLink
+									urlLink={'https://t.me/metod_uyta'}
+									logoSvg={'/static/socialLink/telegramV3.svg'}
+								/>
+								<SocialLink
+									urlLink={'https://vk.com/metod_uyta'}
+									logoSvg={'/static/socialLink/vk.svg'}
+								/>
+								<SocialLink
+									urlLink={'https://api.whatsapp.com/send?phone=89819470547'}
+									logoSvg={'/static/socialLink/whatsapp.svg'}
+								/>
 							</div>
 						</div>
 						<div className={styles.basementInfo}>
@@ -27,7 +43,6 @@ const Footer = () => {
 								м. Пионерская Проспект Королёва, 7, Санкт-Петербург, 197349, БЦ
 								... , офис ...
 							</div>
-							<div className={styles.infoContact}>+ 7 999 999 99 99</div>
 						</div>
 					</div>
 				</div>

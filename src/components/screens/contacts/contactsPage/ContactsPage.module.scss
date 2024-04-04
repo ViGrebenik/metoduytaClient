@@ -28,6 +28,12 @@
 .containerContacts {
 	display: flex;
 	gap: 10px;
+	.contactsSocialLink {
+		display: flex;
+		gap: 5px;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
 	.containerContactsDescription {
 		flex: 1 0 33%;
 		display: flex;
@@ -48,7 +54,7 @@
 				}
 				.blockDescription {
 					margin-top: 10px;
-					margin-bottom: 10px;
+					margin-bottom: 5px;
 					font-size: 20px;
 					color: $white;
 					line-height: 1;
@@ -62,7 +68,7 @@
 				display: flex;
 				flex-direction: column;
 				margin-top: 5px;
-				gap: 10px;
+				gap: 5px;
 				.blockQualities {
 					// display: flex;
 					.qualities {
@@ -98,8 +104,8 @@
 			}
 			&:nth-child(3) {
 				display: flex;
-				margin-top: 10px;
-				gap: 10px;
+				margin-top: 5px;
+				gap: 5px;
 				.blockQualities {
 					.qualities {
 						border-radius: 10px;

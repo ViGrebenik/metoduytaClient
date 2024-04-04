@@ -21,7 +21,7 @@ const WrapperServices = () => {
 					<div className={styles.containerWrapper}>
 						<div className={styles.containerItem}>
 							<ServiceCard
-								title='РЕМОНТ КВАРТИР ПОД КЛЮЧ'
+								title='КОМПЛЕКСНЫЙ РЕМОНТ'
 								description='Выполняем все виды работ, включая дизайн-проект!'
 								price='От 9500 руб. м2'
 								imageUrl='/static/stoke/item02.jpg'

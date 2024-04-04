@@ -9,12 +9,13 @@ const PageServicesComplex = () => {
 		<>
 			<section>
 				<CoverServices
-					category={'Ремонт квартир под ключ'}
+					category={'Комплексный ремонт'}
 					advantages={advantages}
 					title={'Комплексный ремонт квартир под ключ'}
 					subtitle={
 						'Реализуем проекты по кардинальному изменению облика квартир'
 					}
+					objectID={['4', '7']}
 				/>
 				<WrapperReviews />
 				<WrapperServices />

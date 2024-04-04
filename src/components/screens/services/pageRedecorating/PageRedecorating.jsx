@@ -12,7 +12,8 @@ const PageRedecorating = () => {
 					category={'Косметический ремонт'}
 					advantages={advantages}
 					title={'Косметический ремонт'}
-					subtitle={'Косметический ремонт'}
+					subtitle={'Косметический ремонт под ключ'}
+					objectID={['6', '9']}
 				/>
 				<WrapperReviews />
 				<WrapperServices />

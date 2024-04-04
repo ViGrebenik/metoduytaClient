@@ -11,7 +11,8 @@ const CoverServices = ({
 	title,
 	subtitle = '',
 	portfolioPage = false,
-	advantages
+	advantages,
+	objectID = ['1', '2']
 }) => {
 	const location = useLocation()
 	const currentPath = location.pathname
@@ -53,10 +54,10 @@ const CoverServices = ({
 					) : (
 						<>
 							<div className={styles.containerExamples}>
-								<PortfolioCart check={true} objectID={'1'} />
+								<PortfolioCart check={true} objectID={objectID[0]} />
 							</div>
 							<div className={styles.containerExamples}>
-								<PortfolioCart check={true} objectID={'2'} />
+								<PortfolioCart check={true} objectID={objectID[1]} />
 							</div>
 						</>
 					)}

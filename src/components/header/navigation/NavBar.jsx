@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Link, useLocation } from 'react-router-dom'
 import { useModal } from '../../../assets/services/ModalContext'
+import SocialLink from '../../ui/socialLink/SocialLink'
 import styles from './Navbar.module.scss'
 
 const NavBar = () => {
@@ -58,7 +59,7 @@ const NavBar = () => {
 											currentPage === '/servicesComplex' ? styles.active : ''
 										}
 									>
-										РЕМОНТ ПОД КЛЮЧ
+										КОМПЛЕКСНЫЙ РЕМОНТ
 									</Link>
 								</li>
 								<li>
@@ -152,38 +153,18 @@ const NavBar = () => {
 							<div className={styles.description}>с 9:00 до 22:00 (Пн-Вс)</div>
 						</div>
 						<div className={styles.socialLink}>
-							<div className={styles.container}>
-								<a
-									href='https://t.me/metod_uyta'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									<img
-										src='/static/socialLink/telegramV3.svg'
-										alt='intagramSocialLink'
-									/>
-								</a>
-							</div>
-							<div className={styles.container}>
-								<a
-									href='https://vk.com/metod_uyta'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									<img
-										src='/static/socialLink/vk.svg'
-										alt='intagramSocialLink'
-									/>
-								</a>
-							</div>
-							<div className={styles.container}>
-								<a href='https://api.whatsapp.com/send?phone=89819470547'>
-									<img
-										src='/static/socialLink/whatsapp.svg'
-										alt='whatsappSocialLink'
-									/>
-								</a>
-							</div>
+							<SocialLink
+								urlLink={'https://t.me/metod_uyta'}
+								logoSvg={'/static/socialLink/telegramV3.svg'}
+							/>
+							<SocialLink
+								urlLink={'https://vk.com/metod_uyta'}
+								logoSvg={'/static/socialLink/vk.svg'}
+							/>
+							<SocialLink
+								urlLink={'https://api.whatsapp.com/send?phone=89819470547'}
+								logoSvg={'/static/socialLink/whatsapp.svg'}
+							/>
 						</div>
 					</div>
 				</div>

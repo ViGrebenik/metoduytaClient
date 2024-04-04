@@ -44,8 +44,9 @@ const WrapperTeam = () => {
 							Cредний стаж – 8 лет
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
-							<img src='/static/advantage/v1/statistics.svg' alt='icon' />
-							??????
+							<img src='/static/advantage/telephone.svg' alt='icon' />
+							За каждым объектом закреплен отдельный бригадир, с которым вы
+							можете связаться 24/7.
 						</div>
 						<div className={styles.SubtitleTeamSubtitle}>
 							<img src='/static/advantage/v1/teamwork.svg' alt='icon' />

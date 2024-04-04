@@ -12,7 +12,8 @@ const PageRenovationNewBuilding = () => {
 					category={'Ремонт в новостройке'}
 					advantages={advantages}
 					title={'Ремонт в новостройке'}
-					subtitle={'Ремонт в новостройке'}
+					subtitle={'Ремонт в новостройке под ключ'}
+					objectID={['1', '2']}
 				/>
 				<WrapperReviews />
 				<WrapperServices />

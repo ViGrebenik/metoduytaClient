@@ -13,6 +13,7 @@ const PageServicesDesigner = () => {
 					advantages={advantages}
 					title={'ДИЗАЙН ИНТЕРЬЕРА В САНКТ - ПЕТЕРБУРГЕ И МОСКВЕ '}
 					subtitle={' Дизайнерский ремонт от А до Я с гарантией качества'}
+					objectID={['3', '5']}
 				/>
 				<WrapperReviews />
 				<WrapperServices />
