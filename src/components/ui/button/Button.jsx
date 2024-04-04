@@ -48,7 +48,9 @@ const Button = ({
 						className={styles.button}
 						onClick={() => typeActive()}
 					>
-						{arrow && <img src='/static/arrow.svg' alt='arrow' />}
+						{arrow && (
+							<img src='/static/arrow.svg' alt='arrow' className='arrow' />
+						)}
 						<span>{title}</span>
 					</CustomButton>
 				</div>

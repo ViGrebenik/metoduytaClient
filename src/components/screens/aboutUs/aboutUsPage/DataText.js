@@ -62,7 +62,7 @@ export const advantages = [
 		title: 'Не берем авансов',
 		description:
 			'Ремонт без предоплаты, оплата осуществляется по Актам выполненных и принятых работ',
-		urlSvg: '/public/static/advantage/v1/money.svg',
+		urlSvg: '/static/advantage/v1/money.svg',
 		altSvg: 'garantiaIcon'
 	},
 	{
