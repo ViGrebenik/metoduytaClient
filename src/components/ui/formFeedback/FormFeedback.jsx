@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import axios from 'axios'
 import { useState } from 'react'
 import CheckboxButtons from '../../calculator/checkBoxButton/CheckBoxButton'
 import styles from './FormFeedback.module.scss'
 
-const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
+const FeedbackForm = ({ questionForm = true, handleSubmit, result }) => {
 	const [name, setName] = useState('')
 	const [phone, setPhone] = useState('')
 	const [question, setQuestion] = useState('')
@@ -13,6 +14,29 @@ const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
 		{ name: 'Whatsapp', checked: false },
 		{ name: 'По телефону', checked: false }
 	])
+	const handleForm = async () => {
+		const selectedContactMethods = buttonsState
+			.filter(button => button.checked)
+			.map(button => button.name)
+			.join(', ')
+
+		const formData = {
+			name,
+			phone,
+			question,
+			result: String(result),
+			contactMethods: selectedContactMethods
+		}
+
+		try {
+			await axios.post(
+				'https://www.formbackend.com/f/dad5703b24377d95',
+				formData
+			)
+		} catch (error) {
+			// Опционально: Добавьте здесь любую логику для обработки ошибки отправки формы
+		}
+	}
 
 	return (
 		<div className={styles.feedbackForm}>
@@ -53,7 +77,7 @@ const FeedbackForm = ({ questionForm = true, handleSubmit }) => {
 						setButtonsState={setButtonsState}
 					/>
 				</div>
-				<button className={styles.postData} type='submit'>
+				<button onClick={handleForm} className={styles.postData} type='submit'>
 					Получить rонсультация
 				</button>
 			</form>

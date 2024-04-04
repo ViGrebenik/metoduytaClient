@@ -10,6 +10,9 @@ const CalculatorPage = () => {
 	const location = useLocation()
 	const currentPath = location.pathname
 	const isMobile = useMediaQuery({ maxWidth: 767 })
+	const handleSubmit = e => {
+		e.preventDefault()
+	}
 	return (
 		<div className={styles.calculatorPage}>
 			<div className={styles.container}>
@@ -65,7 +68,7 @@ const CalculatorPage = () => {
 						</div>
 					)}
 					<div className={styles.containerCalculator}>
-						<CalculatorUI />
+						<CalculatorUI handleSubmit={handleSubmit} />
 					</div>
 					<FeedbackEstimate />
 				</div>

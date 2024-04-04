@@ -14,7 +14,6 @@ const CallRequestForm = ({ onClose }) => {
 		e.preventDefault()
 		setIsVisible(true)
 		onClose()
-		alert('Вам перезвонят')
 	}
 
 	return (
@@ -24,7 +23,7 @@ const CallRequestForm = ({ onClose }) => {
 					&times;
 				</span>
 				{type === 'calculator' ? (
-					<CalculatorUI />
+					<CalculatorUI handleSubmit={handleSubmit} />
 				) : (
 					<>
 						<div className={styles.feedbackFormTitle}>

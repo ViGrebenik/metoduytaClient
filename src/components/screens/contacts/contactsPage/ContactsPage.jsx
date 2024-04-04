@@ -8,6 +8,10 @@ import { dataContacts, dataEmail } from './DataText'
 const ContactsPage = () => {
 	const location = useLocation()
 	const currentPath = location.pathname
+
+	const handleSubmit = e => {
+		e.preventDefault()
+	}
 	return (
 		<div className={styles.wrapperDesigner}>
 			<div className={styles.container}>
@@ -82,7 +86,7 @@ const ContactsPage = () => {
 							</div>
 						</div>
 						<div className={styles.containerContactsFormAction}>
-							<FeedbackForm />
+							<FeedbackForm handleSubmit={handleSubmit}/>
 						</div>
 						<div className={styles.containerContactsFormCart}>
 							<img src='/static/cart.png' alt='cart' />

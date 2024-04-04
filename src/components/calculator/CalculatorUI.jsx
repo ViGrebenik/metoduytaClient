@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useCallback, useEffect, useState } from 'react'
 import FeedbackForm from '../ui/formFeedback/FormFeedback'
 import styles from './CalculatorUI.module.scss'
 import CheckboxButtons from './checkBoxButton/CheckBoxButton'
 import TypeOfRepair from './typeOfRepair/TypeOfRepair'
 
-const CalculatorUI = () => {
+const CalculatorUI = ({ handleSubmit }) => {
 	// тип помещения
 	const [typeOfRepair, setTypeOfRepair] = useState(1)
 	// Площадь помещения
@@ -200,7 +201,11 @@ const CalculatorUI = () => {
 						</div>
 					</div>
 				</div>
-				<FeedbackForm questionForm={false} />
+				<FeedbackForm
+					questionForm={false}
+					result={result}
+					handleSubmit={handleSubmit}
+				/>
 			</div>
 		</div>
 	)
