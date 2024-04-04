@@ -153,19 +153,36 @@ const NavBar = () => {
 						</div>
 						<div className={styles.socialLink}>
 							<div className={styles.container}>
-								<img
-									src='/static/socialLink/telegramV3.svg'
-									alt='intagramSocialLink'
-								/>
+								<a
+									href='https://t.me/metod_uyta'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<img
+										src='/static/socialLink/telegramV3.svg'
+										alt='intagramSocialLink'
+									/>
+								</a>
 							</div>
 							<div className={styles.container}>
-								<img src='/static/socialLink/vk.svg' alt='intagramSocialLink' />
+								<a
+									href='https://vk.com/metod_uyta'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<img
+										src='/static/socialLink/vk.svg'
+										alt='intagramSocialLink'
+									/>
+								</a>
 							</div>
 							<div className={styles.container}>
-								<img
-									src='/static/socialLink/whatsapp.svg'
-									alt='intagramSocialLink'
-								/>
+								<a href='https://api.whatsapp.com/send?phone=89819470547'>
+									<img
+										src='/static/socialLink/whatsapp.svg'
+										alt='whatsappSocialLink'
+									/>
+								</a>
 							</div>
 						</div>
 					</div>
