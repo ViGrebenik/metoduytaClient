@@ -1,17 +1,22 @@
 /* eslint-disable react/prop-types */ import axios from 'axios'
 import { useFormik } from 'formik'
 import { useState } from 'react'
+import { useModal } from '../../../assets/services/ModalContext'
 import CheckboxButtons from '../../calculator/checkBoxButton/CheckBoxButton'
 import styles from './FormFeedback.module.scss'
 
 const FeedbackForm = ({ questionForm = true, handleSubmit, result }) => {
+	const [isDisabled, setIsDisabled] = useState(false)
 	const [buttonsState, setButtonsState] = useState([
 		{ name: 'Telegram', checked: false },
 		{ name: 'Whatsapp', checked: false },
 		{ name: 'По телефону', checked: false }
 	])
+	const { toggleNotificationModal } = useModal()
+	document.cookie = 'cookieName=cookieValue; SameSite=Strict;'
 
 	const handleForm = async values => {
+		setIsDisabled(true)
 		const selectedContactMethods = buttonsState
 			.filter(button => button.checked)
 			.map(button => button.name)
@@ -31,6 +36,8 @@ const FeedbackForm = ({ questionForm = true, handleSubmit, result }) => {
 			// обработка ошибки
 		} finally {
 			handleSubmit()
+			toggleNotificationModal()
+			setIsDisabled(false)
 		}
 	}
 
@@ -104,7 +111,7 @@ const FeedbackForm = ({ questionForm = true, handleSubmit, result }) => {
 						setButtonsState={setButtonsState}
 					/>
 				</div>
-				<button className={styles.postData} type='submit'>
+				<button disabled={isDisabled} className={styles.postData} type='submit'>
 					Получить консультация
 				</button>
 				<div className={styles.policy}>

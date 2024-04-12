@@ -8,6 +8,13 @@ export const ModalProvider = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [type, setType] = useState(null)
 
+	//notification modal
+	const [isNotification, setIsNotification] = useState(false)
+	const toggleNotificationModal = () => {
+		setIsNotification(prev => !prev)
+	}
+
+	//
 	const openModal = type => {
 		setType(type)
 		setIsModalOpen(true)
@@ -27,7 +34,9 @@ export const ModalProvider = ({ children }) => {
 				toggleMenu,
 				isOpen,
 				setIsOpen,
-				type
+				type,
+				toggleNotificationModal,
+				isNotification
 			}}
 		>
 			{children}
