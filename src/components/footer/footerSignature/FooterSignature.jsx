@@ -8,9 +8,17 @@ const FooterSignature = () => {
 					<div className={styles.containerBasementBorders}>
 						<div className={styles.containerInfoRights}>
 							<div className={styles.InfoRights}>
-								ТК «МЕТОД УЮТА» 2018 - 2024
+								CК «МЕТОД УЮТА» 2018 - 2024
 								<br />
-								<span>Политика конфиденциальности</span>
+								<span>
+									<a
+										href='https://metod-yuta.ru/policy'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Политика конфиденциальности
+									</a>
+								</span>
 							</div>
 						</div>
 						<div className={styles.containerDeveloper}></div>

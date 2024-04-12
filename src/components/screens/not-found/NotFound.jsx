@@ -1,7 +1,8 @@
+import styles from './NotFound.module.scss'
 const NotFound = () => {
 	return (
 		<>
-			<div className='wrapper-inner-page'>404 page not</div>
+			<div className={styles.wrapperInnerPage}>404 page not</div>
 		</>
 	)
 }

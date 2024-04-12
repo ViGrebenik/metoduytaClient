@@ -149,7 +149,7 @@ const NavBar = () => {
 				<div className={styles.socialLinkMobileHeader}>
 					<div className={styles.container}>
 						<div className={styles.containerNumber}>
-							<div className={styles.number}>+7 981 944 67 49</div>
+							<div className={styles.number}>+7 993 490-41-06</div>
 							<div className={styles.description}>с 9:00 до 22:00 (Пн-Вс)</div>
 						</div>
 						<div className={styles.socialLink}>

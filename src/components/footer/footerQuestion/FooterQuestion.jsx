@@ -3,9 +3,6 @@ import { question } from './DataText'
 import styles from './FooterQuestion.module.scss'
 
 const FooterQuestion = () => {
-	const handleSubmit = e => {
-		e.preventDefault()
-	}
 	return (
 		<div className={styles.wrapperFooter}>
 			<div className={styles.container}>
@@ -24,7 +21,7 @@ const FooterQuestion = () => {
 							))}
 						</div>
 						<div className={styles.feedbackBlockQuestion}>
-							<FeedbackForm handleSubmit={handleSubmit} />
+							<FeedbackForm />
 						</div>
 					</div>
 				</div>

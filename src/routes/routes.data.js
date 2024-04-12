@@ -3,6 +3,7 @@ import Calculator from '../components/screens/calculator/Calculator'
 import Contacts from '../components/screens/contacts/Сontacts'
 import Home from '../components/screens/home/Home'
 import Payment from '../components/screens/payment/Payment'
+import Policy from '../components/screens/policy/Policy'
 import Portfolio from '../components/screens/portfolio/Portfolio'
 import PageServicesComplex from '../components/screens/services/pageComplex/PageServicesComplex'
 import PageServicesDesigner from '../components/screens/services/pageDesigner/PageServicesDesigner'
@@ -49,5 +50,9 @@ export const routes = [
 	{
 		path: '/contacts',
 		component: Contacts
+	},
+	{
+		path: '/policy',
+		component: Policy
 	}
 ]

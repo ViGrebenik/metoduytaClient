@@ -40,8 +40,8 @@ const Footer = () => {
 						</div>
 						<div className={styles.basementInfo}>
 							<div className={styles.infoAdress}>
-								м. Пионерская Проспект Королёва, 7, Санкт-Петербург, 197349, БЦ
-								... , офис ...
+								м. Пионерская Проспект Королёва, 7, Санкт-Петербург, 197349,
+								офис 143
 							</div>
 						</div>
 					</div>

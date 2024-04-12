@@ -1,73 +1,100 @@
-/* eslint-disable react/prop-types */
-import axios from 'axios'
+/* eslint-disable react/prop-types */ import axios from 'axios'
+import { useFormik } from 'formik'
 import { useState } from 'react'
 import CheckboxButtons from '../../calculator/checkBoxButton/CheckBoxButton'
 import styles from './FormFeedback.module.scss'
 
 const FeedbackForm = ({ questionForm = true, handleSubmit, result }) => {
-	const [name, setName] = useState('')
-	const [phone, setPhone] = useState('')
-	const [question, setQuestion] = useState('')
-
 	const [buttonsState, setButtonsState] = useState([
 		{ name: 'Telegram', checked: false },
 		{ name: 'Whatsapp', checked: false },
 		{ name: 'По телефону', checked: false }
 	])
-	const handleForm = async () => {
+
+	const handleForm = async values => {
 		const selectedContactMethods = buttonsState
 			.filter(button => button.checked)
 			.map(button => button.name)
 			.join(', ')
 
 		const formData = {
-			name,
-			phone,
-			question,
+			...values,
 			result: String(result),
 			contactMethods: selectedContactMethods
 		}
-
 		try {
 			await axios.post(
 				'https://www.formbackend.com/f/dad5703b24377d95',
 				formData
 			)
 		} catch (error) {
-			// Опционально: Добавьте здесь любую логику для обработки ошибки отправки формы
+			// обработка ошибки
+		} finally {
+			handleSubmit()
 		}
 	}
+
+	const formik = useFormik({
+		initialValues: {
+			name: '',
+			phone: '',
+			question: ''
+		},
+		validate: values => {
+			const errors = {}
+			if (!values.name) {
+				errors.name = 'Обязательно для заполнения'
+			}
+			if (!values.phone) {
+				errors.phone = 'Обязательно для заполнения'
+			}
+			return errors
+		},
+		onSubmit: handleForm
+	})
 
 	return (
 		<div className={styles.feedbackForm}>
 			<div className={styles.headerTitle}>Форма обратной связи</div>
-			<form onSubmit={handleSubmit}>
-				<div>
+			<form onSubmit={formik.handleSubmit}>
+				<div className={styles.inputBlock}>
 					<input
 						type='text'
 						placeholder='Ваше имя'
 						id='name'
-						value={name}
-						onChange={event => setName(event.target.value)}
+						value={formik.values.name}
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
 					/>
+					{formik.touched.name && formik.errors.name && (
+						<span>{formik.errors.name}</span>
+					)}
 				</div>
-				<div>
+				<div className={styles.inputBlock}>
 					<input
 						type='tel'
 						placeholder='Ваш телефон'
 						id='phone'
-						value={phone}
-						onChange={event => setPhone(event.target.value)}
+						value={formik.values.phone}
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
 					/>
+					{formik.touched.phone && formik.errors.phone && (
+						<span>{formik.errors.phone}</span>
+					)}
 				</div>
 				{questionForm && (
 					<div className={styles.question}>
 						<label htmlFor='question'>Опишите свой вопрос</label>
 						<textarea
 							id='question'
-							value={question}
-							onChange={event => setQuestion(event.target.value)}
+							value={formik.values.question}
+							onChange={formik.handleChange}
+							onBlur={formik.handleBlur}
 						/>
+						{formik.touched.question && formik.errors.question && (
+							<span>{formik.errors.question}</span>
+						)}
 					</div>
 				)}
 				<div className={styles.headerCheckBox}>
@@ -77,9 +104,15 @@ const FeedbackForm = ({ questionForm = true, handleSubmit, result }) => {
 						setButtonsState={setButtonsState}
 					/>
 				</div>
-				<button onClick={handleForm} className={styles.postData} type='submit'>
-					Получить rонсультация
+				<button className={styles.postData} type='submit'>
+					Получить консультация
 				</button>
+				<div className={styles.policy}>
+					Нажимая на кнопку {'"Получить консультация"'}, вы соглашаетесь <br />с{' '}
+					<a href='https://metod-yuta.ru/policy' target='_blank'>
+						политикой конфиденциальности
+					</a>
+				</div>
 			</form>
 		</div>
 	)

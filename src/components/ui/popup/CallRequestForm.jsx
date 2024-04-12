@@ -10,8 +10,7 @@ const CallRequestForm = ({ onClose }) => {
 	const [isVisible, setIsVisible] = useState(false)
 	const { type } = useModal()
 
-	const handleSubmit = e => {
-		e.preventDefault()
+	const handleSubmit = () => {
 		setIsVisible(true)
 		onClose()
 	}
