@@ -25,8 +25,6 @@ const Router = () => {
 					name='description'
 					content='Компания Метод Уюта предоставляет услуги по ремонту квартир в Санкт-Петербурге под ключ.'
 				/>
-				<meta name='keywords' content='Метод Уюта' />
-				<link rel='canonical' href='http://metod-yuta.ru' />
 				<meta property='og:title' content='Метод Уюта' />
 				<meta
 					property='og:description'
