@@ -7,9 +7,9 @@ import SliderObject from '../popup/viewObject/sliderObject/SliderObject'
 import styles from './PortfolioCart.module.scss'
 
 const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
-	const { type, description, listWorks, apartmentType, priceArea, timeWork } =
+	const { type, description, listWorks, apartmentType, price, timeWork } =
 		mockData.find(item => item.id === +objectID)
-	const priceM = priceArea.toLocaleString('en', {
+	const newPrice = price.toLocaleString('en', {
 		minimumFractionDigits: 3,
 		maximumFractionDigits: 3
 	})
@@ -50,7 +50,7 @@ const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
 							Сроки: <span> {timeWork} месяца</span>
 						</div>
 						<div className={styles.descriptionInfoObject}>
-							Стоимость работ: <span>{priceM} </span>руб. кв.м.
+							Стоимость работ: <span>{newPrice} </span>руб.
 						</div>
 					</div>
 					<div className={styles.descriptionContainerButton}>

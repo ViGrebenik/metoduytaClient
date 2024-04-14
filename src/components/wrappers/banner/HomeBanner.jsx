@@ -42,9 +42,10 @@ const HomeBanner = () => {
 					{!isMobile && (
 						<SliderBanner
 							slides={[
-								'/static/archive/banner/item_01.jpeg',
-								'/static/archive/banner/item_02.jpeg',
 								'/static/archive/banner/item_03.jpeg',
+
+								'/static/archive/banner/item_02.jpeg',
+								'/static/archive/banner/item_01.jpeg',
 								'/static/archive/banner/item_05.jpeg'
 							]}
 						/>

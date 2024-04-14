@@ -1,7 +1,7 @@
 import { useMediaQuery } from 'react-responsive'
 import Button from '../ui/button/Button'
+import PortfolioCart from '../ui/portfolioCart/PortfolioCart'
 import styles from './WrapperPortfolio.module.scss'
-import PortfolioCart from './portfolioCart/PortfolioCart'
 
 const WrapperPortfolio = () => {
 	const isMobile = useMediaQuery({ maxWidth: 767 })
@@ -30,18 +30,9 @@ const WrapperPortfolio = () => {
 						</div>
 					</div>
 					<div className={styles.containerMain}>
-						<div className={styles.containerMainItem}>
-							<PortfolioCart objectID={'4'} />
-						</div>
-						<div className={styles.containerMainItem}>
-							<PortfolioCart objectID={'1'} />
-						</div>
-						<div className={styles.containerMainItem}>
-							<PortfolioCart objectID={'2'} />
-						</div>
-						<div className={styles.containerMainItem}>
-							<PortfolioCart objectID={'3'} />
-						</div>
+						<PortfolioCart check={true} objectID={'7'} />
+						<PortfolioCart check={true} objectID={'4'} />
+						<PortfolioCart check={true} objectID={'3'} />
 					</div>
 					{isMobile && (
 						<Button
