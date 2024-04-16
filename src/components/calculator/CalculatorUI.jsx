@@ -63,7 +63,7 @@ const CalculatorUI = ({ handleSubmit }) => {
 
 	useEffect(() => {
 		const keFbuildingType = buildingType == 'СТАРЫЙ ФОНД' ? 1.3 : 1.1
-		const keFroomArea = Number(roomArea) * 9000
+		const keFroomArea = Number(roomArea) * 7500
 		const kefButtonsState = buttonsState
 			.filter(button => button.checked)
 			.map(button => button.coefficient)

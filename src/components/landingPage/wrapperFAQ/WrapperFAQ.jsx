@@ -10,7 +10,7 @@ const WrapperFAQ = () => {
 					<div className={styles.containerHeader}>
 						<div className={styles.containerContentHeader}>
 							<div className={styles.contentHeaderTitle}>
-								Часто зававемые вопросы
+								Часто задаваемые вопросы
 							</div>
 						</div>
 						<div className={styles.contentHeaderSubtitle}>
