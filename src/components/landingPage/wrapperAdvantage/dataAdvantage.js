@@ -12,7 +12,7 @@ export const advantages = [
 	},
 	{
 		title: 'ГАРАНТИЯ ОТ 2 ЛЕТ',
-		subTitle: 'Письменная гарантия от 2-х лет на все производимые виды работ',
+		subTitle: 'Юредическая гарантия от 2-х лет на все производимые виды работ',
 		iconImg: '/static/advantage/garantiyv3.svg'
 	},
 

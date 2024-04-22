@@ -10,18 +10,19 @@
 }
 .popup {
 	position: relative;
-	width: 300px;
-	background-color: #4e4e4e;
-	top: 30%;
+	max-width: 310px;
+	width: 100%;
+	background-color: #171717;
+	border: 1px solid #393939;
+	top: 43%;
 	left: 50%;
 	border-radius: 16px;
 	padding: 10px 20px;
 	display: flex;
-
 	gap: 20px;
 
 	@media screen and (max-width: 726px) {
-		left: 10%;
+		left: 20%;
 	}
 	.close {
 		position: absolute;

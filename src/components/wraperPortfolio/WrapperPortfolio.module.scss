@@ -28,12 +28,12 @@
 }
 
 .contentHeaderTitle {
-	font-size: 30px;
+	font-size: clamp(20px, 2vw, 30px);
 	color: $accent;
 	font-weight: 800;
 }
 .contentHeaderSubtitle {
-	font-size: 20px;
+	font-size: clamp(16px, 2vw, 20px);
 	color: $fontColor;
 }
 

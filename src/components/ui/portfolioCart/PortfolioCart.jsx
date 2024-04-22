@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useCallback } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { useModal } from '../../../assets/services/ModalContext'
 import { mockData } from '../../wraperPortfolio/mocData'
 import Button from '../button/Button'
@@ -7,12 +8,21 @@ import SliderObject from '../popup/viewObject/sliderObject/SliderObject'
 import styles from './PortfolioCart.module.scss'
 
 const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
-	const { type, description, listWorks, apartmentType, price, timeWork } =
-		mockData.find(item => item.id === +objectID)
+	const {
+		type,
+		description,
+		listWorks,
+		apartmentType,
+		price,
+		timeWork,
+		location
+	} = mockData.find(item => item.id === +objectID)
 	const newPrice = price.toLocaleString('en', {
 		minimumFractionDigits: 3,
 		maximumFractionDigits: 3
 	})
+	const isMobile = useMediaQuery({ maxWidth: 726 })
+	const isPaddingMobile = isMobile ? '10px 20px' : '20px 20px'
 	const { openModal } = useModal()
 	const typeModal = 'calculator'
 
@@ -37,7 +47,10 @@ const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
 						<div className={styles.descriptionApartmentType}>
 							Тип квартиры: {apartmentType}
 						</div>
-						<div className={styles.descriptionInfoObject}>{description}</div>
+						<div className={styles.descriptionInfoObject}>
+							<span>Описание: </span>
+							{description}
+						</div>
 						<div className={styles.descriptionWorkBeenDone}>
 							<span>Cписок выполненых работ:</span>
 							<ul>
@@ -50,6 +63,9 @@ const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
 							Сроки: <span> {timeWork} месяца</span>
 						</div>
 						<div className={styles.descriptionInfoObject}>
+							Адресс <span>{location} </span>
+						</div>
+						<div className={styles.descriptionInfoObject}>
 							Стоимость работ: <span>{newPrice} </span>руб.
 						</div>
 					</div>
@@ -58,8 +74,13 @@ const PortfolioCart = ({ onClosePopUP, check = false, objectID }) => {
 							title={'РАССЧИТАТЬ СВОЮ СМЕТУ'}
 							type='popUp'
 							active={active}
+							pd={isPaddingMobile}
 						/>
-						<Button title={'ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ'} type='popUp' />
+						<Button
+							title={'ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ'}
+							type='popUp'
+							pd={isPaddingMobile}
+						/>
 					</div>
 				</div>
 			</div>

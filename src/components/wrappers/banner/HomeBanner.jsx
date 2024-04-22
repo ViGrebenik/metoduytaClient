@@ -8,7 +8,9 @@ import { advantages } from './dataAdvantage'
 const HomeBanner = () => {
 	const isMobile = useMediaQuery({ maxWidth: 1024 })
 	const isMobileLittle = useMediaQuery({ maxWidth: 724 })
-	const fontSize = isMobileLittle ? '22px' : '21px'
+	const fontSize = isMobileLittle
+		? 'clamp(16px, 2vw, 20px)'
+		: 'clamp(16px, 2vw, 20px)'
 
 	return (
 		<div className={styles.homeBanner}>
@@ -42,9 +44,8 @@ const HomeBanner = () => {
 					{!isMobile && (
 						<SliderBanner
 							slides={[
-								'/static/archive/banner/item_03.jpeg',
-
 								'/static/archive/banner/item_02.jpeg',
+								'/static/archive/banner/item_03.jpeg',
 								'/static/archive/banner/item_01.jpeg',
 								'/static/archive/banner/item_05.jpeg'
 							]}

@@ -9,7 +9,7 @@ const CalculatorUI = ({ handleSubmit }) => {
 	// тип помещения
 	const [typeOfRepair, setTypeOfRepair] = useState(1)
 	// Площадь помещения
-	const [roomArea, setRoomArea] = useState(45)
+	const [roomArea, setRoomArea] = useState(40)
 	const handleRoomAreaChange = event => {
 		setRoomArea(event.target.value)
 	}
@@ -63,7 +63,7 @@ const CalculatorUI = ({ handleSubmit }) => {
 
 	useEffect(() => {
 		const keFbuildingType = buildingType == 'СТАРЫЙ ФОНД' ? 1.3 : 1.1
-		const keFroomArea = Number(roomArea) * 7500
+		const keFroomArea = Number(roomArea) * 7000
 		const kefButtonsState = buttonsState
 			.filter(button => button.checked)
 			.map(button => button.coefficient)

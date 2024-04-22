@@ -78,7 +78,11 @@ const Header = () => {
 							</Link>
 							<NavBar />
 							<div className={styles.containerContact}>
-								<Button title={'ПЕРЕЗВОНИТЬ МНЕ'} arrow={true} type={'popUP'} />
+								<Button
+									title={'ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ'}
+									arrow={true}
+									type={'popUP'}
+								/>
 							</div>
 						</>
 					)}

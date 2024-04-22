@@ -7,7 +7,7 @@ export const advantages = [
 		altSvg: 'drawingIcon'
 	},
 	{
-		title: 'Договор с фиксированной стоимостью',
+		title: 'ДОГОВОР С ФИКСИРОВАННОЙ СТОИМОСТЬЮ',
 		description: 'Без скрытый платажей',
 		urlSvg: '/static/advantage/garantiy.svg',
 		altSvg: 'garantiaIcon'
@@ -15,7 +15,7 @@ export const advantages = [
 	{
 		title: 'ГАРАНТИЯ ОТ 2 ЛЕТ',
 		description:
-			'Письменная гарантия от 2-х лет на все производимые виды работ',
+			'Юредическая гарантия от 2-х лет на все производимые виды работ',
 		urlSvg: '/static/advantage/garantiyv3.svg',
 		altSvg: 'garantiaIcon'
 	}

@@ -23,11 +23,12 @@ const Home = () => {
 				<WrapperReviews />
 			</section>
 			<section>
-				<WrapperAdvantage />
-			</section>
-			<section>
 				<WrapperTeam />
 			</section>
+			<section>
+				<WrapperAdvantage />
+			</section>
+
 			{/* {!isMobile && (
 				<section>
 					<WrapperStagesWork />

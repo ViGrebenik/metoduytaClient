@@ -48,11 +48,11 @@
 		}
 	}
 	.descriptionInfoObject {
-		margin-top: 20px;
+		margin-top: 10px;
 		color: $fontColorAccent;
 		font-weight: 700;
 		font-size: clamp(12px, 3vw, 20px);
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		span {
 			color: $accent;
 		}
@@ -64,6 +64,7 @@
 			display: block;
 			color: $fontColorAccent;
 		}
+		margin: 15px 0;
 		color: rgb(128 128 128);
 		font-size: clamp(12px, 3vw, 17px);
 		li {

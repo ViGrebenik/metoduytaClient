@@ -4,8 +4,8 @@
 	align-items: center;
 	width: 100%;
 	img {
-		width: 1.5vw;
-		height: 1.5vw;
+		width: 20px;
+		height: 20px;
 	}
 
 	.button {
@@ -25,9 +25,11 @@
 			text-decoration: none;
 			color: inherit;
 		}
-		&:hover {
-			color: $accent;
-			background-color: $bgDefaultAccent;
+		@media (hover: hover) {
+			&:hover {
+				color: $accent;
+				background-color: $bgDefaultAccent;
+			}
 		}
 	}
 }

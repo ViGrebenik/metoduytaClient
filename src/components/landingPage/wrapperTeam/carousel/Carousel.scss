@@ -17,11 +17,13 @@
 	position: relative;
 	border-radius: 10px;
 	background-color: $bgDefaultAccentBlock;
-	height: 400px;
+	max-height: 400px;
 	cursor: pointer;
-	// background-image: url('/static/DSC08377.jpg');
-	background-size: cover;
-	background-position: center;
+	img {
+		border-radius: 10px;
+		object-fit: cover;
+		object-position: center;
+	}
 }
 .carouselTitle {
 	color: #d9d932;
@@ -48,13 +50,27 @@
 	justify-content: end;
 	border-radius: 10px;
 	.item {
-		border-radius: 10px;
+		position: absolute;
+		max-height: 135px;
+		height: 100%;
+		width: 100%;
 		padding: 10px;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		background-color: $bgdefault;
+		font-size: clamp(12px, 2vw, 14px);
+		border-radius: 5px;
 		span {
+			font-size: clamp(12px, 2vw, 14px);
 			color: $fontColorAccent;
+		}
+		.t2 {
+			display: block;
+			padding-top: 10px;
+			font-size: clamp(10px, 2vw, 12px);
+		}
+		@media screen and (max-width: 767px) {
+			height: max-content;
 		}
 	}
 }

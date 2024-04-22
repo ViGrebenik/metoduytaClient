@@ -135,6 +135,7 @@ export const mockData = [
 		timeWork: 3,
 		location: 'Ул.Беринга 27',
 		photos: [
+			'/static/archive/MocPortfolio/object_04/item_09.jpeg',
 			'/static/archive/MocPortfolio/object_04/item_01.jpeg',
 			'/static/archive/MocPortfolio/object_04/item_02.jpeg',
 			'/static/archive/MocPortfolio/object_04/item_03.jpeg',
@@ -142,8 +143,7 @@ export const mockData = [
 			'/static/archive/MocPortfolio/object_04/item_05.jpeg',
 			'/static/archive/MocPortfolio/object_04/item_06.jpeg',
 			'/static/archive/MocPortfolio/object_04/item_07.jpeg',
-			'/static/archive/MocPortfolio/object_04/item_08.jpeg',
-			'/static/archive/MocPortfolio/object_04/item_09.jpeg'
+			'/static/archive/MocPortfolio/object_04/item_08.jpeg'
 		]
 	},
 	{
@@ -228,7 +228,7 @@ export const mockData = [
 		// тип квартиры
 		apartmentType: 'Новостройка',
 		description:
-			'В новом современном ЖК в центре города был проведен комплексный ремонт, придающий квартире современный вид и функциональность', // короткое описание
+			'Современный комплексный ремонт в квартире нового ЖК центрального района, придал ей стильный вид и улучшил ее функциональность.', // короткое описание
 		listWorks: [
 			['Электромонтажные работы (черновые и чистовые)'],
 			['Сантехнические работы (черновые и чистовые)'],

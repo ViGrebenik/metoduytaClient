@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+// import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Slider from 'react-slick'
 import { mockData } from '../../../../wraperPortfolio/mocData'
 import './SliderObject.scss'
@@ -11,7 +11,7 @@ const SliderObject = ({ objectID }) => {
 		customPaging: function (i) {
 			return (
 				<a>
-					<LazyLoadImage effect='blur' src={`${baseUrl}/item_0${i + 1}.jpeg`} />
+					<img src={`${baseUrl}/item_0${i + 1}.jpeg`} />
 				</a>
 			)
 		},
@@ -27,11 +27,7 @@ const SliderObject = ({ objectID }) => {
 			<Slider {...settings}>
 				{photos.map((item, index) => (
 					<div key={index}>
-						<LazyLoadImage
-							effect='blur'
-							src={item}
-							alt={`Image ${index + 1}`}
-						/>
+						<img src={item} alt={`Image ${index}`} />
 					</div>
 				))}
 			</Slider>

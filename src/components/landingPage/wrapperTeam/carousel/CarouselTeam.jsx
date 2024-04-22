@@ -6,6 +6,9 @@ import './Carousel.scss'
 
 const CarouselTeam = ({ items }) => {
 	const isMobile = useMediaQuery({ maxWidth: 767 })
+	const reorderedItems = isMobile
+		? [items[1], items[0], ...items.slice(2)]
+		: items
 	const settings = {
 		infinite: true,
 		speed: 500,
@@ -13,24 +16,20 @@ const CarouselTeam = ({ items }) => {
 		slidesToScroll: 1,
 		waitForAnimate: true
 	}
-	console.log(items)
 	return (
 		<div className='carouselTeam'>
 			<Slider {...settings}>
-				{items.map((item, index) => (
-					<div
-						key={index}
-						className='carouselItemTeam'
-						style={{ backgroundImage: `url(${item.backgroundUrl})` }}
-					>
+				{reorderedItems.map((item, index) => (
+					<div key={index} className='carouselItemTeam'>
 						<div className='carouselDescription'>
+							<img src={item.backgroundUrl} alt='' />
 							<div className='item'>
-								{item.post}
+								{item.name}
 								<br />
 
-								<span>{item.name}</span>
+								<span>{item.post}</span>
 								<br />
-								<span>{item.discription}</span>
+								<span className='t2'>{item.discription}</span>
 							</div>
 						</div>
 					</div>

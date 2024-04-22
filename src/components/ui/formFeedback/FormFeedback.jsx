@@ -32,6 +32,7 @@ const FeedbackForm = ({ questionForm = true, handleSubmit, result }) => {
 				'https://www.formbackend.com/f/dad5703b24377d95',
 				formData
 			)
+			handleSubmit()
 		} catch (error) {
 			// обработка ошибки
 		} finally {
