@@ -4,11 +4,11 @@ import CarouselTeam from './carousel/CarouselTeam'
 const WrapperTeam = () => {
 	const items = [
 		{
-			name: 'Имя Фамилия',
+			name: 'Александр Юрьевич',
 			post: 'Старший прораб',
 			discription:
 				'Старший прораб с более чем 10-летним опытом в строительстве и ремонте квартир. Ответственен за надзор за объектами и соблюдение строительных норм и правил. Обеспечивает высокое качество работ и соблюдение сроков.',
-			backgroundUrl: '/public/static/archive/PhotoTeam/1.jpg'
+			backgroundUrl: '/static/archive/PhotoTeam/1.jpg'
 		},
 
 		{
@@ -16,21 +16,21 @@ const WrapperTeam = () => {
 			post: 'Руководитель',
 			discription:
 				'Основатель и руководитель компании Метод Уюта. Более 15 лет работы в ремонте квартир и более 300 завершенных проектов, демонстрирующих высокий уровень профессионализма и качества.',
-			backgroundUrl: '/public/static/archive/PhotoTeam/3.jpg'
+			backgroundUrl: '/static/archive/PhotoTeam/3.jpg'
 		},
 		{
 			name: 'Виталий Игоревич',
 			post: 'Менеджер по взаимодействию с клиентами и маркетингу',
 			discription:
 				'Профессионал по маркетингу и взаимодействию с клиентами. Опытный специалист, способный создать успешные маркетинговые кампании и поддерживать долгосрочные отношения с клиентами.',
-			backgroundUrl: '/public/static/archive/PhotoTeam/2.jpg'
+			backgroundUrl: '/static/archive/PhotoTeam/2.jpg'
 		},
 		{
 			name: 'Евгения Викторовна',
 			post: 'Дизайнер',
 			discription:
 				'Дизайнер с фокусом на деталях и стремлением к совершенству. Опыт работы в различных областях дизайна, готовый воплотить любую идею в жизнь.',
-			backgroundUrl: '/public/static/archive/PhotoTeam/4.jpg'
+			backgroundUrl: '/static/archive/PhotoTeam/4.jpg'
 		}
 	]
 	return (
